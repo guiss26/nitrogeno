@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Navbar Nitrógeno</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: #0d1b2a;
+      font-family: 'Space Grotesk', sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .navbar-nitrogen {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-end;
+      background: #102840;
+      padding: 2rem;
+      border-radius: 20px;
+    }
+
+    .flask-link {
+      text-align: center;
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .flask-container {
+      width: 60px;
+      height: 100px;
+      border: 3px solid white;
+      border-radius: 20px 20px 10px 10px;
+      position: relative;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.05);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .liquid {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 50%;
+      border-radius: 0 0 10px 10px;
+      z-index: 1;
+    }
+
+    .label {
+      margin-top: 0.3rem;
+      font-size: 0.75rem;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar-nitrogen">
+    <a href="#que-soy" class="flask-link">
+      <div class="flask-container" title="¿Qué soy?">
+        <div class="liquid" style="background-color:#00c2ff;"></div>
+        💨
+      </div>
+      <div class="label">¿Qué soy?</div>
+    </a>
+    <a href="#historia" class="flask-link">
+      <div class="flask-container" title="Historia">
+        <div class="liquid" style="background-color:#ff8a3c;"></div>
+        📜
+      </div>
+      <div class="label">Historia</div>
+    </a>
+    <a href="#impacto" class="flask-link">
+      <div class="flask-container" title="Impacto">
+        <div class="liquid" style="background-color:#ccff66;"></div>
+        🌍
+      </div>
+      <div class="label">Impacto</div>
+    </a>
+    <a href="#juego" class="flask-link">
+      <div class="flask-container" title="Juego">
+        <div class="liquid" style="background-color:#b672ff;"></div>
+        🎲
+      </div>
+      <div class="label">Juego</div>
+    </a>
+    <a href="#creadoras" class="flask-link">
+      <div class="flask-container" title="Creadoras">
+        <div class="liquid" style="background-color:#ff66c4;"></div>
+        👩‍🔬
+      </div>
+      <div class="label">Creadoras</div>
+    </a>
+  </nav>
+</body>
+</html>

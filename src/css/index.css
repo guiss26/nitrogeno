@@ -83,16 +83,23 @@ h1 {
 }
 
 /*SECTION*/
+.container-section{
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+
 .que-es-section {
     background-color: #F4F1DE;
-    flex: 1;
+    /* flex: 1; */
     text-align: center;
     position: relative;
 }
 
 .buttons{
     width: 100%;
-    padding: 20px 0;
+    padding: 24px 0;
 }
 
 .btn i{
@@ -109,8 +116,8 @@ h1 {
 .btn-up{
     position: absolute;
     /* position: fixed; */
-    bottom: 20px;
-    right: 20px;
+    bottom: 24px;
+    right: 24px;
 
 }
 /*FOOTER*/

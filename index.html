@@ -11,44 +11,104 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <main class="container">
-        <header>
-            <!-- <button></button> -->
-            <h1>7.NITROGENO</h1>
+        <header id="top">
+            <h1>
+                <a class="title" href="#"><i class="fa-solid fa-arrow-left"></i> 7.NITROGENO</a>
+            </h1>
             <nav>
-                <ul>
-                    <li>
-                        <img src="files/.png" alt="">
-                        <a href="">¿Qué es?</a></li>
-                    <li>
-                        <img src="files/tubo-amarillo.png" alt="">
-                        <a href="">Historia</a></li>
-                    <li>
-                        <img class="tubo-purple" src="files/tubo-morado.png" alt="">
-                        <a href="">Curiosidades</a></li>
-                    <li>
-                        <img src="files/tubo-azul-verdoso.png" alt="">
-                        <a href="">Impacto</a></li>
-                    <li>
-                        <img src="files/tubo-azul-verdoso.png" alt="">
-                        <a href="">Juego</a></li>
-                    <li>
-                        <img src="files/tubo-rosa.png" alt="">
-                        <a href="">Creadoras</a></li>
+                <!-- <i class="fa-solid fa-bars"></i>  icono dropdown-menu -->
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="index.html">
+                            <img src="public/comun/que-es.png" alt="icono-que-es">
+                            ¿Qué es?
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="pages/historia.html">
+                            <img src="public/comun/historia.png" alt="icono-historia">
+                            Historia
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="pages/historia.html">
+                            <img src="public/comun/curiosidades.png" alt="icono-curiosidades">
+                            Curiosidades
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="pages/impacto.html">
+                            <img src="public/comun/impacto.png" alt="icono-impacto">
+                            Impacto
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="pages/juego.html">
+                            <img src="public/comun/juego.png" alt="icono-juego">
+                            Juego
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="pages/creadoras.html">
+                            <img src="public/comun/creadoras.png" alt="icono-creadoras">
+                            Creadoras
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </header>
-        <section>
-            <!-- <button id="btn-next"><i class="fa-regular fa-circle-left"></i></button>
-            <button id="btn-up"></button> -->
-        </section>
+        <div class="container-section">
+            <section class="que-es-section">
+                <h2>¿Qué es?</h2>
+                <iframe src="" frameborder="0"></iframe>
+                <p>El nitrógeno es un elemento químico que se representa con la letra N y tiene el número atómico 7. En condiciones normales es un gas incoloro, inodoro e insípido, y constituye aproximadamente el 78% del aire que respiramos. Es el principal componente de la atmósfera.
+                Aunque está en el aire que respiramos, nuestro cuerpo no lo puede usar directamente en esa forma. En realidad, obtenemos el nitrógeno a través de los alimentos, especialmente gracias a las plantas que lo absorben del suelo en forma de compuestos como nitratos o amoníaco.
+                El nitrógeno es esencial para la vida ya que forma aprte del ADN, de las proteínas y de mcuhos procesos biológicos fundamentales.
+                </p>
+            </section>
+            <section class="donde-section">
+                <h3>¿Dónde se encuentra?</h3>
+                <div class="donde-box">
+                    <ul>
+                        <li>En la atmósfera, como gas</li>
+                        <li>En el suelo, en forma de compuestos absorbidos por las plantas</li>
+                        <li>En organismos vivos, como parte de sus tejidos y estructuras celulares</li>
+                    </ul>
+                    <img src="" alt=""> <!--img o video-->
+                </div>
+            </section>
+
+            <section class="para-que-section">
+                <div class="para-que-box">
+                    <h3>¿Para qué sirve?</h3>
+                    <div class="box-cont-para-que">
+                        <img src="" alt=""><!--img o video-->
+                        <ul>
+                            <li>En la industria de alimentos, se usa para conservar productos (por ejemplo, bolsas de papas infladas con nitrógeno).</li>
+                            <li>En medicina y laboratorios, el nitrógeno líquido sirve como refrigerante para conservar tejidos, vacunas y muestras.</li>
+                            <li>En la tecnología, se usa como gas protector en la fabricación de componentes electrónicos</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="buttons">
+                    <a class="btn btn-right" href="pages/historia.html"><i class="fa-regular fa-circle-right"></i></a>
+                    <a class="btn btn-up" onclick="scrollToTop(event)" href="#top"><i class="fa-regular fa-circle-up"></i></a>
+                </div>
+            </section>
+        </div>
         <footer>
             <p>Proyecto creado por grupo P4 Femcoders Factoria F5</p>
             <p>© 2025 Tabla Periódica Interactiva</p>
-            <img class="logo-fem-coders" src="files/fem-coders-logo.png" alt="logo fem-coders-f5">
+            <img class="logo-fem-coders" src="public/comun/fem-coders-logo.png" alt="logo fem-coders-f5">
         </footer>
     </main>
+
+    <script src="src/js/script.js"></script>
 </body>
 </html>

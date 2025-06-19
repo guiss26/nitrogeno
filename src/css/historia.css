@@ -1,0 +1,94 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #f1f1f1, #e0f7fa);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #cd49ae;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+nav li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+nav img {
+  width: 36px;
+  height: auto;
+}
+
+main {
+  
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #00796b;
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+blockquote {
+  background: #f0f4c3;
+  border-left: 6px solid #cddc39;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  font-style: italic;
+  color: #616161;
+}
+
+strong {
+  color: #00796b;
+}
+
+code {
+  background-color: #eee;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+  color: #d32f2f;
+}
+
+footer {
+  background-image: url('../../public/comun/background-footer.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 200px; /* asegúrate de que el footer tenga altura */
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
+}
+
+.footer-content p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}

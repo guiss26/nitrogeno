@@ -1,1 +1,21 @@
 /*juego*/
+body {
+
+  background: linear-gradient(to bottom, #f1f1f1, #e0f7fa);
+  color: #333;
+  
+}
+#top{
+    background-color: #FF2AAA;
+
+}
+
+.flex-1{
+    flex: 1;
+}
+
+footer {
+    background-image: url(../../public/comun/background-footer.png);
+    background-size: cover;
+    text-align: center;
+}

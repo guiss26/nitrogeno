@@ -5,7 +5,6 @@
     box-sizing: border-box;
     font-family: "Space Mono", monospace;
     font-optical-sizing: auto;
-    /* font-weight: <weight>; */
     font-style: normal;
     font-size: 12px;
 }
@@ -23,22 +22,23 @@ body {
 }
 
 /*HEADER*/
-header {
+#top{
     background-color: #FFB6C1;
 
     display: flex;
     justify-content: space-between;
-    padding: 20px 0 10px 50px;
+    padding: 10px 0 20px 50px;
 }
 
-header img {
-    height: 70px;
-}
-
-header h1 {
+#top h1 {
     display: flex;
     align-items: center;
     font-size: 2rem;
+}
+
+#top i{
+    width: 20px;
+    font-size: 25px;
 }
 
 h1 {
@@ -46,45 +46,83 @@ h1 {
     color: rgb(73, 72, 72);
 }
 
-ul {
-    background-color: #c7828c;
+.title {
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(73, 72, 72);
+}
 
+.menu {
     display: flex;
+    gap: 10px;
+    padding: 0;
+    margin-right: 45px;
 }
 
-li {
-    display: grid;
-    margin: 0 10px;
-    padding: 0 10px;
-    background-color: antiquewhite;
+.menu-item{
+    padding: 10px;
+    list-style: none;
 }
 
-li img {
-    margin-left: 13px;
-    /*ver como dejar margen sin poner num exacto*/
-    text-align: center;
+.menu-item img {
+    height: 70px;
+    margin-bottom: 5px;
 }
 
-.tubo-purple {
-    margin-left: 35px;
-}
-
-li a {
+.menu-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-decoration: none;
     color: black;
     text-align: center;
 }
 
-/*SECTION*/
-section {
-    background-color: #F4F1DE;
-    flex: 1;
+.menu-item a:hover{
+    color: white;
 }
 
+/*SECTION*/
+.container-section{
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+
+.que-es-section {
+    background-color: #F4F1DE;
+    /* flex: 1; */
+    text-align: center;
+    position: relative;
+}
+
+.buttons{
+    width: 100%;
+    padding: 24px 0;
+}
+
+.btn i{
+    font-size: 30px;
+    color: rgb(73, 72, 72);/*prueba cambiar color*/
+}
+
+.btn-right {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn-up{
+    position: absolute;
+    /* position: fixed; */
+    bottom: 24px;
+    right: 24px;
+
+}
 /*FOOTER*/
 footer {
-    /* background-color: #FFB6C1; */
-    background-image: url(files/footer_gradient_1.PNG);
+    background-image: url(/public/comun/footer_gradient_1.PNG);
     background-size: cover;
     text-align: center;
 }

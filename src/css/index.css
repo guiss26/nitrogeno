@@ -122,7 +122,8 @@ h1 {
 }
 /*FOOTER*/
 footer {
-    background-image: url(/public/comun/footer_gradient_1.PNG);
+    /* background-image: url(/public/comun/background-footer.png); */
+    background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493);
     background-size: cover;
     text-align: center;
 }

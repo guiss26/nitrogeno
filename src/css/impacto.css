@@ -1,1 +1,9 @@
 /*impacto*/
+#top{
+    background-color: #ff55a4;
+}
+
+.impact-section {
+    flex: 1;
+    
+}

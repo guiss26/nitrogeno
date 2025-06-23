@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+cjcjdocument.addEventListener('DOMContentLoaded', () => {
     const creadorasContainer = document.querySelector('.creadoras-container');
     const modal = document.getElementById('creatorModal');
     const closeButton = document.querySelector('.close-button');

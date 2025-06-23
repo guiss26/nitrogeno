@@ -2,7 +2,60 @@
 #top{
     background-color: #ff55a4;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Estilo general */
+body {
+  line-height: 1.6;
+  background-color: #f4f9f4;
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 30px 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #2a5d34;
+}
+
+.subtitulo {
+  font-size: 1.2em;
+  color: #4a7c59;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+}
+
+.impacto {
+  border-left: 8px solid #3b9155;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.impacto h2 {
+  margin-bottom: 10px;
+  color: #2f6f3e;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #777;
+}
 .impact-section {
     flex: 1;
     

@@ -1,17 +1,95 @@
-/*juego*/
 body {
 
-  background: linear-gradient(to bottom, #f1f1f1, #e0f7fa);
-  color: #333;
-  
+    background: linear-gradient(to bottom, #f1f1f1, #e0f7fa);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 #top{
     background-color: #FF2AAA;
-
 }
 
-.flex-1{
+.flex-1 {
     flex: 1;
+}
+
+.headline h2 {
+    font-size: 32px; 
+    text-align: center;
+    margin: 0 auto;
+    color: #FF2AAA;
+}
+
+.paragraph p{
+    font-size: 14px; 
+    margin-top: 20px;
+    margin-left: 240px;
+    margin-right: 240px;
+    margin-bottom: 20px;
+    color: #121212;
+    text-align: center;
+}
+
+.collapsible1, .collapsible2 {
+    width: 300px; 
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    background-color: #FFB6C1;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    flex-grow: 0;
+}
+
+.content1 {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: white; 
+}
+
+.content2 {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: white; 
+}
+
+.two-columns {
+    display: flex;
+    gap: 20px; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin: 20px 0;
+}
+
+.buttons {
+    width: 100%;
+    padding: 24px 0;
+    position: relative;
+}
+
+.btn-horizontal {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.btn i {
+    font-size: 30px;
+    color: rgb(73, 72, 72);
+}
+
+.btn-up {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
 }
 
 footer {

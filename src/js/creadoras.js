@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const creadorasData = [
         {
             id: 'creadora1',
-            name: 'Guisella',
+            name: 'Guissella',
             photo: 'https://via.placeholder.com/150/8e44ad/FFFFFF?text=Ana', // Reemplazar con URL de la foto real
             role: 'Desarrolladora Front-end / Maquetación HTML',
             nitrogenLink: '"Para mí, el nitrógeno en este proyecto es como el código fuente: invisible pero esencial para que todo funcione."',

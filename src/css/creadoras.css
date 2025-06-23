@@ -24,7 +24,6 @@ body {
     background-repeat: no-repeat; /* Evita que se repita */
 }
 
-
 header {
     background-color: var(--nitrogen-dark);
     color: var(--nitrogen-light);
@@ -278,6 +277,29 @@ h2 {
     #modalWisdom {
         font-size: 0.95rem;
     }
+}
+
+.buttons {
+    width: 100%;
+    padding: 24px 0;
+    position: relative;
+}
+
+.btn-horizontal {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.btn i {
+    font-size: 30px;
+    color: rgb(73, 72, 72);
+}
+
+.btn-up {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
 }
 
 footer {

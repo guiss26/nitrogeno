@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link type="Image/x-icon" href="./favicon.ico" rel="icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -63,15 +64,32 @@
                 </ul>
             </nav>
         </header>
-<section class="flex-1">
-    <p>Hola</p>
+<section class="flex-1 two-columns">
+    <div class="box">
+    <button type="button" class="collapsible1">¿Cómo jugar?</button>
+    <div class="content1">
+        <p>Lorem ipsum...</p>
+    </div>
+    </div>
+
+    <div class="box">
+    <button type="button" class="collapsible2">¿Qué debería pasar?</button>
+    <div class="content2">
+        <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+    </div>
+
+    <div id="game-board">
+    </div>
 </section>
+
         <footer>
             <p>Proyecto creado por grupo P4 Femcoders Factoria F5</p>
             <p>© 2025 Tabla Periódica Interactiva</p>
             <img class="logo-fem-coders" src="../public/comun/fem-coders-logo.png" alt="logo fem-coders-f5">
         </footer>
     </main>
+    <script src="../src/js/juego.js"></script>
 </body>
 
 </html>

@@ -210,7 +210,6 @@ section.history blockquote {
   font-size: 1.1rem;
   color: #8a1454;
   font-weight: 700;
-  font-family: 'Space Grotesk', sans-serif;
   letter-spacing: 0.3px;
   text-transform: uppercase;
   margin: 0 0 0.3rem 0; /* margen abajo para separar título y texto */
@@ -222,7 +221,6 @@ section.history blockquote {
   font-size: 0.95rem;
   line-height: 1.4;
   color: #444;
-  font-family: 'DM Sans', sans-serif;
   font-weight: 400;
   margin: 0;
   padding: 0 4px;
@@ -298,7 +296,6 @@ section.history blockquote {
   margin: 0;
   color: #8a1454;
   font-weight: 700;
-  font-family: 'Space Grotesk', sans-serif;
 }
 
 .flip-card-back {
@@ -310,7 +307,6 @@ section.history blockquote {
   justify-content: center;
   align-items: center;
   font-size: 0.95rem;
-  font-family: 'DM Sans', sans-serif;
   border-radius: 12px;
 }
 
@@ -319,7 +315,6 @@ section.history blockquote {
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  font-family: 'DM Sans', sans-serif;
   text-align: center;
   max-width: 400px;
   margin: 2rem auto;
@@ -363,7 +358,6 @@ section.history blockquote {
   padding: 0;
   max-width: 500px;
   margin: 20px auto;
-  font-family: 'Roboto', sans-serif;
   font-size: 1.1rem;
   color: #333;
 }

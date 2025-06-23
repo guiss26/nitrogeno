@@ -6,7 +6,8 @@
     font-family: "Space Mono", monospace;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: 15px;
 }
 
 body {
@@ -76,35 +77,111 @@ h1 {
     text-decoration: none;
     color: black;
     text-align: center;
+    font-size: 13px;
 }
 
 .menu-item a:hover{
     color: white;
 }
 
-/*SECTION*/
+/*SECTIONS*/
 .container-section{
     flex: 1;
     text-align: center;
     position: relative;
 }
 
-
-.que-es-section {
-    background-color: #F4F1DE;
-    /* flex: 1; */
-    text-align: center;
-    position: relative;
+section img{
+    width: 400px;
+    height: 300px;
 }
 
+/*--- que-es-section ---*/
+.que-es-section {
+    text-align: center;
+    position: relative;
+
+    padding: 70px 8%;
+}
+
+.que-es-section h2{
+    font-size: 28px;
+    padding: 0 0 50px 0;
+}
+
+.gift {
+    width: 100%;
+}
+
+.que-es-paragraph {
+    padding-top: 40px;
+    line-height: 35px;
+}
+
+/*--- donde-section ---*/
+.donde-section{
+    padding: 20px 8%;
+}
+
+h3{
+    padding: 40px 0;
+    font-size: 20px;
+}
+.donde-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    gap: 50px;
+}
+
+.donde-list{
+    text-align: left;
+}
+
+.donde-list li{
+    list-style: none;
+    line-height: 25px;
+    margin: 17px 0;
+
+    /* padding: 0 50px; */
+}
+
+/*--- para-que-section ---*/
+.para-que-section {
+    padding: 20px 8% 0 8%;
+}
+
+.box-cont-para-que{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+
+.para-que-list {
+    text-align: left;
+}
+
+.box-cont-para-que li{
+    list-style: none;
+    line-height: 25px;
+    margin: 17px 0;
+}
+
+/*Botonoes*/
 .buttons{
     width: 100%;
-    padding: 24px 0;
+    padding: 50px 0 30px 0;
 }
 
 .btn i{
     font-size: 30px;
     color: rgb(73, 72, 72);/*prueba cambiar color*/
+}
+
+.btn i:hover {
+    transform: scale(1.2); 
 }
 
 .btn-right {
@@ -122,7 +199,6 @@ h1 {
 }
 /*FOOTER*/
 footer {
-    /* background-image: url(/public/comun/background-footer.png); */
     background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493);
     background-size: cover;
     text-align: center;

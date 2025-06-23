@@ -6,6 +6,19 @@ body {
 }
 
 
+#top {
+  background-color: #FF80C4;
+}
+
+.history {
+  flex : 1;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 h2 {
   color: #00796b;
   font-size: 1.8rem;
@@ -35,7 +48,7 @@ code {
 
 
 footer {
-    background-image: url(../../public/comun/background-footer.png);
+    background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493);
     background-size: cover;
     text-align: center;
 }

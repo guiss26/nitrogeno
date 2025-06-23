@@ -1,1 +1,135 @@
-/*curiosidades*/
+/* paleta de colores*/
+:root {
+  --fondo-claro: #F0F4F8;
+  --rosado: #FFB6C1;
+  --verde: #A8D8B9;
+  --beige: #F4F1DE;
+  --oscuro: #2C3E50;
+}
+
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--fondo-claro);
+  margin: 0;
+  padding: 0;
+  color: var(--oscuro);
+}
+
+
+.curiosidades {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.curiosidades h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--oscuro);
+  margin-bottom: 3rem;
+}
+
+
+.timeline {
+  position: relative;
+  margin-left: 2rem;
+  padding-left: 2rem;
+  border-left: 4px dashed var(--rosado);
+}
+
+.timeline h3 {
+  margin-top: 3rem;
+  color: var(--rosado);
+  font-size: 1.8rem;
+  position: relative;
+}
+
+.timeline-item {
+  background-color: var(--beige);
+  border-left: 8px solid var(--verde);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(44, 62, 80, 0.1);
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.timeline-item:hover {
+  transform: scale(1.02);
+  background-color: #fff;
+}
+
+.timeline-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--oscuro);
+}
+
+.timeline-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+.timeline-item::before {
+  content: "💡";
+  position: absolute;
+  left: -2.2rem;
+  top: 1.2rem;
+  font-size: 1.5rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  .curiosidades {
+    padding: 1rem;
+  }
+
+  .timeline {
+    margin-left: 1rem;
+    padding-left: 1rem;
+  }
+
+  .timeline-item {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+
+  .timeline-item::before {
+    font-size: 1.2rem;
+    left: -1.8rem;
+  }
+}
+.bottom-buttons {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.btn {
+  text-decoration: none;
+}
+
+.btn i {
+  font-size: 32px;
+  color: #494848;
+  transition: transform 0.2s ease;
+}
+
+.btn i:hover {
+  transform: scale(1.2);
+}
+
+.btn-up {
+  position: static; 
+}

@@ -1,50 +1,127 @@
+/* === ESTILOS GENERALES === */
 body {
-
   background: linear-gradient(to bottom, #f1f1f1, #e0f7fa);
   color: #333;
-  
 }
 
-
+/* === ENCABEZADO === */
 #top {
   background-color: #FF80C4;
 }
 
+/* === SECCIÓN HISTORIA === */
 section.history {
-  max-width: 800px;
+  max-width: 900px;
   margin: 3rem auto;
   padding: 2rem;
   background-color: #f9fbfc;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   font-family: 'Merriweather', serif;
   line-height: 1.7;
   color: #333;
+  text-align: center;
 }
 
 .history h1 {
   font-size: 2.5rem;
   color: #b80075;
   margin-bottom: 1rem;
-  text-align: center;
+}
+.smoke-text {
+  position: relative;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 20px white;
+  z-index: 1;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+/* Efecto de humo usando pseudoelementos */
+.smoke-text::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  width: 120%;
+  height: 150%;
+  background: url('https://i.ibb.co/6Hxx3R7/smoke.gif') no-repeat center;
+  background-size: cover;
+  opacity: 0.4;
+  animation: smokeMove 8s linear infinite;
+  z-index: -1;
+  filter: blur(2px);
+}
+
+
+.content-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  margin: 2rem 0;
+}
+
+.text-block {
+  flex: 1 1 60%;
+  font-family: sans-serif;
+}
+
+.text-block h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.text-block p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.image-block {
+  flex: 1 1 35%;
+}
+
+.image-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 section.history h2 {
   font-size: 1.5rem;
   color: #9e0071;
   margin-bottom: 1rem;
-  text-align: center;
 }
 
 section.history p {
   margin-bottom: 1.2rem;
-  text-align: center;
 }
 
 section.history strong {
   color: #6e0c59;
 }
 
+section.history code {
+  background-color: #e2e8f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+/* === BLOQUE DE CITA === */
+section.history blockquote {
+  background-color: #fface3;
+  padding: 1rem;
+  margin: 1.5rem auto;
+  border-left: 5px solid #e35ac3;
+  font-style: italic;
+  text-align: center;
+  max-width: 500px;
+}
+
+/* === LISTA HORIZONTAL DE TEMAS (explosivos, estiércol, etc.) === */
 .horizontal-list {
   display: flex;
   justify-content: center;
@@ -55,19 +132,57 @@ section.history strong {
   flex-wrap: wrap;
 }
 
+.animated-wrapper {
+  position: relative;
+  width: 160px; /* ajusta según tu diseño */
+  height: auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.animated-wrapper img,
+.animated-wrapper iframe {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.animated-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: none;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.animated-wrapper:hover iframe {
+  display: block;
+}
+
+.animated-wrapper:hover img {
+  opacity: 0;
+}
+
 .horizontal-list .item {
   text-align: center;
   max-width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
   transition: transform 0.3s ease;
 }
 
-.horizontal-list img {
+.horizontal-list .item img {
   width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 0.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 0.3rem;
 }
 
 .horizontal-list img:hover {
@@ -78,7 +193,7 @@ section.history strong {
 .horizontal-list .item h3 {
   font-size: 1.1rem;
   color: #8a1454;
-  margin: 0.5rem 0 0.3rem;
+  
   font-weight: 700;
   font-family: 'Space Grotesk', sans-serif;
   letter-spacing: 0.3px;
@@ -103,66 +218,73 @@ section.history strong {
   text-align: center;
 }
 
-section.history code {
-  background-color: #e2e8f0;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: monospace;
-}
+  @keyframes smokeUp1 {
+    0% {
+      transform: translate(0, 0) scale(1);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.15;
+    }
+    100% {
+      transform: translate(-30px, -200px) scale(1.3);
+      opacity: 0;
+    }
+  }
+  @keyframes smokeUp2 {
+    0% {
+      transform: translate(0, 0) scale(1);
+      opacity: 0;
+    }
+    20% {
+      opacity: 0.12;
+    }
+    100% {
+      transform: translate(40px, -230px) scale(1.4);
+      opacity: 0;
+    }
+  }
+  @keyframes smokeUp3 {
+    0% {
+      transform: translate(0, 0) scale(1);
+      opacity: 0;
+    }
+    15% {
+      opacity: 0.1;
+    }
+    100% {
+      transform: translate(10px, -180px) scale(1.1);
+      opacity: 0;
+    }
+  }
 
-section.history blockquote {
-  background-color: #eaaed6;
-  padding: 1rem;
-  margin: 1.5rem auto; /* ← centrado horizontal */
-  border-left: 5px solid #e35ac3;
-  font-style: italic;
-  text-align: center;
-  max-width: 500px; /* ← reduce el ancho */
-}
-
+/* === BOTONES DE NAVEGACIÓN === */
 .buttons {
-    width: 100%;
-    padding: 24px 0;
-    position: relative;
+  width: 100%;
+  padding: 24px 0;
+  position: relative;
 }
 
 .btn-horizontal {
-    display: flex;
-    justify-content: center;
-    gap: 20px; 
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .btn i {
-    font-size: 30px;
-    color: rgb(73, 72, 72);
+  font-size: 30px;
+  color: rgb(73, 72, 72);
 }
 
 .btn-up {
-    position: absolute;
-    bottom: 24px;
-    right: 24px;
-}
-
-footer {
-    background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493);
-    background-size: cover;
-    text-align: center;
-}
-
-.particle {
   position: absolute;
-  width: 5px;
-  height: 5px;
-  background-color: orange;
-  border-radius: 50%;
-  pointer-events: none;
-  animation: explode 0.6s ease-out forwards;
-  z-index: 9999;
+  bottom: 24px;
+  right: 24px;
 }
 
-@keyframes explode {
-  to {
-    transform: translate(var(--x), var(--y)) scale(0.5);
-    opacity: 0;
-  }
+/* === FOOTER === */
+footer {
+  background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493);
+  background-size: cover;
+  text-align: center;
 }

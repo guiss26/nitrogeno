@@ -72,13 +72,31 @@
 
     <section class="history">
       <h1>Historia del Nitrógeno</h1>
+      <h2>El gas discreto que cambió el mundo</h2>
+
+      <div class="content-block">
+        <div class="text-block">
+          <p>Antes de que supiéramos que el nitrógeno era un elemento esencial para la vida, se le conocía como... nada. Solo era una parte del aire que “no hacía nada”: no ayudaba a respirar, no servía para quemar cosas. Por eso, en 1772, el escocés Daniel Rutherford lo llamó “aire nocivo”.</p>
+          <p>Pero no fue el único en investigarlo. En esa misma época, científicos como Scheele, Cavendish y Priestley también se toparon con ese gas misterioso. Algunos lo llamaban “aire flogisticado”, otros “aire quemado”. Estaban de acuerdo en que algo raro había ahí.</p>
+          <p>Más tarde, Lavoisier le puso un nombre que todavía se usa en francés: azote, que significa “sin vida”. Pero fue Jean-Antoine Chaptal, en 1790, quien le dio el nombre que usamos hoy: nitrógeno, por su relación con los nitratos y el ácido nítrico.</p>
+        </div>
+        <div class="image-block">
+          <img src="../public/historia-files/daniel-rutherford.png" alt="Daniel Rutherford">
+          <p>Daniel Rutherford</p>
+        </div>
+        <p>Lo que nadie imaginaba en ese entonces era lo que vendría después: explosivos más potentes, fertilizantes que revolucionarían la agricultura… y un gas invisible que terminaría alimentando al mundo (¡y también causando más de un problema ambiental!).</p>
+      </div>
       <h2>¿Qué tienen en común los explosivos, el estiércol y la agricultura moderna?</h2>
       <p>Todos están relacionados con el nitrógeno.</p>
 
       <ul class="horizontal-list">
         <li>
           <div class="item">
-            <img id="explosion-img" src="../public/historia-files/explosion.jpg" alt="Explosivos">
+            <div class="animated-wrapper">
+              <img src="../public/historia-files/explosion.jpg" alt="Explosivos" class="explosion-img">
+              <iframe src="https://giphy.com/embed/XrNry0aqYWEhi" frameborder="0" allowfullscreen
+                class="explosion-gif"></iframe>
+            </div>
             <h3>Explosivos</h3>
             <p>Muchos explosivos, como la dinamita o el TNT, contienen compuestos con nitrógeno. Al romperse, liberan
               gases y energía de forma violenta, produciendo la explosión.</p>
@@ -86,7 +104,10 @@
         </li>
         <li>
           <div class="item">
-            <img src="../public/historia-files/estiercol.jpg" alt="Estiércol">
+            <div class="animated-wrapper">
+              <img src="../public/historia-files/estiercol.jpg" alt="Estiércol">
+              <iframe src="https://giphy.com/embed/R9cQo06nQBpRe" frameborder="0" allowfullscreen></iframe>
+            </div>
             <h3>Estiércol</h3>
             <p>El estiércol es una fuente natural de nitrógeno para la tierra. Cuando se descompone, libera nutrientes
               que las plantas pueden absorber, ayudando al crecimiento agrícola.</p>
@@ -94,9 +115,14 @@
         </li>
         <li>
           <div class="item">
-            <img src="../public/historia-files/agricultura.jpg" alt="Agricultura moderna">
+            <div class="animated-wrapper">
+              <img src="../public/historia-files/agricultura.jpg" alt="Agricultura">
+              <iframe src="https://giphy.com/embed/txCo7WXCwZpmM" width="480" height="480" style=" frameBorder=" 0"
+                allowFullScreen></iframe>
+            </div>
             <h3>Agricultura</h3>
-            <p>Las plantas necesitan nitrógeno para crecer, pero no pueden usar el nitrógeno del aire. Gracias al proceso Haber-Bosch, hoy se fabrican fertilizantes que alimentan al mundo.</p>
+            <p>Las plantas necesitan nitrógeno para crecer, pero no pueden usar el nitrógeno del aire. Gracias al
+              proceso Haber-Bosch, hoy se fabrican fertilizantes que alimentan al mundo.</p>
           </div>
         </li>
       </ul>
@@ -141,18 +167,17 @@
         <li>Alrededor del 50% del nitrógeno en tu cuerpo proviene de este proceso.</li>
         <li>En otras palabras, ¡estás hecho de aire transformado en una fábrica!</li>
       </ul>
-      <script src="../src/js/script.js" defer></script>
     </section>
 
 
- <div class="buttons">
-    <div class="btn-horizontal">
+    <div class="buttons">
+      <div class="btn-horizontal">
         <a class="btn btn-left" href="../index.html" title="Ir a ¿Qué es?"><i class="fa-regular fa-circle-left"></i>
-</a>
+        </a>
         <a class="btn" href="curiosidades.html"><i class="fa-regular fa-circle-right"></i></a>
+      </div>
+      <a class="btn btn-up" onclick="scrollToTop(event)" href="#top"><i class="fa-regular fa-circle-up"></i></a>
     </div>
-    <a class="btn btn-up" onclick="scrollToTop(event)" href="#top"><i class="fa-regular fa-circle-up"></i></a>
-</div>
 
     <footer>
       <p>Proyecto creado por grupo P4 Femcoders Factoria F5</p>
@@ -160,6 +185,7 @@
       <img class="logo-fem-coders" src="../public/comun/fem-coders-logo.png" alt="logo fem-coders-f5">
     </footer>
   </main>
+  <script src="../src/js/historia.js" defer></script>
 </body>
 
 </html>

@@ -7,6 +7,10 @@
     --modal-bg: rgba(0, 0, 0, 0.7);
 }
 
+#top {
+  background-color: #FF80C4;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -14,12 +18,12 @@ body {
     background-color: var(--nitrogen-light);
     color: var(--text-color);
     overflow-x: hidden; /* Evita scroll horizontal */
-    background-image: url(./img/Fondo.jpeg); /* Reemplaza con la URL correcta */
-    background-size: cover; /* Asegura que cubra toda la pantalla */
+    background-image: url(/public/creadoras-files/Fondo.jpeg); 
+    background-size: cover; 
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que se repita */
 }
-}
+
 
 header {
     background-color: var(--nitrogen-dark);
@@ -274,4 +278,10 @@ h2 {
     #modalWisdom {
         font-size: 0.95rem;
     }
+}
+
+footer {
+    background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493);
+    background-size: cover;
+    text-align: center;
 }

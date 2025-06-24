@@ -105,12 +105,17 @@ section.history h2:hover{
     transition: color 0.3s ease;
 }
 
+
 section.history p {
   margin-bottom: 1.2rem;
 }
 
 section.history strong {
   color: #6e0c59;
+}
+
+.scientist strong:hover {
+  color: #6c44c3;
 }
 
 section.history code {
@@ -308,8 +313,8 @@ section.history code {
 }
 
 .flip-card-back {
-  background-color: #f8bbd0;
-  color: #4a114a;
+  background-color: #b2ebf2;
+  color: #611651;
   transform: rotateY(180deg);
   padding: 1rem;
   display: flex;

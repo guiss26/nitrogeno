@@ -89,23 +89,24 @@ h1 {
     flex: 1;
     text-align: center;
     position: relative;
+    background: linear-gradient(to bottom, #fff0f5, #ffe4e1, #f0fff0);
 }
 
 section img{
     width: 400px;
     height: 300px;
+    border-radius: 10px;
 }
 
 /*--- que-es-section ---*/
 .que-es-section {
     text-align: center;
     position: relative;
-
     padding: 70px 8%;
 }
 
 .que-es-section h2{
-    font-size: 28px;
+    font-size: 30px;
     padding: 0 0 50px 0;
 }
 
@@ -125,26 +126,28 @@ section img{
 
 h3{
     padding: 40px 0;
-    font-size: 20px;
+    font-size: 25px;
 }
 .donde-box{
     display: flex;
     justify-content: space-around;
     align-items: center;
-
     gap: 50px;
 }
 
 .donde-list{
     text-align: left;
+    /* background-color: #f9d7ea; */
+    background-color: #f9c9e4;
+    padding: 0 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .donde-list li{
     list-style: none;
     line-height: 25px;
     margin: 17px 0;
-
-    /* padding: 0 50px; */
 }
 
 /*--- para-que-section ---*/
@@ -161,6 +164,11 @@ h3{
 
 .para-que-list {
     text-align: left;
+
+    background-color: #ffcee9;
+    padding: 0 20px; /*arreglarlo para responsive*/
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .box-cont-para-que li{
@@ -193,7 +201,7 @@ h3{
 .btn-up{
     position: absolute;
     /* position: fixed; */
-    bottom: 24px;
+    bottom: 30px;
     right: 24px;
 
 }

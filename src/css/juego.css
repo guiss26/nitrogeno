@@ -1,10 +1,7 @@
 body {
-
-    background: linear-gradient(to bottom, #f1f1f1, #e0f7fa);
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #f4f9f4;
 }
+
 #top{
     background-color: #FF2AAA;
 }
@@ -13,85 +10,85 @@ body {
     flex: 1;
 }
 
-.headline h2 {
-    font-size: 32px; 
+.headline {
+    font-size: 44px;
     text-align: center;
-    margin: 0 auto;
     color: #FF2AAA;
 }
 
-.paragraph p{
-    font-size: 14px; 
-    margin-top: 20px;
-    margin-left: 240px;
-    margin-right: 240px;
-    margin-bottom: 20px;
-    color: #121212;
+.disc {
+    align-items: center;
     text-align: center;
+    margin: 20px;
 }
 
 .collapsible1, .collapsible2 {
-    width: 300px; 
+    width: 600px; 
     box-sizing: border-box;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis; 
-    background-color: #FFB6C1;
-    color: #444;
+    background-color: #FF2AAA;
     cursor: pointer;
     padding: 18px;
     border: none;
-    text-align: left;
+    text-align: center;
     outline: none;
-    font-size: 15px;
-    flex-grow: 0;
+    font-size: 18px;
 }
 
-.content1 {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: white; 
+.content1{
+    max-width: 600px;  
+    background-color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 44px;
+    text-align: start;
 }
 
 .content2 {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: white; 
+    max-width: 600px;  
+    background-color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 18px;
+    text-align: start;
 }
-
 .two-columns {
     display: flex;
     gap: 20px; 
     flex-wrap: wrap; 
     justify-content: center; 
-    margin: 20px 0;
+    margin: 20px;
 }
 
 .buttons {
-    width: 100%;
-    padding: 24px 0;
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+    padding: 50px 0 30px 0;
     position: relative;
 }
 
-.btn-horizontal {
-    display: flex;
-    justify-content: center;
-    gap: 20px; 
+.btn-left, .btn-right {
+    margin: 0;
 }
 
-.btn i {
+.btn i{
     font-size: 30px;
-    color: rgb(73, 72, 72);
 }
 
-.btn-up {
+.btn i:hover {
+    transform: scale(1.2); 
+}
+
+.btn-up{
     position: absolute;
+    /* position: fixed; */
     bottom: 24px;
     right: 24px;
-}
 
+}
 footer {
     background-image: url(../../public/comun/background-footer.png);
     background-size: cover;

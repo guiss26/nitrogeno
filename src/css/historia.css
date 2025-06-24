@@ -96,6 +96,15 @@ section.history h2 {
   margin-bottom: 1rem;
 }
 
+section.history h1:hover{
+  color:rgb(60, 54, 214);
+    transition: color 0.3s ease;
+}
+section.history h2:hover{
+  color:rgb(60, 54, 214);
+    transition: color 0.3s ease;
+}
+
 section.history p {
   margin-bottom: 1.2rem;
 }
@@ -124,13 +133,13 @@ section.history code {
 
 /* === LISTA HORIZONTAL DE TEMAS (explosivos, estiércol, etc.) === */
 .horizontal-list {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
   list-style: none;
   padding: 0;
-  margin: 2rem 0;
+  margin: 0 0 2rem 0;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .animated-wrapper {
@@ -167,14 +176,7 @@ section.history code {
   opacity: 0;
 }
 
-.horizontal-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 1.2rem; /* un poco más de espacio horizontal */
-  justify-content: center;
-}
+
 
 .horizontal-list li {
   margin: 0;
@@ -336,6 +338,9 @@ section.history blockquote {
   max-width: 100%;
   margin: 0 auto;
 }
+section.history blockquote:hover {
+  background: #b2ebf2;
+}
 
 .quote-img {
   width: 100%;
@@ -350,7 +355,7 @@ section.history blockquote {
 
 
 .reaction-container {
-  background: #fde3fd;
+  background: #fface3;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -375,7 +380,7 @@ section.history blockquote {
 }
 
 .reaction-list li {
-  background-color: #fbbbf5;
+  background-color: #fae0f2;
   margin: 0.5rem 0;
   padding: 0.8rem;
   border-radius: 0.5rem;
@@ -438,11 +443,12 @@ button {
   padding: 0.6rem 1rem;
   border-radius: 0.5rem;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.3s ease;
 }
 
 button:hover {
-  background-color: #c01677;
+  background-color: #3d5eed;
+  transform: scale(1.08); /* efecto de zoom suave */
 }
 
 /* === BOTONES DE NAVEGACIÓN === */

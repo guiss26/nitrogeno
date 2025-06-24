@@ -24,36 +24,26 @@ section.history {
   text-align: center;
 }
 
-.history h1 {
+/* === TÍTULO Y SUBTITULOS === */
+section.history h1 {
   font-size: 2.5rem;
   color: #b80075;
   margin-bottom: 1rem;
 }
-/*.smoke-text {
-  position: relative;
-  font-size: 3rem;
-  color: white;
-  text-shadow: 0 0 10px white, 0 0 20px white;
-  z-index: 1;
-  animation: fadeIn 2s ease-out forwards;
+
+section.history h2 {
+  font-size: 1.5rem;
+  color: #b80075;
+  margin-bottom: 1rem;
 }
 
-/* Efecto de humo usando pseudoelementos 
-.smoke-text::before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: -10px;
-  width: 120%;
-  height: 150%;
-  background: url('https://i.ibb.co/6Hxx3R7/smoke.gif') no-repeat center;
-  background-size: cover;
-  opacity: 0.4;
-  animation: smokeMove 8s linear infinite;
-  z-index: -1;
-  filter: blur(2px);
-}*/
+section.history h1:hover,
+section.history h2:hover{
+  color:rgb(60, 54, 214);
+    transition: color 0.3s ease;
+}
 
+/* === CONTENIDO 2 BLOQUES === */
 
 .content-block {
   display: flex;
@@ -90,22 +80,6 @@ section.history {
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-section.history h2 {
-  font-size: 1.5rem;
-  color: #9e0071;
-  margin-bottom: 1rem;
-}
-
-section.history h1:hover{
-  color:rgb(60, 54, 214);
-    transition: color 0.3s ease;
-}
-section.history h2:hover{
-  color:rgb(60, 54, 214);
-    transition: color 0.3s ease;
-}
-
-
 section.history p {
   margin-bottom: 1.2rem;
 }
@@ -125,18 +99,7 @@ section.history code {
   font-family: monospace;
 }
 
-/* === BLOQUE DE CITA === */
-/*section.history blockquote {
-  background-color: #fface3;
-  padding: 1rem;
-  margin: 1.5rem auto;
-  border-left: 5px solid #e35ac3;
-  font-style: italic;
-  text-align: center;
-  max-width: 500px;
-}*/
-
-/* === LISTA HORIZONTAL DE TEMAS (explosivos, estiércol, etc.) === */
+/* === LISTA HORIZONTAL CON GIFS === */
 .horizontal-list {
   list-style: none;
   padding: 0;
@@ -180,8 +143,6 @@ section.history code {
 .animated-wrapper:hover img {
   opacity: 0;
 }
-
-
 
 .horizontal-list li {
   margin: 0;
@@ -235,7 +196,7 @@ section.history code {
   text-align: center;
 }
 
-/*tarjetas*/
+/* === TARJETAS*/
  .horizontal-cards {
   list-style: none;
   padding: 0;
@@ -325,6 +286,8 @@ section.history code {
   overflow-y: auto;  /* permite scroll si hay exceso */
 }
 
+/* === CITA + FOTOS LATERALES === */
+
 section.history .quote-container {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -361,7 +324,7 @@ section.history blockquote:hover {
   display: block; /* para evitar pequeños problemas con inline */
 }
 
-
+/* === CONTENEDOR DE REACCIÓN HABER-BOSCH === */
 .reaction-container {
   background: #fface3;
   padding: 2rem;
@@ -375,6 +338,20 @@ section.history blockquote:hover {
 .reaction-container h3 {
   color: #c015b2;
   margin-bottom: 1rem;
+}
+button {
+  background-color: #f394e6;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #3d5eed;
+  transform: scale(1.08); /* efecto de zoom suave */
 }
 
 .reaction-container:hover {
@@ -413,6 +390,7 @@ section.history blockquote:hover {
   50% { opacity: 0.3; }
 }
 
+/* === REPERCUSIÓN === */
 .consequences-list {
   list-style: none;
   padding: 0;
@@ -442,21 +420,6 @@ section.history blockquote:hover {
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.5rem;
-}
-
-button {
-  background-color: #f394e6;
-  color: white;
-  border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s ease;
-}
-
-button:hover {
-  background-color: #3d5eed;
-  transform: scale(1.08); /* efecto de zoom suave */
 }
 
 /* === BOTONES DE NAVEGACIÓN === */
@@ -504,6 +467,15 @@ footer {
   animation: fadeOut 0.7s ease-out forwards;
 }
 
+#emoji-cursor {
+  position: fixed;
+  font-size: 24px;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s linear;
+}
+
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -515,11 +487,3 @@ footer {
   }
 }
 
-#emoji-cursor {
-  position: fixed;
-  font-size: 24px;
-  pointer-events: none;
-  z-index: 10000;
-  transform: translate(-50%, -50%);
-  transition: transform 0.05s linear;
-}

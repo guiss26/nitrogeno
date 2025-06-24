@@ -384,7 +384,7 @@ section.history blockquote {
   50% { opacity: 0.3; }
 }
 
-.impact-list {
+.consequences-list {
   list-style: none;
   padding: 0;
   max-width: 500px;
@@ -393,7 +393,7 @@ section.history blockquote {
   color: #333;
 }
 
-.impact-list li {
+.consequences-list li {
   position: relative;
   background: #fae0f2;
   margin-bottom: 15px;
@@ -403,11 +403,11 @@ section.history blockquote {
   transition: background-color 0.3s ease;
 }
 
-.impact-list li:hover {
+.consequences-list li:hover {
   background: #b2ebf2;
 }
 
-.impact-list li::before {
+.consequences-list li::before {
   position: absolute;
   left: 15px;
   top: 50%;

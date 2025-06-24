@@ -1,15 +1,16 @@
 console.log("Hello world")
 
-/**Cambia el color de fondo dinámico según la sección */
-const sections = document.querySelectorAll("section")
+const text = "¿Qué es?"
+let i = 0;
 
-window.addEventListener("scroll", () => {
-    sections.forEach(section => {
-        if( top >= 0 && top < window.innerHeight /2) {
-            document.body.style.backgroundColor = section.dataset.bg || '#fff'
-        }
-    })
-})
+function write(){
+    if(i < text.length){
+        document.getElementById("typewriter").innerHTML += text.charAt(i)
+        i++
+        setTimeout(write, 100)
+    }
+}
+document.addEventListener("DOMContentLoaded", write)
 
 
 //para que el ↑ te lleve arriba con desplazamiento lento

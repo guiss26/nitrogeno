@@ -1,50 +1,127 @@
+/* === ESTILOS GENERALES === */
 body {
-
   background: linear-gradient(to bottom, #f1f1f1, #e0f7fa);
   color: #333;
-  
 }
 
-
+/* === ENCABEZADO === */
 #top {
   background-color: #FF80C4;
 }
 
+/* === SECCIÓN HISTORIA === */
 section.history {
-  max-width: 800px;
+  max-width: 900px;
   margin: 3rem auto;
   padding: 2rem;
   background-color: #f9fbfc;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   font-family: 'Merriweather', serif;
   line-height: 1.7;
   color: #333;
+  text-align: center;
 }
 
 .history h1 {
   font-size: 2.5rem;
   color: #b80075;
   margin-bottom: 1rem;
-  text-align: center;
+}
+.smoke-text {
+  position: relative;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 20px white;
+  z-index: 1;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+/* Efecto de humo usando pseudoelementos */
+.smoke-text::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  width: 120%;
+  height: 150%;
+  background: url('https://i.ibb.co/6Hxx3R7/smoke.gif') no-repeat center;
+  background-size: cover;
+  opacity: 0.4;
+  animation: smokeMove 8s linear infinite;
+  z-index: -1;
+  filter: blur(2px);
+}
+
+
+.content-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  margin: 2rem 0;
+}
+
+.text-block {
+  flex: 1 1 60%;
+  font-family: sans-serif;
+}
+
+.text-block h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.text-block p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.image-block {
+  flex: 1 1 35%;
+}
+
+.image-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 section.history h2 {
   font-size: 1.5rem;
   color: #9e0071;
   margin-bottom: 1rem;
-  text-align: center;
 }
 
 section.history p {
   margin-bottom: 1.2rem;
-  text-align: center;
 }
 
 section.history strong {
   color: #6e0c59;
 }
 
+section.history code {
+  background-color: #e2e8f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+/* === BLOQUE DE CITA === */
+section.history blockquote {
+  background-color: #fface3;
+  padding: 1rem;
+  margin: 1.5rem auto;
+  border-left: 5px solid #e35ac3;
+  font-style: italic;
+  text-align: center;
+  max-width: 500px;
+}
+
+/* === LISTA HORIZONTAL DE TEMAS (explosivos, estiércol, etc.) === */
 .horizontal-list {
   display: flex;
   justify-content: center;
@@ -55,19 +132,73 @@ section.history strong {
   flex-wrap: wrap;
 }
 
+.animated-wrapper {
+  position: relative;
+  width: 160px; /* ajusta según tu diseño */
+  height: auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.animated-wrapper img,
+.animated-wrapper iframe {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.animated-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: none;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.animated-wrapper:hover iframe {
+  display: block;
+}
+
+.animated-wrapper:hover img {
+  opacity: 0;
+}
+
+.horizontal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.2rem; /* un poco más de espacio horizontal */
+  justify-content: center;
+}
+
+.horizontal-list li {
+  margin: 0;
+  padding: 0;
+}
+
 .horizontal-list .item {
   text-align: center;
   max-width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem; /* más espacio que antes, menos que el original */
   transition: transform 0.3s ease;
+  margin: 0;
+  padding: 0;
 }
 
-.horizontal-list img {
+.horizontal-list .item img {
   width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 0.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 0 0.4rem 0; /* margen abajo, para separar imagen y título */
 }
 
 .horizontal-list img:hover {
@@ -78,91 +209,222 @@ section.history strong {
 .horizontal-list .item h3 {
   font-size: 1.1rem;
   color: #8a1454;
-  margin: 0.5rem 0 0.3rem;
   font-weight: 700;
-  font-family: 'Space Grotesk', sans-serif;
   letter-spacing: 0.3px;
   text-transform: uppercase;
-}
-
-.horizontal-list .item {
-  text-align: center;
-  max-width: 160px;
-  transition: transform 0.3s ease;
+  margin: 0 0 0.3rem 0; /* margen abajo para separar título y texto */
+  padding: 0;
+  line-height: 1.3;
 }
 
 .horizontal-list .item p {
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.4;
   color: #444;
-  text-align: left;
-  font-family: 'DM Sans', sans-serif;
   font-weight: 400;
   margin: 0;
   padding: 0 4px;
   text-align: center;
 }
 
-section.history code {
-  background-color: #e2e8f0;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: monospace;
+/*tarjetas*/
+ .horizontal-cards {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 960px;
 }
 
-section.history blockquote {
-  background-color: #eaaed6;
-  padding: 1rem;
-  margin: 1.5rem auto; /* ← centrado horizontal */
-  border-left: 5px solid #e35ac3;
-  font-style: italic;
+.horizontal-cards li {
+  width: 220px;
+  perspective: 1000px; /* necesario para el efecto 3D */
+}
+
+.flip-card {
+  width: 100%;
+  height: 280px;
+  background-color: transparent;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  max-width: 500px; /* ← reduce el ancho */
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
 }
 
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.flip-card-front {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.flip-card-front h3 {
+  margin: 0;
+  color: #8a1454;
+  font-weight: 700;
+}
+
+.flip-card-back {
+  background-color: #f8bbd0;
+  color: #4a114a;
+  transform: rotateY(180deg);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.95rem;
+  border-radius: 12px;
+}
+
+.reaction-container {
+  background: #fde3fd;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.reaction-container h3 {
+  color: #c015b2;
+  margin-bottom: 1rem;
+}
+
+.reaction-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.reaction-list li {
+  background-color: #fbbbf5;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-out;
+  position: relative;
+}
+
+.reaction-list li::before {
+  content: "🧪";
+  margin-right: 0.5rem;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.impact-list {
+  list-style: none;
+  padding: 0;
+  max-width: 500px;
+  margin: 20px auto;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.impact-list li {
+  position: relative;
+  background: #fae0f2;
+  margin-bottom: 15px;
+  padding: 15px 20px 15px 50px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.impact-list li:hover {
+  background: #b2ebf2;
+}
+
+.impact-list li::before {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+}
+
+button {
+  background-color: #f394e6;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #c01677;
+}
+
+/* === BOTONES DE NAVEGACIÓN === */
 .buttons {
-    width: 100%;
-    padding: 24px 0;
-    position: relative;
+  width: 100%;
+  padding: 24px 0;
+  position: relative;
 }
 
 .btn-horizontal {
-    display: flex;
-    justify-content: center;
-    gap: 20px; 
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .btn i {
-    font-size: 30px;
-    color: rgb(73, 72, 72);
+  font-size: 30px;
+  color: rgb(73, 72, 72);
 }
 
 .btn-up {
-    position: absolute;
-    bottom: 24px;
-    right: 24px;
-}
-
-footer {
-    background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493);
-    background-size: cover;
-    text-align: center;
-}
-
-.particle {
   position: absolute;
-  width: 5px;
-  height: 5px;
-  background-color: orange;
-  border-radius: 50%;
-  pointer-events: none;
-  animation: explode 0.6s ease-out forwards;
-  z-index: 9999;
+  bottom: 24px;
+  right: 24px;
 }
 
-@keyframes explode {
-  to {
-    transform: translate(var(--x), var(--y)) scale(0.5);
-    opacity: 0;
-  }
+/* === FOOTER === */
+footer {
+  background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493);
+  background-size: cover;
+  text-align: center;
 }

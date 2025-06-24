@@ -1,13 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const images = document.querySelectorAll(".horizontal-list .item img");
-
-  images.forEach((img) => {
-    img.addEventListener("mouseenter", () => {
-      img.style.transform = "scale(1.05)";
+  function triggerReaction() {
+    const items = document.querySelectorAll(".reaction-list li");
+    items.forEach((item, index) => {
+      setTimeout(() => {
+        item.style.opacity = "1";
+        item.style.transform = "translateY(0)";
+      }, index * 300);
     });
-
-    img.addEventListener("mouseleave", () => {
-      img.style.transform = "scale(1)";
-    });
-  });
-});
+  }

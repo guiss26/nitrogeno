@@ -28,7 +28,7 @@ section.history {
   color: #b80075;
   margin-bottom: 1rem;
 }
-.smoke-text {
+/*.smoke-text {
   position: relative;
   font-size: 3rem;
   color: white;
@@ -37,7 +37,7 @@ section.history {
   animation: fadeIn 2s ease-out forwards;
 }
 
-/* Efecto de humo usando pseudoelementos */
+/* Efecto de humo usando pseudoelementos 
 .smoke-text::before {
   content: '';
   position: absolute;
@@ -51,7 +51,7 @@ section.history {
   animation: smokeMove 8s linear infinite;
   z-index: -1;
   filter: blur(2px);
-}
+}*/
 
 
 .content-block {
@@ -111,7 +111,7 @@ section.history code {
 }
 
 /* === BLOQUE DE CITA === */
-section.history blockquote {
+/*section.history blockquote {
   background-color: #fface3;
   padding: 1rem;
   margin: 1.5rem auto;
@@ -119,7 +119,7 @@ section.history blockquote {
   font-style: italic;
   text-align: center;
   max-width: 500px;
-}
+}*/
 
 /* === LISTA HORIZONTAL DE TEMAS (explosivos, estiércol, etc.) === */
 .horizontal-list {
@@ -309,6 +309,37 @@ section.history blockquote {
   font-size: 0.95rem;
   border-radius: 12px;
 }
+
+section.history .quote-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+section.history blockquote {
+  background-color: #fface3;
+  padding: 1rem;
+  border-left: 5px solid #e35ac3;
+  font-style: italic;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.quote-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  object-fit: contain;
+  background-color: #fff;
+  justify-self: center;
+  display: block; /* para evitar pequeños problemas con inline */
+}
+
 
 .reaction-container {
   background: #fde3fd;

@@ -2,6 +2,7 @@
 body {
   background: linear-gradient(to bottom, #f1f1f1, #e0f7fa);
   color: #333;
+  cursor: none;
 }
 
 /* === ENCABEZADO === */
@@ -23,36 +24,26 @@ section.history {
   text-align: center;
 }
 
-.history h1 {
+/* === TÍTULO Y SUBTITULOS === */
+section.history h1 {
   font-size: 2.5rem;
   color: #b80075;
   margin-bottom: 1rem;
 }
-/*.smoke-text {
-  position: relative;
-  font-size: 3rem;
-  color: white;
-  text-shadow: 0 0 10px white, 0 0 20px white;
-  z-index: 1;
-  animation: fadeIn 2s ease-out forwards;
+
+section.history h2 {
+  font-size: 1.5rem;
+  color: #b80075;
+  margin-bottom: 1rem;
 }
 
-/* Efecto de humo usando pseudoelementos 
-.smoke-text::before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: -10px;
-  width: 120%;
-  height: 150%;
-  background: url('https://i.ibb.co/6Hxx3R7/smoke.gif') no-repeat center;
-  background-size: cover;
-  opacity: 0.4;
-  animation: smokeMove 8s linear infinite;
-  z-index: -1;
-  filter: blur(2px);
-}*/
+section.history h1:hover,
+section.history h2:hover{
+  color:rgb(60, 54, 214);
+    transition: color 0.3s ease;
+}
 
+/* === CONTENIDO 2 BLOQUES === */
 
 .content-block {
   display: flex;
@@ -89,18 +80,16 @@ section.history {
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-section.history h2 {
-  font-size: 1.5rem;
-  color: #9e0071;
-  margin-bottom: 1rem;
-}
-
 section.history p {
   margin-bottom: 1.2rem;
 }
 
 section.history strong {
   color: #6e0c59;
+}
+
+.scientist strong:hover {
+  color: #6c44c3;
 }
 
 section.history code {
@@ -110,26 +99,15 @@ section.history code {
   font-family: monospace;
 }
 
-/* === BLOQUE DE CITA === */
-/*section.history blockquote {
-  background-color: #fface3;
-  padding: 1rem;
-  margin: 1.5rem auto;
-  border-left: 5px solid #e35ac3;
-  font-style: italic;
-  text-align: center;
-  max-width: 500px;
-}*/
-
-/* === LISTA HORIZONTAL DE TEMAS (explosivos, estiércol, etc.) === */
+/* === LISTA HORIZONTAL CON GIFS === */
 .horizontal-list {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
   list-style: none;
   padding: 0;
-  margin: 2rem 0;
+  margin: 0 0 2rem 0;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .animated-wrapper {
@@ -164,15 +142,6 @@ section.history code {
 
 .animated-wrapper:hover img {
   opacity: 0;
-}
-
-.horizontal-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 1.2rem; /* un poco más de espacio horizontal */
-  justify-content: center;
 }
 
 .horizontal-list li {
@@ -227,7 +196,7 @@ section.history code {
   text-align: center;
 }
 
-/*tarjetas*/
+/* === TARJETAS*/
  .horizontal-cards {
   list-style: none;
   padding: 0;
@@ -240,16 +209,18 @@ section.history code {
 }
 
 .horizontal-cards li {
-  width: 220px;
-  perspective: 1000px; /* necesario para el efecto 3D */
+  width: 240px; /* un pelín más ancho si quieres más aire */
+  perspective: 1000px;
 }
 
 .flip-card {
   width: 100%;
-  height: 280px;
+  height: 300px;
   background-color: transparent;
   cursor: pointer;
-  perspective: 1000px;
+  padding: 10px; /* ✅ Espacio interior para que no quede tan al ras */
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
 }
 
 .flip-card-inner {
@@ -279,28 +250,32 @@ section.history code {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* alineamos hacia arriba */
   align-items: center;
   padding: 1rem;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .flip-card-front img {
   width: 100%;
-  height: 160px;
+  height: 150px;
   object-fit: cover;
   border-radius: 12px;
-  margin-bottom: 0.5rem;
+  margin-top: 10px;      /* ✅ espacio respecto al borde superior */
+  margin-bottom: 0.75rem;
 }
 
-.flip-card-front h3 {
+.flip-card-front h2 {
   margin: 0;
   color: #8a1454;
   font-weight: 700;
+  text-align: center;
 }
 
 .flip-card-back {
-  background-color: #f8bbd0;
-  color: #4a114a;
+  background-color: #b2ebf2;
+  color: #611651;
   transform: rotateY(180deg);
   padding: 1rem;
   display: flex;
@@ -308,7 +283,10 @@ section.history code {
   align-items: center;
   font-size: 0.95rem;
   border-radius: 12px;
+  overflow-y: auto;  /* permite scroll si hay exceso */
 }
+
+/* === CITA + FOTOS LATERALES === */
 
 section.history .quote-container {
   display: grid;
@@ -323,10 +301,16 @@ section.history .quote-container {
 section.history blockquote {
   background-color: #fface3;
   padding: 1rem;
+  margin: 1.5rem auto;
   border-left: 5px solid #e35ac3;
   font-style: italic;
-  max-width: 100%;
-  margin: 0 auto;
+  text-align: center;
+  max-width: 500px;
+  border-radius: 12px; /* aquí redondeas los bordes */
+}
+
+section.history blockquote:hover {
+  background: #b2ebf2;
 }
 
 .quote-img {
@@ -340,9 +324,9 @@ section.history blockquote {
   display: block; /* para evitar pequeños problemas con inline */
 }
 
-
+/* === CONTENEDOR DE REACCIÓN HABER-BOSCH === */
 .reaction-container {
-  background: #fde3fd;
+  background: #fface3;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -355,6 +339,24 @@ section.history blockquote {
   color: #c015b2;
   margin-bottom: 1rem;
 }
+button {
+  background-color: #f394e6;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #3d5eed;
+  transform: scale(1.08); /* efecto de zoom suave */
+}
+
+.reaction-container:hover {
+  background: #b2ebf2;
+}
 
 .reaction-list {
   list-style-type: none;
@@ -363,7 +365,7 @@ section.history blockquote {
 }
 
 .reaction-list li {
-  background-color: #fbbbf5;
+  background-color: #fae0f2;
   margin: 0.5rem 0;
   padding: 0.8rem;
   border-radius: 0.5rem;
@@ -379,11 +381,16 @@ section.history blockquote {
   animation: blink 1.5s infinite;
 }
 
+.reaction-list li:hover {
+  background: #b2ebf2;
+}
+
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
 }
 
+/* === REPERCUSIÓN === */
 .consequences-list {
   list-style: none;
   padding: 0;
@@ -413,20 +420,6 @@ section.history blockquote {
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.5rem;
-}
-
-button {
-  background-color: #f394e6;
-  color: white;
-  border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background-color: #c01677;
 }
 
 /* === BOTONES DE NAVEGACIÓN === */
@@ -459,3 +452,38 @@ footer {
   background-size: cover;
   text-align: center;
 }
+
+/* cursor*/
+.cursor-trail {
+  position: fixed;
+  width: 16px;
+  height: 16px;
+  background: rgba(168, 207, 239, 0.25); /* rosa suave (hot pink transparente) */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 0 0 15px rgba(146, 183, 246, 0.4);
+  transform: translate(-50%, -50%);
+  animation: fadeOut 0.7s ease-out forwards;
+}
+
+#emoji-cursor {
+  position: fixed;
+  font-size: 24px;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s linear;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.2) translate(-50%, -50%);
+  }
+}
+

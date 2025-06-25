@@ -23,6 +23,7 @@
 
 <body>
   <main class="container">
+    <div id="emoji-cursor">🌺</div>
     <header id="top">
       <h1>
         <a class="title" href="#"><i class="fa-solid fa-arrow-left"></i> 7.NITROGENO</a>
@@ -89,11 +90,11 @@
         </div>
         <div class="image-block">
           <img src="../public/historia-files/daniel-rutherford.jpg" alt="Daniel Rutherford">
-          <p><strong>Daniel Rutherford</strong></p>
+          <p class="scientist"><strong>Daniel Rutherford</strong></p>
         </div>
       </div>
       <h2>¿Qué tienen en común los explosivos, el estiércol y la agricultura moderna?</h2>
-      <h3>Todos están relacionados con el nitrógeno.</h3>
+      <h2>Todos están relacionados con el nitrógeno.</h2>
 
       <ul class="horizontal-list">
         <li>
@@ -141,7 +142,7 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img src="../public/historia-files/letrina.jpg" alt="Letrina" />
-                <h3>Letrinas</h3>
+                <h2>Letrinas</h2>
               </div>
               <div class="flip-card-back">
                 <p>Las letrinas son sistemas antiguos de eliminación de desechos humanos, que permiten mantener la
@@ -150,32 +151,30 @@
             </div>
           </div>
         </li>
-
-        <li>
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="../public/historia-files/corral.jpg" alt="Corral" />
-                <h3>Corrales</h3>
-              </div>
-              <div class="flip-card-back">
-                <p>El corral es un espacio cerrado donde se mantienen animales domésticos, facilitando su cuidado y
-                  protegiéndolos de depredadores o pérdidas.</p>
-              </div>
-            </div>
-          </div>
-        </li>
-
         <li>
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img src="../public/historia-files/cueva.JPG" alt="Cuevas de Murciélagos" />
-                <h3>Cuevas de Murciélagos</h3>
+                <h2>Cuevas de Murciélagos</h2>
               </div>
               <div class="flip-card-back">
                 <p>Las cuevas de murciélagos son fuentes naturales de nitrógeno debido a la acumulación de guano, que
                   enriquece el suelo y sirve como fertilizante.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="../public/historia-files/corral.jpg" alt="Corral" />
+                <h2>Corrales</h2>
+              </div>
+              <div class="flip-card-back">
+                <p>El corral es un espacio cerrado donde se mantienen animales domésticos, facilitando su cuidado y
+                  protegiéndolos de depredadores o pérdidas.</p>
               </div>
             </div>
           </div>
@@ -191,30 +190,30 @@
       <p>Pero el verdadero desafío era aprovechar el nitrógeno del aire.</br>
         Aunque nos rodea, está en forma de<code>N₂</code>, una molécula muy estable.</p>
 
-      <h3>La revolución: el proceso Haber-Bosch</h3>
-      <p>En el siglo XX, el químico alemán Fritz Haber y el ingeniero Carl Bosch desarrollaron un método para sintetizar
-        fertilizantes a partir del aire.</p>
+      <h2>La revolución: el proceso Haber-Bosch</h2>
+      <p>En el siglo XX, el químico alemán Fritz Haber y el ingeniero Carl Bosch desarrollaron un método para producir
+        amoníaco a partir del aire, sentando las bases de los fertilizantes sintéticos modernos.</p>
       </div>
 
       <div class="quote-container">
         <div>
-  <img src="../public/historia-files/fritz-haber.jpg" alt="Foto izquierda" class="quote-img">
-  <p><strong>Daniel Rutherford</strong></p>
-  </div>
-  <div>
-  <blockquote>
-    N₂ + 3 H₂ → 2 NH₃<br>
-    <small>(Reacción del proceso Haber-Bosch)</small>
-  </blockquote>
-  </div>
-  <div>
-  <img src="../public/historia-files/carl-bosch.JPG" alt="Foto derecha" class="quote-img">
-  <p><strong>Carl Bosch</strong></p>
-</div>
-</div>
+          <img src="../public/historia-files/fritz-haber.jpg" alt="Foto izquierda" class="quote-img">
+          <p class="scientist"><strong>Daniel Rutherford</strong></p>
+        </div>
+        <div>
+          <blockquote>
+            N₂ + 3 H₂ → 2 NH₃<br>
+            <small>(Reacción del proceso Haber-Bosch)</small>
+          </blockquote>
+        </div>
+        <div>
+          <img src="../public/historia-files/carl-bosch.JPG" alt="Foto derecha" class="quote-img">
+          <p class="scientist"><strong>Carl Bosch</strong></p>
+        </div>
+      </div>
 
       <div class="reaction-container">
-        <h3>Reacción de síntesis del amoníaco (NH₃)</h3>
+        <h3>Reacción de síntesis</br>del amoníaco </br>(NH₃)</h3>
         <button onclick="triggerReaction()">Iniciar Reacción</button>
         <ul class="reaction-list">
           <li>Se obtiene NH₃ a partir de N₂ y H₂</li>
@@ -224,7 +223,7 @@
         </ul>
       </div>
 
-      <h3>Repercusión mundial</h3>
+      <h2>Repercusión mundial</h2>
       <p>Gracias a este proceso, se pudo producir fertilizante a gran escala, aumentando la producción de alimentos.</p>
 
       <ul class="consequences-list">

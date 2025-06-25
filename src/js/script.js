@@ -3,6 +3,7 @@ console.log("Hello world")
 const text = "¿Qué es?"
 let i = 0;
 
+// Texto que se escribe solo(efecto máquina de escribir)
 function write(){
     if(i < text.length){
         document.getElementById("typewriter").innerHTML += text.charAt(i)

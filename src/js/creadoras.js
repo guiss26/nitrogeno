@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'creadora1',
             name: 'Guissella',
             photo: 'https://via.placeholder.com/150/8e44ad/FFFFFF?text=Ana', // Reemplazar con URL de la foto real
-            role: 'Desarrolladora Front-end / Maquetación HTML',
-            nitrogenLink: '"Para mí, el nitrógeno en este proyecto es como el código fuente: invisible pero esencial para que todo funcione."',
+            role: 'Scrum master',
+            nitrogenLink: '"Así como el nitrógeno es el 78% del aire que respiramos, el Scrum Master es el 100% del oxígeno que impulsa a tu equipo."',
             wisdom: '"La colaboración es el catalizador que convierte las ideas individuales en una reacción en cadena de éxito."',
             atomPositions: [ // Posiciones relativas para los "átomos de ideas"
                 { top: '10%', left: '15%' },
@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'creadora2',
             name: 'Aday',
             photo: 'https://via.placeholder.com/150/3498db/FFFFFF?text=Maria', // Reemplazar con URL de la foto real
-            role: 'Diseñadora UI/UX / Estilos CSS',
-            nitrogenLink: '"El nitrógeno nos rodea en el aire, y yo me encargué de que nuestra web sea tan envolvente y visible como él."',
+            role: 'Historiadora',
+            nitrogenLink: '"Así como el nitrógeno es fundamental para la vida en la Tierra, Aday ha sido el elemento esencial que ha dado vida a la fascinante historia del nitrógeno en esta página."',
             wisdom: '"Un buen diseño es la interfaz invisible que conecta al usuario con el corazón del contenido."',
             atomPositions: [
                 { top: '25%', left: '10%' },
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'creadora3',
             name: 'Rocío',
             photo: 'https://via.placeholder.com/150/2ecc71/FFFFFF?text=Laura', // Reemplazar con URL de la foto real
-            role: 'Investigadora de Contenido / Redacción',
+            role: 'Investigadora',
             nitrogenLink: '"Descubrir los secretos del nitrógeno fue tan fascinante como ver cómo nuestras palabras daban vida a la información."',
             wisdom: '"La claridad es el oxígeno de la comunicación; asegúrate de que tus mensajes respiren libertad."',
             atomPositions: [

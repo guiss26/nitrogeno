@@ -575,17 +575,17 @@ footer {
 
   .flip-card {
     width: 90%;
-    height: 400px;
+    height: 300px;
   }
 
   .horizontal-cards {
     grid-template-columns: 1fr; /*cambia de 2 a una carta por fila*/
   }
 
-  .flip-card {
+  /*.flip-card {
     width: 90%;
     height: 450px;
-  }
+  }*/
   
 }
 

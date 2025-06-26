@@ -267,83 +267,93 @@ footer p:first-child {
 
 /*--- RESPONSIVE ---*/
 @media only screen and (max-width: 945px){/*768px, 607px para el .container-section*/
+    
     #top {
-            font-size: 55%;
-            position: relative;
-            z-index: 1;
-        }
+        font-size: 55%;
+        position: relative;
+        z-index: 1;
+    }
     
-        label #btn {
-            display: block;
-        }
+    label #btn {
+        display: block;
+    }
     
-        .menu-item .menu-links {
-            display: none;
-        }
+    .menu-item .menu-links {
+        display: none;
+    }
     
         /**/
-        .menu {
-            display: block;
+    .menu {
+        display: block;
             /* z-index: 9999; */
-            position: absolute;
-            width: 100%;
-            box-sizing: border-box;
-            top: 100%;
-            left: 0;
-            display: none;
-            text-align: center;
-            transition: all .5s;
-            /* z-index: 10; */
-            z-index: 100;
-        }
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        top: 100%;
+        left: 0;
+        display: none;
+        text-align: center;
+        transition: all .5s;
+        /* z-index: 10; */
+        z-index: 100;
+    }
     
-        .top .menu li {
-            display: block;
-            margin: 50px 0;
-            line-height: 30px;
-        }
+    .top .menu li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
     
-        .menu li a {
-            font-size: 20px;
-        }
+    .menu li a {
+        font-size: 20px;
+    }
     
-        .menu-item {
-            background: #fddbde;
-        }
+    .menu-item {
+        background: #fddbde;
+    }
     
-        .menu-item:hover {
-            background-color: #dfcdce;
-        }
+    .menu-item:hover {
+        background-color: #dfcdce;
+    }
     
-        #check:checked~.menu {
-            display: block;
-        }
+    #check:checked~.menu {
+        display: block;
+    }
     
-        label #cancel {
-            display: none;
-        }
+    label #cancel {
+        display: none;
+    }
 
-        #check:checked~ul {
-            width: 100%;
-        }
+    #check:checked~ul {
+        width: 100%;
+    }
     
-        #check:checked~label #btn {
-            display: none;
-        }
+    #check:checked~label #btn {
+        display: none;
+    }
     
-        #check:checked~label #cancel {
-            display: block;
-        }
+    #check:checked~label #cancel {
+        display: block;
+    }
     
-        #typewriter {
+        /* #typewriter {
             z-index: 1;
             position: relative;
-        }
+        } */
     
-        .que-es-section {
-            padding-top: 120px;
+    .que-es-section {
+        padding-top: 120px;
+    }
+
+    @media only screen and (max-width: 870px){/*870px*/
+        /**/
+        .donde-section {
+            flex-wrap: wrap;
         }
+    }
 }
+
+
 
 /*FALTA .container-section RESPONSIVE
    - sections responsive 

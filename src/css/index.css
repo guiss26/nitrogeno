@@ -347,8 +347,13 @@ footer p:first-child {
 
     @media only screen and (max-width: 870px){/*870px*/
         /**/
-        .donde-section {
-            flex-wrap: wrap;
+        .donde-box {
+            flex-wrap: wrap;/*cambiar*/
+            flex-direction: column-reverse;
+        }
+
+        .donde-list {
+            
         }
     }
 }

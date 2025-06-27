@@ -63,7 +63,7 @@ body {
 }
 
 .button-game:hover {
-    background-color: #ff50c8; /
+    background-color: #ff50c8; 
     transform:scale(1.03);
     box-shadow: 0 0 12px rgba(255, 42, 170, 0.6); 
 }

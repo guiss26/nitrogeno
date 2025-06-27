@@ -2,9 +2,12 @@ export class Tile {
   constructor(gridElement) {
     this.tileElement = document.createElement("div");
     this.tileElement.classList.add("tile");
-    this.setValue(Math.random() > 0.5 ? 2 : 4);
-    gridElement.append(this.tileElement);
-  }
+    const initialMolecules = ["N", "NO"];
+    const molecule = Math.random() > 0.5 ? initialMolecules[0] : initialMolecules[1];
+    this.setValue(molecule);
+      gridElement.append(this.tileElement);
+}
+
 
   setValue(value) {
     this.value = value;

@@ -22,6 +22,22 @@ body {
     margin: 20px;
 }
 
+.button-game {
+    display: block;                  
+    margin: 40px auto;               
+    padding: 2.0em 3.2em;           
+    background-color: #FF2AAA;
+    border: 1px solid #000;
+    border-radius: 8px;              
+    font-family: 'Space Mono', monospace;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    width: fit-content;           
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
 .collapsible1, .collapsible2 {
     width: 600px; 
     box-sizing: border-box;
@@ -35,7 +51,23 @@ body {
     text-align: center;
     outline: none;
     font-size: 18px;
+    border: 1px solid #000;
+    border-radius: 8px; 
 }
+
+.box-desc {
+    display: flex;
+    justify-content: space-around; 
+    width: 100%;
+    padding-top: 1px;
+}
+
+.button-game:hover {
+    background-color: #ff50c8; 
+    transform:scale(1.03);
+    box-shadow: 0 0 12px rgba(255, 42, 170, 0.6); 
+}
+
 
 .content1{
     max-width: 600px;  
@@ -51,12 +83,13 @@ body {
     background-color: white;
     padding-top: 4px;
     padding-bottom: 4px;
-    padding-left: 18px;
+    padding-left: 44px;
     text-align: start;
 }
 
 .content1, .content2 {
     max-height: 0;
+    padding-top: 4px;
     overflow: hidden;
     transition: max-height 0.5s ease-out, padding 0.5s ease;
     background-color: white;
@@ -77,6 +110,7 @@ body {
     margin: 20px;
 }
 
+<<<<<<< HEAD
 #game-board {
     --cell-size: 20vmin;
     --cell-gap: 2vmin;
@@ -128,6 +162,8 @@ body {
     height: 100vh;
 }
 
+=======
+>>>>>>> 7ce9f897a154206c768c9a963694802e7a665556
 .buttons {
     display: flex;
     justify-content: center; 
@@ -150,7 +186,6 @@ body {
 
 .btn-up{
     position: absolute;
-    /* position: fixed; */
     bottom: 24px;
     right: 24px;
 

@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'creadora2',
             name: 'Aday',
-            photo: 'https://via.placeholder.com/150/3498db/FFFFFF?text=Maria', // Reemplazar con URL de la foto real
+            photo: '',// Reemplazar con URL de la foto real
             role: 'Historiadora',
             nitrogenLink: '"Así como el nitrógeno es fundamental para la vida en la Tierra, Aday ha sido el elemento esencial que ha dado vida a la fascinante historia del nitrógeno en esta página."',
             wisdom: '"Un buen diseño es la interfaz invisible que conecta al usuario con el corazón del contenido."',

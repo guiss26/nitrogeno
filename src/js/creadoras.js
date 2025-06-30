@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'creadora4',
             name: 'Ana',
             photo: 'https://via.placeholder.com/150/f39c12/FFFFFF?text=Sofia', // Reemplazar con URL de la foto real
-            role: 'Programadora JavaScript / Interactividad',
+            role: 'Creadora',
             nitrogenLink: '"Hacer que el nitrógeno cobre vida con el código fue un reto tan emocionante como ver una reacción química controlada."',
             wisdom: '"No hay bug que una buena taza de café y un par de ojos frescos no puedan resolver."',
             atomPositions: [
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'creadora5',
             name: 'Larysa',
             photo: 'https://via.placeholder.com/150/9b59b6/FFFFFF?text=Elena', // Reemplazar con URL de la foto real
-            role: 'Coordinadora de Proyecto / Control de Calidad',
+            role: 'Creadora de Interactividad',
             nitrogenLink: '"Organizar este proyecto fue como equilibrar el ciclo del nitrógeno: vital para que todo fluyera sin problemas."',
             wisdom: '"Un equipo unido no solo supera obstáculos, sino que los transforma en escalones hacia el éxito."',
             atomPositions: [
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'creadora6',
             name: 'Paloma',
             photo: 'https://via.placeholder.com/150/e74c3c/FFFFFF?text=Paula', // Reemplazar con URL de la foto real
-            role: 'Editora de Contenido / Accesibilidad',
+            role: 'Pestaña creadora',
             nitrogenLink: '"Asegurar que la información del nitrógeno fuera clara y accesible para todos fue mi misión principal."',
             wisdom: '"La inclusión no es una opción, es la base de un diseño web realmente potente y universal."',
             atomPositions: [

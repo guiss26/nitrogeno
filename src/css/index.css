@@ -13,7 +13,6 @@
 body {
     height: 100vh;
     width: 100%;
-
 }
 
 .container {
@@ -52,6 +51,22 @@ h1 {
     font-size: 30px;
     color: rgb(73, 72, 72);
 }
+
+/*añadido*/
+/*input*/
+label #btn,
+label #cancel {
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+/*fin añadido*/
 
 .menu {
     display: flex;
@@ -104,6 +119,31 @@ section img{
     position: relative;
     padding: 70px 8%;
 }
+
+/* .que-es-section { prueba
+    padding-top: 120px;
+} */
+
+/*añadido --- opcional*/
+#typewriter::after {
+    content: "|";
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+/*fin añadido*/
 
 .que-es-section h2{
     font-size: 30px;
@@ -177,7 +217,7 @@ h3{
     margin: 17px 0;
 }
 
-/*Botonoes*/
+/*Botones*/
 .buttons{
     width: 100%;
     padding: 50px 0 30px 0;
@@ -224,3 +264,157 @@ footer p:first-child {
     height: 50px;
     margin-bottom: 20px;
 }
+
+/*--- RESPONSIVE ---*/
+@media only screen and (max-width: 945px){/*768px, 607px para el .container-section*/
+    
+    #top {
+        font-size: 55%;
+        position: relative;
+        z-index: 1;
+    }
+    
+    label #btn {
+        display: block;
+    }
+    
+    .menu-item .menu-links {
+        display: none;
+    }
+    
+        /**/
+    .menu {
+        display: block;
+            /* z-index: 9999; */
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        top: 100%;
+        left: 0;
+        display: none;
+        text-align: center;
+        transition: all .5s;
+        /* z-index: 10; */
+        z-index: 100;
+    }
+    
+    .top .menu li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    
+    .menu li a {
+        font-size: 20px;
+    }
+    
+    .menu-item {
+        background: #fddbde;
+    }
+    
+    .menu-item:hover {
+        background-color: #dfcdce;
+    }
+    
+    #check:checked~.menu {
+        display: block;
+    }
+    
+    label #cancel {
+        display: none;
+    }
+
+    #check:checked~ul {
+        width: 100%;
+    }
+    
+    #check:checked~label #btn {
+        display: none;
+    }
+    
+    #check:checked~label #cancel {
+        display: block;
+    }
+    
+        /* #typewriter {
+            z-index: 1;
+            position: relative;
+        } */
+    
+    .que-es-section {
+        padding-top: 120px;
+    }
+
+    @media only screen and (max-width: 870px){
+        .donde-box {
+            flex-wrap: wrap;/*cambiar*/
+            flex-direction: column-reverse;
+        }
+
+        .donde-list, .para-que-list {
+            width: 600px;
+        }
+
+        .box-cont-para-que {
+            flex-wrap: wrap;/*realmente sirve?*/
+            flex-direction: column;
+        }
+
+       @media only screen and (max-width: 678px) {
+            .donde-list, .para-que-list{
+                width: 500px;
+            }
+            @media only screen and (max-width: 565px){
+                .donde-list, .para-que-list{
+                    width: 400px;
+                }
+                @media only screen and (max-width: 455px){
+                    .donde-list, .donde-img, .para-que-list, .para-img{
+                        width: 350px;
+                    }
+                    @media only screen and (max-width: 405px) {
+                        .title{
+                            font-size: 29px;
+                        }
+
+                        .donde-img, .para-img{
+                            height: 250px;
+                        }
+
+                        .donde-list, .donde-img, .para-que-list, .para-img{
+                            width: 320px;
+                        }
+                        @media only screen and (max-width: 365px){
+                            .title{
+                                font-size: 27px;
+                            }
+                            .donde-img, .para-img{
+                                height: 230px;
+                            }
+
+                            .donde-list, .donde-img, .para-que-list, .para-img{
+                                width: 300px;
+                            }
+                        }
+                    }
+                }
+            }
+       }
+    }
+}
+
+
+
+/*FALTA .container-section RESPONSIVE
+   - sections responsive 
+      -> img responsive ✅
+      -> uls responsive flex-wrap ✅
+      -> posible carrusel responsive (?)*/
+/*FALTA QUE EL h2 #typewriter aparezca como antes*/
+/*FALTA CARRUSEL IMG EN section donde y para*/
+
+
+
+/*Añadir cursor flor(?)*/
+/*Cambia color Nitrogeno titulo?*/
+/*Todos los navs del mismo color?*/

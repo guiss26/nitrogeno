@@ -2,7 +2,7 @@ body {
     background-color: #f4f9f4;
 }
 
-#top{
+#top {
     background-color: #FF2AAA;
 }
 
@@ -16,6 +16,12 @@ body {
     color: #FF2AAA;
 }
 
+@media (max-width: 768px) {
+    .headline {
+        font-size: 32px;
+    }
+}
+
 .disc {
     align-items: center;
     text-align: center;
@@ -23,27 +29,34 @@ body {
 }
 
 .button-game {
-    display: block;                  
-    margin: 40px auto;               
-    padding: 2.0em 3.2em;           
+    display: block;
+    margin: 40px auto;
+    padding: 2.0em 3.2em;
     background-color: #FF2AAA;
     border: 1px solid #000;
-    border-radius: 8px;              
+    border-radius: 8px;
     font-family: 'Space Mono', monospace;
     font-size: 1.5rem;
     cursor: pointer;
     text-decoration: none;
     color: black;
-    width: fit-content;           
+    width: fit-content;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.button-game:hover {
+    background-color: #ff50c8;
+    transform: scale(1.03);
+    box-shadow: 0 0 12px rgba(255, 42, 170, 0.6);
+}
+
 .collapsible1, .collapsible2 {
-    width: 600px; 
+    width: 100%;
+    max-width: 600px;
     box-sizing: border-box;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
     background-color: #FF2AAA;
     cursor: pointer;
     padding: 18px;
@@ -52,64 +65,45 @@ body {
     outline: none;
     font-size: 18px;
     border: 1px solid #000;
-    border-radius: 8px; 
-}
-
-.box-desc {
-    display: flex;
-    justify-content: space-around; 
-    width: 100%;
-    padding-top: 1px;
-}
-
-.button-game:hover {
-    background-color: #ff50c8; 
-    transform:scale(1.03);
-    box-shadow: 0 0 12px rgba(255, 42, 170, 0.6); 
-}
-
-
-.content1{
-    max-width: 600px;  
-    background-color: white;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 44px;
-    text-align: start;
-}
-
-.content2 {
-    max-width: 600px;  
-    background-color: white;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 44px;
-    text-align: start;
+    border-radius: 8px;
+    margin: 0 auto;
 }
 
 .content1, .content2 {
-    max-height: 0;
+    max-width: 600px;
+    background-color: white;
     padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 44px;
+    text-align: start;
+    max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out, padding 0.5s ease;
-    background-color: white;
-    text-align: start;
 }
 
 .content1.active, .content2.active {
-    max-height: 500px; 
+    max-height: 500px;
     padding-top: 12px;
     padding-bottom: 12px;
 }
 
+.box-desc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 1px;
+}
+
 .two-columns {
     display: flex;
-    gap: 20px; 
-    flex-wrap: wrap; 
-    justify-content: center; 
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 20px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #game-board {
     --cell-size: 20vmin;
@@ -164,10 +158,20 @@ body {
 
 =======
 >>>>>>> 7ce9f897a154206c768c9a963694802e7a665556
+=======
+@media (max-width: 768px) {
+    .two-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+>>>>>>> 89f628e116b58621ce43f62a44b0ae74c9760f47
 .buttons {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
     padding: 50px 0 30px 0;
     position: relative;
 }
@@ -176,22 +180,47 @@ body {
     margin: 0;
 }
 
-.btn i{
+.btn i {
     font-size: 30px;
 }
 
 .btn i:hover {
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
 
-.btn-up{
+.btn-up {
     position: absolute;
     bottom: 24px;
     right: 24px;
-
 }
+
 footer {
     background-image: url(../../public/comun/background-footer.png);
     background-size: cover;
     text-align: center;
+}
+
+/* Дополнительные адаптивные правки */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .hero-text {
+        font-size: 1.2rem;
+    }
+
+    .button-game {
+        padding: 1.2em 2em;
+        font-size: 1.2rem;
+    }
+
+    .content1, .content2 {
+        padding-left: 20px;
+    }
+
+    .btn-up {
+        right: 16px;
+        bottom: 16px;
+    }
 }

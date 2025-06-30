@@ -22,7 +22,6 @@ body {
     border-radius: 1vmin;
 }
 
-/* Responsive for small screens */
 @media (max-width: 500px) {
     #game-board {
         grid-template-columns: repeat(4, 18vmin);
@@ -72,7 +71,6 @@ body {
     }
 }
 
-/* Popup overlay */
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -86,7 +84,6 @@ body {
     z-index: 1000;
 }
 
-/* Popup window */
 .popup-window {
     background-color: #f4f9f4;
     padding: 30px 40px;
@@ -98,14 +95,12 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-/* Popup message */
 .popup-message {
     font-size: 1.2rem;
     margin-bottom: 25px;
     color: #222;
 }
 
-/* Popup buttons */
 .popup-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -132,7 +127,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Popup mobile adjustments */
 @media (max-width: 500px) {
     .popup-window {
         padding: 20px 25px;

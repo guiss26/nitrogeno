@@ -102,12 +102,6 @@ body {
     margin: 20px;
 }
 
-@media (max-width: 768px) {
-    .two-columns {
-        flex-direction: column;
-        align-items: center;
-    }
-}
 
 #game-board {
     --cell-size: 20vmin;
@@ -159,6 +153,16 @@ body {
     align-items: center;
     height: 100vh;
 }
+
+
+
+@media (max-width: 768px) {
+    .two-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 
 .buttons {
     display: flex;

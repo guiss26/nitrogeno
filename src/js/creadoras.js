@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'creadora1',
             name: 'Guissella',
-            photo: 'https://via.placeholder.com/150/8e44ad/FFFFFF?text=Ana', // Reemplazar con URL de la foto real
             role: 'Scrum master',
             nitrogenLink: '"Así como el nitrógeno es el 78% del aire que respiramos, el Scrum Master es el 100% del oxígeno que impulsa a tu equipo."',
             wisdom: '"La colaboración es el catalizador que convierte las ideas individuales en una reacción en cadena de éxito."',
@@ -26,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'creadora2',
             name: 'Aday',
-            photo: 'https://via.placeholder.com/150/3498db/FFFFFF?text=Maria', // Reemplazar con URL de la foto real
+            photo: '',// Reemplazar con URL de la foto real
             role: 'Historiadora',
             nitrogenLink: '"Así como el nitrógeno es fundamental para la vida en la Tierra, Aday ha sido el elemento esencial que ha dado vida a la fascinante historia del nitrógeno en esta página."',
             wisdom: '"Un buen diseño es la interfaz invisible que conecta al usuario con el corazón del contenido."',
@@ -39,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'creadora3',
             name: 'Rocío',
-            photo: 'https://via.placeholder.com/150/2ecc71/FFFFFF?text=Laura', // Reemplazar con URL de la foto real
+            photo: '', // Reemplazar con URL de la foto real
             role: 'Investigadora',
             nitrogenLink: '"Descubrir los secretos del nitrógeno fue tan fascinante como ver cómo nuestras palabras daban vida a la información."',
             wisdom: '"La claridad es el oxígeno de la comunicación; asegúrate de que tus mensajes respiren libertad."',

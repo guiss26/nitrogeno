@@ -1,24 +1,42 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: #f4f9f4;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 #game-board {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(4,20vmin);
+    grid-template-columns: repeat(4, 20vmin);
     grid-template-rows: repeat(4, 20vmin);
     gap: 2vmin;
     border-radius: 1vmin;
+}
+
+/* Responsive for small screens */
+@media (max-width: 500px) {
+    #game-board {
+        grid-template-columns: repeat(4, 18vmin);
+        grid-template-rows: repeat(4, 18vmin);
+        gap: 1.5vmin;
+    }
+
+    .tile {
+        width: 18vmin;
+        height: 18vmin;
+        font-size: 6.5vmin;
+        top: calc(var(--y)*(18vmin + 1.5vmin));
+        left: calc(var(--x)*(18vmin + 1.5vmin));
+    }
 }
 
 .cell {
@@ -26,7 +44,7 @@ body{
     border-radius: 1vmin;
 }
 
-.tile{
+.tile {
     --y: 0;
     --x: 0;
     position: absolute;
@@ -47,74 +65,101 @@ body{
     animation: show 200ms;
 }
 
-@keyframes show{
-    0%{
+@keyframes show {
+    0% {
         opacity: 0.5;
-        transform: scale (0);
+        transform: scale(0);
     }
 }
 
-/* Фон, который затемняет экран */
+/* Popup overlay */
 .popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* Чтобы быть поверх всего */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
-/* Окошко самого попапа */
+/* Popup window */
 .popup-window {
     background-color: #f4f9f4;
-  padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
-  max-width: 400px;
-  width: 90%;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Текст сообщения */
+/* Popup message */
 .popup-message {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
-  color: #222;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #222;
 }
 
-/* Кнопки */
+/* Popup buttons */
+.popup-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
 .popup-button {
-  margin: 0 10px;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 7px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  color: white;
-}
-
-/* Синий стиль для кнопки "Volver atrás" */
-.btn-back {
+    flex: 1 1 120px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 7px;
     background-color: #FF2AAA;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    max-width: 200px;
 }
 
-.btn-back:hover {
-    background-color: #ffa7dc;
+.popup-button:hover {
+    background-color: #ff55cc;
+    transform: scale(1.05);
 }
 
-/* Зелёный стиль для кнопки "Creadores" */
-.btn-creators {
-    background-color: #FF2AAA;
+/* Popup mobile adjustments */
+@media (max-width: 500px) {
+    .popup-window {
+        padding: 20px 25px;
+    }
 
+    .popup-message {
+        font-size: 1rem;
+    }
+
+    .popup-button {
+        flex: 1 1 100%;
+        font-size: 0.95rem;
+        padding: 10px 20px;
+    }
 }
+@media (max-width: 500px) {
+  #game-board {
+    grid-template-columns: repeat(4, 16vmin);
+    grid-template-rows: repeat(4, 16vmin);
+    gap: 1vmin;
+  }
 
-.btn-creators:hover {
-    background-color: #ffa7dc;
+  .tile {
+    width: 16vmin;
+    height: 16vmin;
+    font-size: 6vmin;
+    top: calc(var(--y) * (16vmin + 1vmin));
+    left: calc(var(--x) * (16vmin + 1vmin));
+  }
 }
-

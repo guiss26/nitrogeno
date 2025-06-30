@@ -72,7 +72,7 @@ body {
 .content1, .content2 {
     max-width: 600px;
     background-color: white;
-    padding-bottom: 4px;
+    padding-top: 4px;
     padding-left: 44px;
     text-align: start;
     max-height: 0;

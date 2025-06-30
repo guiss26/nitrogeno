@@ -76,40 +76,48 @@ export class Cell {
     }
   }
 
-  showWinPopup() {
-    if (document.getElementById("win-popup")) return;
+showWinPopup() {
+  if (document.getElementById("win-popup")) return;
 
-    const overlay = document.createElement("div");
-    overlay.id = "win-popup";
-    overlay.classList.add("popup-overlay");
+  const overlay = document.createElement("div");
+  overlay.id = "win-popup";
+  overlay.classList.add("popup-overlay");
 
-    const popup = document.createElement("div");
-    popup.classList.add("popup-window");
+  const popup = document.createElement("div");
+  popup.classList.add("popup-window");
 
-    const message = document.createElement("p");
-    message.classList.add("popup-message");
-    message.textContent = `¡Felicitaciones! ¡Has creado ${WIN_VALUE} y ganó el juego!`;
+  const message = document.createElement("p");
+  message.classList.add("popup-message");
+  message.textContent = `¡Felicitaciones! ¡Has creado ${WIN_VALUE} y ganó el juego!`;
 
-    const btnBack = document.createElement("button");
-    btnBack.classList.add("popup-button", "btn-back");
-    btnBack.textContent = "Volver atrás";
+  // СОЗДАЕМ КОНТЕЙНЕР ДЛЯ КНОПОК
+  const buttonsContainer = document.createElement("div");
+  buttonsContainer.classList.add("popup-buttons");
 
-    const btnCreators = document.createElement("button");
-    btnCreators.classList.add("popup-button", "btn-creators");
-    btnCreators.textContent = "Creadoras";
+  const btnBack = document.createElement("button");
+  btnBack.classList.add("popup-button", "btn-back");
+  btnBack.textContent = "Volver atrás";
 
-    btnBack.addEventListener("click", () => {
-      window.location.href = "../pages/juego.html";
-    });
+  const btnCreators = document.createElement("button");
+  btnCreators.classList.add("popup-button", "btn-creators");
+  btnCreators.textContent = "Creadoras";
 
-    btnCreators.addEventListener("click", () => {
-      window.open("../pages/creadoras.html", "_blank");
-    });
+  btnBack.addEventListener("click", () => {
+    window.location.href = "../pages/juego.html";
+  });
 
-    popup.appendChild(message);
-    popup.appendChild(btnBack);
-    popup.appendChild(btnCreators);
-    overlay.appendChild(popup);
-    document.body.appendChild(overlay);
-  }
+  btnCreators.addEventListener("click", () => {
+    window.open("../pages/creadoras.html", "_blank");
+  });
+
+  // ВСТАВЛЯЕМ КНОПКИ В КОНТЕЙНЕР
+  buttonsContainer.appendChild(btnBack);
+  buttonsContainer.appendChild(btnCreators);
+
+  // ДОБАВЛЯЕМ ВСЁ В POPUP
+  popup.appendChild(message);
+  popup.appendChild(buttonsContainer);
+  overlay.appendChild(popup);
+  document.body.appendChild(overlay);
+}
 }

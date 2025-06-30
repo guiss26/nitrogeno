@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f4f9f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#game-board {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4,20vmin);
+    grid-template-rows: repeat(4, 20vmin);
+    gap: 2vmin;
+    border-radius: 1vmin;
+}
+
+.cell {
+    background-color: #444;
+    border-radius: 1vmin;
+}
+
+.tile{
+    --y: 0;
+    --x: 0;
+    position: absolute;
+    top: calc(var(--y)*(20vmin + 2vmin));
+    left: calc(var(--x)*(20vmin + 2vmin));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 1vmin;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7.5vmin;
+    font-weight: bold;
+    background-color: #FF2AAA;
+    color: black;
+    transition: 100ms;
+    animation: show 200ms;
+}
+
+@keyframes show{
+    0%{
+        opacity: 0.5;
+        transform: scale (0);
+    }
+}
+
+/* Фон, который затемняет экран */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Чтобы быть поверх всего */
+}
+
+/* Окошко самого попапа */
+.popup-window {
+    background-color: #f4f9f4;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Текст сообщения */
+.popup-message {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+/* Кнопки */
+.popup-button {
+  margin: 0 10px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 7px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+/* Синий стиль для кнопки "Volver atrás" */
+.btn-back {
+    background-color: #FF2AAA;
+}
+
+.btn-back:hover {
+    background-color: #ffa7dc;
+}
+
+/* Зелёный стиль для кнопки "Creadores" */
+.btn-creators {
+    background-color: #FF2AAA;
+
+}
+
+.btn-creators:hover {
+    background-color: #ffa7dc;
+}
+

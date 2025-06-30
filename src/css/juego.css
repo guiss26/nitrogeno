@@ -72,7 +72,6 @@ body {
 .content1, .content2 {
     max-width: 600px;
     background-color: white;
-    padding-top: 4px;
     padding-bottom: 4px;
     padding-left: 44px;
     text-align: start;
@@ -105,6 +104,16 @@ body {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+@media (max-width: 768px) {
+    .two-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+>>>>>>> 4e82bb8a2a845f2a98a72dcea01deeccf095e43c
 #game-board {
     --cell-size: 20vmin;
     --cell-gap: 2vmin;
@@ -156,6 +165,7 @@ body {
     height: 100vh;
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 7ce9f897a154206c768c9a963694802e7a665556
 =======
@@ -167,6 +177,8 @@ body {
 }
 
 >>>>>>> 89f628e116b58621ce43f62a44b0ae74c9760f47
+=======
+>>>>>>> 4e82bb8a2a845f2a98a72dcea01deeccf095e43c
 .buttons {
     display: flex;
     justify-content: center;
@@ -200,7 +212,7 @@ footer {
     text-align: center;
 }
 
-/* Дополнительные адаптивные правки */
+
 @media (max-width: 768px) {
     .menu {
         flex-direction: column;

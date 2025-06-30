@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'creadora3',
             name: 'Rocío',
-            photo: 'https://via.placeholder.com/150/2ecc71/FFFFFF?text=Laura', // Reemplazar con URL de la foto real
+            photo: '', // Reemplazar con URL de la foto real
             role: 'Investigadora',
             nitrogenLink: '"Descubrir los secretos del nitrógeno fue tan fascinante como ver cómo nuestras palabras daban vida a la información."',
             wisdom: '"La claridad es el oxígeno de la comunicación; asegúrate de que tus mensajes respiren libertad."',

@@ -8,6 +8,11 @@
     });
   }
 
+  document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector(".reaction-container button");
+  btn.addEventListener("click", triggerReaction);
+});
+
  document.addEventListener("mousemove", (e) => {
   // Mueve el emoji
   const emojiCursor = document.getElementById("emoji-cursor");
@@ -41,3 +46,27 @@ const text = document.querySelector('.hover-sound');
     audio.currentTime = 0; // Reinicia desde el inicio
     audio.play();
   });
+
+  const textDaniel = document.querySelector('.image-block');
+  const audioDaniel = document.getElementById('danielAudio');
+
+  textDaniel.addEventListener('mouseenter', () => {
+    audioDaniel.currentTime = 0; // Reinicia desde el inicio
+    audioDaniel.play();
+  });
+
+const textFritz = document.querySelector('.fritz');
+const audioFritz = document.getElementById('fritzAudio');
+
+textFritz.addEventListener('mouseenter', () => {
+  audioFritz.currentTime = 0; // Reinicia desde el inicio
+  audioFritz.play();
+});
+
+const textCarl = document.querySelector('.carl');
+const audioCarl = document.getElementById('carlAudio');
+
+textCarl.addEventListener('mouseenter', () => {
+  audioCarl.currentTime = 0; // Reinicia desde el inicio
+  audioCarl.play();
+});

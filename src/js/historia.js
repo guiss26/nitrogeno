@@ -40,33 +40,33 @@ function scrollToTop(event){
     })
 }
 const text = document.querySelector('.hover-sound');
-  const audio = document.getElementById('hoverAudio');
+const audio = document.getElementById('hoverAudio');
 
-  text.addEventListener('mouseenter', () => {
-    audio.currentTime = 0; // Reinicia desde el inicio
-    audio.play();
-  });
+text.addEventListener('click', () => {
+  audio.currentTime = 0; // Reinicia desde el inicio
+  audio.play();
+});
 
-  const textDaniel = document.querySelector('.image-block');
-  const audioDaniel = document.getElementById('danielAudio');
+const textDaniel = document.querySelector('.daniel-pic');
+const audioDaniel = document.getElementById('danielAudio');
 
-  textDaniel.addEventListener('mouseenter', () => {
-    audioDaniel.currentTime = 0; // Reinicia desde el inicio
-    audioDaniel.play();
-  });
+textDaniel.addEventListener('click', () => {
+  audioDaniel.currentTime = 0; // Reinicia desde el inicio
+  audioDaniel.play();
+});
 
-const textFritz = document.querySelector('.fritz');
+const textFritz = document.querySelector('.fritz-pic');
 const audioFritz = document.getElementById('fritzAudio');
 
-textFritz.addEventListener('mouseenter', () => {
+textFritz.addEventListener('click', () => {
   audioFritz.currentTime = 0; // Reinicia desde el inicio
   audioFritz.play();
 });
 
-const textCarl = document.querySelector('.carl');
+const textCarl = document.querySelector('.carl-pic');
 const audioCarl = document.getElementById('carlAudio');
 
-textCarl.addEventListener('mouseenter', () => {
+textCarl.addEventListener('click', () => {
   audioCarl.currentTime = 0; // Reinicia desde el inicio
   audioCarl.play();
 });

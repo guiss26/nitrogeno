@@ -24,6 +24,15 @@ section.history {
   text-align: center;
 }
 
+/* === MANITA PARA EL CURSOR DE PERSONAJES ===*/
+.image-block img,
+.fritz-pic,
+.carl-pic {
+  cursor: pointer;
+}
+
+
+
 /* === TÍTULO Y SUBTITULOS === */
 section.history h1 {
   font-size: 2.5rem;

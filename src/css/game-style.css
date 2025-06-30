@@ -105,7 +105,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
+    gap: 20px; /* ✅ увеличили gap до 20px между кнопками */
     margin-top: 20px;
 }
 
@@ -120,12 +120,16 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     max-width: 200px;
+
+    display: block;     /* ✅ исправлено: убрано flex, поставлено block */
+    gap: unset;         /* ✅ убрали ненужный gap внутри кнопки */
 }
 
 .popup-button:hover {
     background-color: #ff55cc;
     transform: scale(1.05);
 }
+
 
 @media (max-width: 500px) {
     .popup-window {

@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'creadora1',
             name: 'Guissella',
-            photo: 'https://via.placeholder.com/150/8e44ad/FFFFFF?text=Ana', // Reemplazar con URL de la foto real
+            photo: '/public/comun/Guissella.png', // Reemplazar con URL de la foto real
             role: 'Scrum master',
             nitrogenLink: '"Así como el nitrógeno es el 78% del aire que respiramos, el Scrum Master es el 100% del oxígeno que impulsa a tu equipo."',
             wisdom: '"La colaboración es el catalizador que convierte las ideas individuales en una reacción en cadena de éxito."',

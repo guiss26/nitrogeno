@@ -6,4 +6,3 @@ collapsibles.forEach(button => {
         content.classList.toggle("active");
     });
 });
-

@@ -26,3 +26,18 @@
   setTimeout(() => trail.remove(), 600);
 });
 
+//para que el ↑ te lleve arriba con desplazamiento lento
+function scrollToTop(event){
+    event.preventDefault(); //Previene el salto instantáneo
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' //desplazamiento suave
+    })
+}
+const text = document.querySelector('.hover-sound');
+  const audio = document.getElementById('hoverAudio');
+
+  text.addEventListener('mouseenter', () => {
+    audio.currentTime = 0; // Reinicia desde el inicio
+    audio.play();
+  });

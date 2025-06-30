@@ -24,6 +24,15 @@ section.history {
   text-align: center;
 }
 
+/* === MANITA PARA EL CURSOR DE PERSONAJES ===*/
+.image-block img,
+.fritz-pic,
+.carl-pic {
+  cursor: pointer;
+}
+
+
+
 /* === TÍTULO Y SUBTITULOS === */
 section.history h1 {
   font-size: 2.5rem;
@@ -508,7 +517,79 @@ footer {
 
 /* RESPONSIVE */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 945px) {
+
+      #top {
+        font-size: 55%;
+        position: relative;
+        z-index: 1;
+    }
+    
+    label #btn {
+        display: block;
+    }
+    
+    .menu-item .menu-links {
+        display: none;
+    }
+    
+        /**/
+    .menu {
+        display: block;
+            /* z-index: 9999; */
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        top: 100%;
+        left: 0;
+        display: none;
+        text-align: center;
+        transition: all .5s;
+        /* z-index: 10; */
+        z-index: 100;
+    }
+    
+    .top .menu li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    
+    .menu li a {
+        font-size: 20px;
+    }
+    
+    .menu-item {
+        background: #fddbde;
+    }
+    
+    .menu-item:hover {
+        background-color: #dfcdce;
+    }
+    
+    #check:checked~.menu {
+        display: block;
+    }
+    
+    label #cancel {
+        display: none;
+    }
+
+    #check:checked~ul {
+        width: 100%;
+    }
+    
+    #check:checked~label #btn {
+        display: none;
+    }
+    
+    #check:checked~label #cancel {
+        display: block;
+    }
+
+  }
+ @media only screen and (max-width: 870px){
+
   .content-block {
     flex-direction: column;
     gap: 1rem;
@@ -555,7 +636,7 @@ footer {
     height: auto;
   }
 
-  .menu {
+  /*.menu {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
@@ -569,7 +650,7 @@ footer {
 
   nav ul.menu {
     padding: 1rem 0;
-  }
+  }*/
   
   section.history {
   /*max-width: 900px;*/
@@ -600,13 +681,13 @@ footer {
   .horizontal-cards {
     grid-template-columns: 1fr; /*cambia de 2 a una carta por fila*/
   }
-
+}
   /*.flip-card {
     width: 90%;
     height: 450px;
   }*/
   
-}
+
 
 
 
@@ -616,5 +697,3 @@ footer {
   margin: none;
   padding: 2rem;
 }*/
-
- 

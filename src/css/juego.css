@@ -194,13 +194,6 @@ body {
     right: 24px;
 }
 
-footer {
-    background-image: url(../../public/comun/background-footer.png);
-    background-size: cover;
-    text-align: center;
-}
-
-
 @media (max-width: 768px) {
     .menu {
         flex-direction: column;

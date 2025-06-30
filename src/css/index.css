@@ -54,7 +54,7 @@ h1 {
 
 /*añadido*/
 /*input*/
-label #btn,
+label #btn-menu,
 label #cancel {
     float: right;
     line-height: 80px;
@@ -120,10 +120,6 @@ section img{
     padding: 70px 8%;
 }
 
-/* .que-es-section { prueba
-    padding-top: 120px;
-} */
-
 /*añadido --- opcional*/
 #typewriter::after {
     content: "|";
@@ -177,7 +173,6 @@ h3{
 
 .donde-list{
     text-align: left;
-    /* background-color: #f9d7ea; */
     background-color: #f9c9e4;
     padding: 0 20px;
     border-radius: 10px;
@@ -267,14 +262,13 @@ footer p:first-child {
 
 /*--- RESPONSIVE ---*/
 @media only screen and (max-width: 945px){/*768px, 607px para el .container-section*/
-    
     #top {
         font-size: 55%;
         position: relative;
         z-index: 1;
     }
     
-    label #btn {
+    label #btn-menu {
         display: block;
     }
     
@@ -285,7 +279,6 @@ footer p:first-child {
         /**/
     .menu {
         display: block;
-            /* z-index: 9999; */
         position: absolute;
         width: 100%;
         box-sizing: border-box;
@@ -294,7 +287,6 @@ footer p:first-child {
         display: none;
         text-align: center;
         transition: all .5s;
-        /* z-index: 10; */
         z-index: 100;
     }
     
@@ -328,7 +320,7 @@ footer p:first-child {
         width: 100%;
     }
     
-    #check:checked~label #btn {
+    #check:checked~label #btn-menu {
         display: none;
     }
     

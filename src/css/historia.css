@@ -326,7 +326,7 @@ section.history blockquote {
   font-style: italic;
   text-align: center;
   max-width: 500px;
-  border-radius: 12px; /* aquí redondeas los bordes */
+  border-radius: 12px;
 }
 
 section.history blockquote:hover {
@@ -335,14 +335,32 @@ section.history blockquote:hover {
 
 .quote-img {
   width: 100%;
+  max-width: 150px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  object-fit: contain;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
   background-color: #fff;
-  justify-self: center;
-  display: block; /* para evitar pequeños problemas con inline */
+  display: block;
+  margin: 0 auto;
 }
+
+.scientist {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-family: monospace;
+}
+
+/* Mostrar/Ocultar según dispositivo */
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+  text-align: center;
+}
+
 
 /* === CONTENEDOR DE REACCIÓN HABER-BOSCH === */
 .reaction-container {
@@ -630,7 +648,7 @@ footer {
     padding-left: 1rem;
   }
 
-  .quote-container {
+ /* .quote-container {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
@@ -639,7 +657,7 @@ footer {
   .quote-img {
     width: 80px;
     height: auto;
-  }
+  }*/
 
   /*.menu {
     flex-direction: column;
@@ -685,6 +703,32 @@ footer {
 
   .horizontal-cards {
     grid-template-columns: 1fr; /*cambia de 2 a una carta por fila*/
+  }
+
+     section.history .quote-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .quote-img {
+    max-width: 120px;
+  }
+
+  .scientist {
+    font-size: 0.9rem;
   }
 }
   /*.flip-card {

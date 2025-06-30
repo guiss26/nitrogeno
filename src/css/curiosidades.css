@@ -1,7 +1,7 @@
 /* paleta de colores*/
 :root {
   --fondo-claro: #F0F4F8;
-  --rosado: #FFB6C1;
+  --rosado:  #ff63b6;
   --verde: #A8D8B9;
   --beige: #F4F1DE;
   --oscuro: #2C3E50;
@@ -15,7 +15,9 @@ body {
   padding: 0;
   color: var(--oscuro);
 }
-
+#top {
+  background-color: #ff63b6;
+}
 
 .curiosidades {
   padding: 2rem;

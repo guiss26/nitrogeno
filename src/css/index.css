@@ -24,10 +24,10 @@ body {
 /*HEADER*/
 #top{
     background-color: #FFB6C1;
-
     display: flex;
     justify-content: space-between;
     padding: 10px 0 20px 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1)
 }
 
 #top h1 {
@@ -206,7 +206,7 @@ h3{
     text-align: left;
 
     background-color: #ffcee9;
-    padding: 0 20px; /*arreglarlo para responsive*/
+    padding: 0 20px; 
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -410,10 +410,8 @@ footer p:first-child {
       -> img responsive ✅
       -> uls responsive flex-wrap ✅
       -> posible carrusel responsive (?)*/
-/*FALTA QUE EL h2 #typewriter aparezca como antes*/
+/*FALTA QUE EL h2 #typewriter aparezca como antes*/✅
 /*FALTA CARRUSEL IMG EN section donde y para*/
-
-
 
 /*Añadir cursor flor(?)*/
 /*Cambia color Nitrogeno titulo?*/

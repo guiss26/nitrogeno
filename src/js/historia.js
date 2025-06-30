@@ -34,3 +34,10 @@ function scrollToTop(event){
         behavior: 'smooth' //desplazamiento suave
     })
 }
+const text = document.querySelector('.hover-sound');
+  const audio = document.getElementById('hoverAudio');
+
+  text.addEventListener('mouseenter', () => {
+    audio.currentTime = 0; // Reinicia desde el inicio
+    audio.play();
+  });

@@ -452,6 +452,15 @@ footer {
   background-size: cover;
   text-align: center;
 }
+.hover-sound {
+  cursor: pointer;
+  color: #c01677;
+  transition: color 0.3s ease;
+}
+
+.hover-sound:hover {
+  color: #661040;
+}
 
 /* cursor*/
 .cursor-trail {

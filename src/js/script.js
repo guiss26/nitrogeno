@@ -1,5 +1,10 @@
 console.log("Hello world")
 
+window.addEventListener('scroll', () => {
+    document.getElementById('check').checked = false
+})
+
+
 const text = "¿Qué es?"
 let i = 0;
 

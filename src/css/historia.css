@@ -87,6 +87,16 @@ section.history p {
 section.history strong {
   color: #6e0c59;
 }
+.scientist-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.scientist-link:hover .scientist {
+  color: #6c44c3; /* Cambia a un color destacado al pasar el cursor */
+  text-decoration: underline; /* Opcional, puedes quitarlo si no lo quieres */
+}
 
 .scientist strong:hover {
   color: #6c44c3;

@@ -243,3 +243,11 @@ function getRamdom(min, max){
             isPlaying = !isPlaying;
         });
     });
+
+function scrollToTop(event){
+    event.preventDefault(); //Previene el salto instantáneo
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' //desplazamiento suave
+    })
+}

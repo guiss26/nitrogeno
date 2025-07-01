@@ -366,7 +366,7 @@ section.history blockquote:hover {
 
 /* === CONTENEDOR DE REACCIÓN HABER-BOSCH === */
 .reaction-container {
-  background: rgb(164, 202, 232);
+  background: rgb(176, 213, 241);
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -402,10 +402,11 @@ button:hover {
   list-style-type: none;
   padding: 0;
   margin-top: 1rem;
+  font-weight: bold;
 }
 
 .reaction-list li {
-  background-color: #64c1e3;
+  background-color: #89c6dc;
   margin: 0.5rem 0;
   padding: 0.8rem;
   border-radius: 0.5rem;
@@ -442,12 +443,13 @@ button:hover {
 
 .consequences-list li {
   position: relative;
-  background: rgb(164, 202, 232);
+  background: rgb(176, 213, 241);
   margin-bottom: 15px;
   padding: 15px 20px 15px 50px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
   transition: background-color 0.3s ease;
+  font-weight: bold;
 }
 
 .consequences-list li:hover {

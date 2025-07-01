@@ -39,6 +39,14 @@ function scrollToTop(event){
         behavior: 'smooth' //desplazamiento suave
     })
 }
+
+function scrollToTop(event) {
+  event.preventDefault();
+  document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
+}
+
+// === SONIDOS DE TEXTOS ===
+
 const text = document.querySelector('.hover-sound');
 const audio = document.getElementById('hoverAudio');
 

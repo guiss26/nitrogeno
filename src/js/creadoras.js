@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'Guissella',
             photo: '../public/creadoras-files/guissella.png', // Reemplazar con URL de la foto real
             role: 'Scrum master',
-            nitrogenLink: '"Así como el nitrógeno es el 78% del aire que respiramos, el Scrum Master es el 100% del oxígeno que impulsa a tu equipo."',
+            nitrogenLink: '"Así como el nitrógeno es el 78% del aire que respiramos, el Scrum Master es el 100% del oxígeno que haimpulsa este equipo."',
             wisdom: '"La colaboración es el catalizador que convierte las ideas individuales en una reacción en cadena de éxito."',
             atomPositions: [ // Posiciones relativas para los "átomos de ideas"
                 { top: '10%', left: '15%' },
@@ -178,7 +178,7 @@ const SIZES = [
 const EMOJIS = [
     '🎀',
     '🎆',
-'💻',
+    '💻',
     '💕',
     '♥',
     '💕',
@@ -193,7 +193,7 @@ const EMOJIS = [
     '🐈'
 ];
 
-const rainContainer = document.querySelector('#creadoras-section > h2');
+const rainContainer = document.querySelector('.rain-background-container');
 
 const genRainDrop = (size, xStart, xEnd, yStart, emoji)=>{
     const myEmoji = document.createElement('div');
@@ -243,3 +243,11 @@ function getRamdom(min, max){
             isPlaying = !isPlaying;
         });
     });
+
+function scrollToTop(event){
+    event.preventDefault(); //Previene el salto instantáneo
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' //desplazamiento suave
+    })
+}

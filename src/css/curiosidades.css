@@ -16,15 +16,6 @@ body {
   color: var(--oscuro);
 }
 
-main, .container {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-#top {
-  background-color: var(--rosado);
-}
-
 .curiosidades {
   padding: 2rem;
   max-width: 1100px;

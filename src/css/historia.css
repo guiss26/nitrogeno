@@ -6,9 +6,6 @@ body {
 }
 
 /* === ENCABEZADO === */
-#top {
-  background-color: #FF80C4;
-}
 
 /* === SECCIÓN HISTORIA === */
 section.history {
@@ -27,13 +24,13 @@ section.history {
 /* === TÍTULO Y SUBTITULOS === */
 section.history h1 {
   font-size: 2.5rem;
-  color: #b80075;
+  color: #247c8c;
   margin-bottom: 1rem;
 }
 
 section.history h2 {
   font-size: 1.5rem;
-  color: #b80075;
+  color: #247c8c;
   margin-bottom: 1rem;
 }
 
@@ -69,7 +66,10 @@ section.history h2:hover{
 }
 
 .image-block {
-  flex: 1 1 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-block img {
@@ -78,6 +78,7 @@ section.history h2:hover{
   display: block;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  cursor: pointer;
 }
 
 section.history p {
@@ -85,8 +86,25 @@ section.history p {
 }
 
 section.history strong {
-  color: #6e0c59;
+  color: #1669b7;
 }
+
+/* Por defecto, ocultar imagen mobile, mostrar desktop */
+.image-mobile {
+  display: none;
+}
+
+.daniel-pic-desktop {
+width: auto;
+  max-width: 100%;
+  max-height: 400px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
 .scientist-link {
   text-decoration: none;
   color: inherit;
@@ -94,12 +112,12 @@ section.history strong {
 }
 
 .scientist-link:hover .scientist {
-  color: #6c44c3; /* Cambia a un color destacado al pasar el cursor */
+  color: rgb(60, 54, 214);/* Cambia a un color destacado al pasar el cursor */
   text-decoration: underline; /* Opcional, puedes quitarlo si no lo quieres */
 }
 
 .scientist strong:hover {
-  color: #6c44c3;
+ color: #1669b7;
 }
 
 section.history code {
@@ -185,9 +203,8 @@ section.history code {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-.horizontal-list .item h3 {
+.horizontal-list .item h2 {
   font-size: 1.1rem;
-  color: #8a1454;
   font-weight: 700;
   letter-spacing: 0.3px;
   text-transform: uppercase;
@@ -206,7 +223,7 @@ section.history code {
   text-align: center;
 }
 
-/* === TARJETAS*/
+/* === TARJETAS === */
  .horizontal-cards {
   list-style: none;
   padding: 0;
@@ -222,6 +239,7 @@ section.history code {
   width: 240px; /* un pelín más ancho si quieres más aire */
   perspective: 1000px;
 }
+
 
 .flip-card {
   width: 100%;
@@ -276,16 +294,16 @@ section.history code {
   margin-bottom: 0.75rem;
 }
 
-.flip-card-front h2 {
+.flip-card-front item h2{
   margin: 0;
-  color: #8a1454;
-  font-weight: 700;
+  color: rgb(60, 54, 214);
+  font-weight: 600;
   text-align: center;
 }
 
 .flip-card-back {
   background-color: #b2ebf2;
-  color: #611651;
+  color: #0e4da4;
   transform: rotateY(180deg);
   padding: 1rem;
   display: flex;
@@ -296,7 +314,7 @@ section.history code {
 }
 
 /*pulsar para girar la tarjeta en responsive*/
-.tap-to-flip { 
+.tap-to-go { 
   display: none;
   font-size: 0.9rem;
   color: #0e4da4;
@@ -306,7 +324,7 @@ section.history code {
   text-align: center;
 }
 
-/* === CITA + FOTOS LATERALES === */
+/* === CITA + 2 FOTOS LATERALES === */
 
 section.history .quote-container {
   display: grid;
@@ -319,10 +337,10 @@ section.history .quote-container {
 }
 
 section.history blockquote {
-  background-color: #fface3;
+  background-color: rgb(154, 197, 232);
   padding: 1rem;
   margin: 1.5rem auto;
-  border-left: 5px solid #e35ac3;
+  border-left: 5px solid #402dcf;
   font-style: italic;
   text-align: center;
   max-width: 500px;
@@ -331,6 +349,7 @@ section.history blockquote {
 
 section.history blockquote:hover {
   background: #b2ebf2;
+  transition: background-color 0.3s ease;
 }
 
 .quote-img {
@@ -343,15 +362,17 @@ section.history blockquote:hover {
   background-color: #fff;
   display: block;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .scientist {
   margin-top: 0.5rem;
   font-size: 1rem;
   font-family: monospace;
+  cursor: pointer;
 }
 
-/* Mostrar/Ocultar según dispositivo */
+/* === Mostrar/Ocultar según dispositivo == */
 .desktop-only {
   display: block;
 }
@@ -364,7 +385,7 @@ section.history blockquote:hover {
 
 /* === CONTENEDOR DE REACCIÓN HABER-BOSCH === */
 .reaction-container {
-  background: #fface3;
+  background: rgb(176, 213, 241);
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -374,11 +395,11 @@ section.history blockquote:hover {
 }
 
 .reaction-container h3 {
-  color: #c015b2;
+  color: #3319a7;
   margin-bottom: 1rem;
 }
 button {
-  background-color: #f394e6;
+  background-color: #2d78ba;
   color: white;
   border: none;
   padding: 0.6rem 1rem;
@@ -388,7 +409,7 @@ button {
 }
 
 button:hover {
-  background-color: #3d5eed;
+  background-color: #1f43e3;
   transform: scale(1.08); /* efecto de zoom suave */
 }
 
@@ -400,10 +421,11 @@ button:hover {
   list-style-type: none;
   padding: 0;
   margin-top: 1rem;
+  font-weight: bold;
 }
 
 .reaction-list li {
-  background-color: #fae0f2;
+  background-color: #89c6dc;
   margin: 0.5rem 0;
   padding: 0.8rem;
   border-radius: 0.5rem;
@@ -440,12 +462,13 @@ button:hover {
 
 .consequences-list li {
   position: relative;
-  background: #fae0f2;
+  background: rgb(176, 213, 241);
   margin-bottom: 15px;
   padding: 15px 20px 15px 50px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
   transition: background-color 0.3s ease;
+  font-weight: bold;
 }
 
 .consequences-list li:hover {
@@ -485,11 +508,7 @@ button:hover {
 }
 
 /* === FOOTER === */
-footer {
-  background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493);
-  background-size: cover;
-  text-align: center;
-}
+
 .hover-sound {
   cursor: pointer;
   color: #c01677;
@@ -500,12 +519,12 @@ footer {
   color: #661040;
 }
 
-/* cursor*/
+/* === CURSOR FLOR === */
 .cursor-trail {
   position: fixed;
   width: 16px;
   height: 16px;
-  background: rgba(168, 207, 239, 0.25); /* rosa suave (hot pink transparente) */
+  background: rgba(168, 207, 239, 0.25); /* grisito claro */
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
@@ -555,7 +574,6 @@ footer {
         /**/
     .menu {
         display: block;
-            /* z-index: 9999; */
         position: absolute;
         width: 100%;
         box-sizing: border-box;
@@ -564,7 +582,6 @@ footer {
         display: none;
         text-align: center;
         transition: all .5s;
-        /* z-index: 10; */
         z-index: 100;
     }
     
@@ -605,7 +622,7 @@ footer {
     #check:checked~label #cancel {
         display: block;
     }
-
+    
   }
  @media only screen and (max-width: 870px){
 
@@ -614,13 +631,51 @@ footer {
     gap: 1rem;
   }
 
+    section.history {
+    padding: 1rem;
+  }
+
+  /*  ===  FOTO DANIEL(Ocultar Desktop y mostrar mobile) === */
+
+   .image-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .daniel-pic-mobile {
+    width: 50%;       /* ancho máximo razonable */
+    height: auto;     /* alto automático para mantener proporción */
+    object-fit: contain;  /* muestra la imagen completa, sin recortar */
+    border-radius: 12px;
+  }
+
+  .scientist-mobile {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #0077cc;
+    text-decoration: underline;
+  }
+
+  .image-block {
+    display: none;
+  }
+
+  /* === columna para responsive de imagenes y gifs === */
+  
   .horizontal-list {
     flex-direction: column;
     align-items: center;
   }
 
+  /* === flip-cards responsive === */
+
   .horizontal-cards {
     flex-direction: column;
+    grid-template-columns: 1fr; /*cambia de 2 a una carta por fila*/
   }
 
   .flip-card {
@@ -628,7 +683,7 @@ footer {
     height: auto;
   }
 
-   .tap-to-flip {
+   .tap-to-go {
     display: block;
   }
 
@@ -636,54 +691,14 @@ footer {
     flex: 1 1 100%;
   }
 
-  section.history {
-    padding: 1rem;
-  }
-
-  .horizontal-list .item {
-    max-width: 90%;
-  }
-
   .reaction-container ul.reaction-list {
     padding-left: 1rem;
   }
-
- /* .quote-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .quote-img {
-    width: 80px;
-    height: auto;
-  }*/
-
-  /*.menu {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .menu-item a {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  nav ul.menu {
-    padding: 1rem 0;
-  }*/
   
   section.history {
-  /*max-width: 900px;*/
   width: 100%;
   margin: auto;
   padding: 2rem;
-  }
-
-  body {
-    cursor: none;
   }
 
   html, body {
@@ -692,17 +707,9 @@ footer {
   overflow-x: hidden;
 }
 
- .horizontal-cards {
-    grid-template-columns: 1fr; /*cambia de 2 a una carta por fila*/
-  }
-
   .flip-card {
     width: 90%;
     height: 300px;
-  }
-
-  .horizontal-cards {
-    grid-template-columns: 1fr; /*cambia de 2 a una carta por fila*/
   }
 
      section.history .quote-container {
@@ -731,18 +738,14 @@ footer {
     font-size: 0.9rem;
   }
 }
-  /*.flip-card {
-    width: 90%;
-    height: 450px;
-  }*/
+
+@media (max-width: 600px) {
+  #emoji-cursor {
+    display: none;
+  }
+}
+
+
   
 
 
-
-
-/*section.history {
-  max-width: 900px;
-  width: 100%;
-  margin: none;
-  padding: 2rem;
-}*/

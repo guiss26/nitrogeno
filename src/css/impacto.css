@@ -1,13 +1,11 @@
-/* Estilos globales  */
+/* Estilos globales para todo el body */
 body {
-  background: linear-gradient(to bottom, #f1f1f1, #e0f7fa);
-  color: #333;
-  cursor: none !important;
+  background: linear-gradient(to bottom, #f1f1f1, #e0f7fa); /* Fondo degradado */
+  color: #333; /* Color de texto */
+  cursor: none !important; /* Desactiva el cursor por defecto para usar el personalizado */
 }
+<<<<<<< HEAD
 
-#top {
-  background-color: #FF80C4;
-}
 
 /* Contenedor principal (usando los mismos estilos que .history) */
 section.impact {
@@ -252,7 +250,7 @@ section.impact code {
   margin: 0;
 }
 
-/* Botón del ciclo */
+/* Botón del ciclo (mismo estilo que Historia) */
 .cycle-container button {
   background-color: #f394e6;
   color: white;
@@ -268,7 +266,7 @@ section.impact code {
   transform: scale(1.08);
 }
 
-/* Soluciones */
+/* Soluciones (mismo estilo que consequences-list) */
 .solutions-section {
   background: #f0f8ff;
   padding: 2rem;
@@ -396,7 +394,7 @@ section.impact code {
   text-decoration: underline;
 }
 
-/* === VENTANA SORPRESA QUE NO ME FUNCIONA!! === */
+/* === VENTANA SORPRESA === */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -552,15 +550,18 @@ section.impact code {
   filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
 }
 
+=======
+/*Lo del cursor y el fade out*/
+>>>>>>> 19c63a7297c17dc60d91cf689d9b45a35ec8a4fe
 .cursor-trail {
   position: fixed;
   width: 16px;
   height: 16px;
-  background: rgba(34, 139, 34, 0.4); /* Verde para la hojita */
+  background: rgba(34, 139, 34, 0.4); /* Verde translúcido */
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
-  box-shadow: 0 0 15px rgba(34, 139, 34, 0.6); /* Sombra verde */
+  box-shadow: 0 0 15px rgba(34, 139, 34, 0.6);
   transform: translate(-50%, -50%);
   animation: fadeOut 0.7s ease-out forwards;
 }
@@ -576,77 +577,369 @@ section.impact code {
   }
 }
 
-/* Efectos hover */
-.hover-sound {
-  cursor: pointer;
-  color: #c01677;
+/* Barra superior de navegación */
+#top {
+  background-color: #FF80C4; /* Color rosa para el menú superior */
+}
+
+/* Sección principal del contenido de impacto */
+section.impact {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #f9fbfc; /* Fondo blanco azulado */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra */
+  font-family: "Space Mono", monospace; /* Fuente monoespaciada */
+  line-height: 1.7;
+  color: #333;
+  text-align: center; /* Centrar texto */
+}
+
+/* Títulos principales */
+section.impact h1 {
+  font-size: 2.5rem;
+  color: #b80075; /* Color rosado fuerte */
+  margin-bottom: 1rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+}
+
+section.impact h2 {
+  font-size: 1.5rem;
+  color: #b80075;
+  margin-bottom: 1rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+}
+
+/* Efecto hover para cambiar el color de títulos */
+section.impact h1:hover,
+section.impact h2:hover {
+  color: rgb(60, 54, 214); /* Cambia a azul al pasar el ratón */
   transition: color 0.3s ease;
 }
 
-.hover-sound:hover {
-  color: #661040;
+/* Espaciado en párrafos */
+section.impact p {
+  margin-bottom: 1.2rem;
 }
 
-/* Botones de navegación */
+/* Estilo de texto en negrita */
+section.impact strong {
+  color: #6e0c59; /* Un morado oscuro */
+}
+
+/* Código en línea */
+section.impact code {
+  background-color: #e2e8f0; /* Fondo gris */
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+/* Texto introductorio */
+.intro-text {
+  max-width: 700px;
+  margin: 2rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Párrafos en la intro */
+.intro-text p {
+  margin-bottom: 1rem;
+}
+
+/* Grid de tarjetas de efectos ambientales */
+.effects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Tarjetas individuales */
+.effect-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  max-width: 250px;
+  text-align: center;
+}
+
+/* Animación al pasar el ratón sobre la tarjeta */
+.effect-card:hover {
+  transform: translateY(-5px); /* Eleva ligeramente */
+}
+
+/* Imágenes dentro de tarjetas */
+.effect-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover; /* Recorta y ajusta imagen */
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título dentro de tarjetas */
+.effect-card h3 {
+  color: #8a1454; /* Morado */
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Texto dentro de tarjetas */
+.effect-card p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Contenedor de estadísticas */
+.stats-container {
+  background: #fface3; /* Rosa claro */
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+/* Cambio de color al pasar el ratón en estadísticas */
+.stats-container:hover {
+  background: #b2ebf2; /* Azul claro */
+  transition: background 0.3s ease;
+}
+
+/* Grid de tarjetas de estadísticas */
+.stat-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* Tarjetas de cada dato */
+.stat-card {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  min-width: 200px;
+  flex: 1 1 200px;
+  max-width: 250px;
+}
+
+/* Animación al pasar el ratón en estadísticas */
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Números de estadísticas */
+.stat-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #b80075;
+  margin-bottom: 0.5rem;
+}
+
+/* Etiquetas de estadísticas */
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.3;
+}
+
+/* Botón para revelar estadísticas */
+.reveal-stats {
+  background-color: #f394e6; /* Rosa intenso */
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover en botón de estadísticas */
+.reveal-stats:hover {
+  background-color: #3d5eed; /* Azul fuerte */
+  transform: scale(1.05);
+}
+
+/* Sección de soluciones */
+.solutions-section {
+  background: #f0f8ff; /* Azul muy claro */
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+/* Lista de soluciones */
+.solutions-list {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 20px auto;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Cada elemento de la lista de soluciones */
+.solutions-list li {
+  position: relative;
+  background: #fae0f2; /* Rosa pastel */
+  margin-bottom: 15px;
+  padding: 15px 20px 15px 50px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover para soluciones */
+.solutions-list li:hover {
+  background: #b2ebf2; /* Azul suave */
+  transform: translateX(5px); /* Desplaza un poco a la derecha */
+}
+
+/* Sección llamada a la acción */
+.call-to-action {
+  background: linear-gradient(135deg, #fface3, #b2ebf2); /* Degradado rosa a azul */
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Botones dentro de llamada a la acción */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Estilos de botones de acción */
+.action-btn {
+  background-color: #f394e6;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Hover en botones de acción */
+.action-btn:hover {
+  background-color: #3d5eed;
+  transform: scale(1.08);
+}
+
+/* Contenido oculto que se despliega dinámicamente */
+.hidden-content {
+  display: none;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 1rem auto;
+  max-width: 600px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Títulos de contenido oculto */
+.hidden-content h3 {
+  color: #b80075;
+  margin-bottom: 1rem;
+}
+
+/* Listas dentro de contenido oculto */
+.hidden-content ul {
+  text-align: left;
+  padding-left: 1.5rem;
+}
+
+/* Elementos de las listas en contenido oculto */
+.hidden-content li {
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+/* Cursor personalizado (emoji hojita) */
+#emoji-cursor {
+  position: fixed;
+  font-size: 28px;
+  pointer-events: none; /* No interfiere con clics */
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s linear;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+}
+
+/* Botones de navegación en la parte inferior */
 .buttons {
   width: 100%;
   padding: 24px 0;
   position: relative;
 }
 
+/* Contenedor horizontal de botones izquierda y derecha */
 .btn-horizontal {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
+/* Iconos de botones */
 .btn i {
   font-size: 30px;
   color: rgb(73, 72, 72);
 }
 
+/* Botón para volver arriba */
 .btn-up {
   position: absolute;
   bottom: 24px;
   right: 24px;
 }
 
-/* Footer  */
+<<<<<<< HEAD
+/* Footer (igual que Historia) */
+
+=======
+/* Pie de página */
 footer {
   background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493);
   background-size: cover;
   text-align: center;
 }
+>>>>>>> 19c63a7297c17dc60d91cf689d9b45a35ec8a4fe
 
-/* RESPONSIVE */
+/* RESPONSIVE: ajustes para pantallas pequeñas */
 @media only screen and (max-width: 768px) {
-  .effects-grid {
+  .effects-grid, .stat-grid, .cycle-steps {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
   }
 
-  .effect-card {
-    max-width: 90%;
-  }
-
-  .stat-grid {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .stat-card {
-    max-width: 90%;
-  }
-
-  .cycle-steps {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .cycle-step {
+  .effect-card, .stat-card, .cycle-step {
     max-width: 90%;
   }
 
@@ -668,10 +961,6 @@ footer {
 
   .solutions-list li {
     padding: 15px 20px;
-  }
-
-  body {
-    cursor: none;
   }
 
   html, body {

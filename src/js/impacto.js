@@ -1,86 +1,138 @@
-// 🍃 El emoji te sigue cuando mueves el ratón
-document.addEventListener('mousemove', function(e) {
-    // Mueve la hojita
-    document.getElementById('emoji-cursor').style.left = e.clientX + 'px';
-    document.getElementById('emoji-cursor').style.top = e.clientY + 'px';
-    
-    // Agrega rastro verde cada cierto tiempo
-    if (Math.random() > 0.7) { // Solo 30% de las veces
-        const trail = document.createElement("div");
-        trail.className = "cursor-trail";
-        trail.style.left = e.clientX + 'px';
-        trail.style.top = e.clientY + 'px';
-        document.body.appendChild(trail);
 
-        setTimeout(() => trail.remove(), 600);
+// Detecto el movimiento del ratón en la página
+document.addEventListener('mousemove', function(e) {
+    // Obtengo el elemento de la hojita personalizada
+    const cursor = document.getElementById('emoji-cursor');
+    if (cursor) {
+        // Coloco la hojita en la posición actual del ratón
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+
+        // A veces creo un efecto de rastro verde detrás del cursor
+        if (Math.random() > 0.7) {
+            const trail = document.createElement("div");
+            trail.className = "cursor-trail";
+            trail.style.left = e.clientX + 'px';
+            trail.style.top = e.clientY + 'px';
+            document.body.appendChild(trail);
+
+            // Elimino el rastro después de 0.6 segundos para que no se acumulen
+            setTimeout(() => {
+                if (trail && trail.parentNode) {
+                    trail.remove();
+                }
+            }, 600);
+        }
     }
 });
 
-// 🔢 Función para animar números (solo cambia el texto)
-    function animateStats() {
-  const statCards = document.querySelectorAll('.stat-card');
+// Esta función hace que los números de las estadísticas cuenten hasta su valor objetivo
+function animateStats() {
+    // Busco todas las tarjetas que contienen estadísticas
+    const statCards = document.querySelectorAll('.stat-card');
+    // Busco el botón que dispara la animación de estadísticas
+    const button = document.querySelector('.reveal-stats');
 
-  statCards.forEach(card => {
-    const target = +card.getAttribute('data-stat');
-    const statNumber = card.querySelector('.stat-number');
-    let current = 0;
-    const duration = 1500; // duración total de la animación (ms)
-    const stepTime = Math.max(Math.floor(duration / target), 20); // asegura que el paso sea al menos 20ms
+    // Compruebo que existen las tarjetas antes de continuar
+    if (statCards.length === 0) {
+        console.log('No encuentro las tarjetas de estadísticas');
+        return;
+    }
 
-    const counter = setInterval(() => {
-      current += 1;
-      statNumber.textContent = current;
+    // Recorro cada tarjeta de estadística
+    statCards.forEach(card => {
+        // Leo el valor objetivo desde el atributo data-stat
+        const target = +card.getAttribute('data-stat');
+        // Busco el elemento donde se muestra el número
+        const statNumber = card.querySelector('.stat-number');
 
-      if (current >= target) {
-        clearInterval(counter);
-        statNumber.textContent = target; // asegúrate de acabar en el valor exacto
-      }
-    }, stepTime);
-  });
+        if (statNumber && target) {
+            let current = 0; // Comienzo desde cero
+            const duration = 1500; // Duración total en milisegundos
+            const stepTime = Math.max(Math.floor(duration / target), 20); // Tiempo entre cada incremento
 
-  document.querySelector('.reveal-stats').textContent = '¡Completado!';
+            // Intervalo que actualiza el número poco a poco
+            const counter = setInterval(() => {
+                current += 1;
+                statNumber.textContent = current;
+
+                // Cuando llego al objetivo, paro la animación
+                if (current >= target) {
+                    clearInterval(counter);
+                    statNumber.textContent = target;
+                }
+            }, stepTime);
+        }
+    });
+
+    // Cambio el texto del botón para indicar que ya se revelaron los datos
+    if (button) {
+        button.textContent = 'Ahora ya te haces una idea, ¿no?';
+    }
 }
 
-
-
-// Mostrar/ocultar contenido
+// Esta función muestra u oculta el bloque de acciones personales
 function showPersonalActions() {
-    var content = document.getElementById('personal-actions');
-    
-    if (content.style.display === 'block') {
-        content.style.display = 'none';  // Si está visible, lo oculta
-    } else {
-        content.style.display = 'block'; // Si está oculto, lo muestra
+    const content = document.getElementById('personal-actions');
+    if (content) {
+        // Si está visible, lo escondo; si está escondido, lo muestro
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
     }
 }
 
+// Esta función muestra u oculta el bloque de esfuerzos globales
 function showGlobalEfforts() {
-    var content = document.getElementById('global-efforts');
-    
-    if (content.style.display === 'block') {
-        content.style.display = 'none';
-    } else {
-        content.style.display = 'block';
+    const content = document.getElementById('global-efforts');
+    if (content) {
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
     }
 }
 
-// ⬆️ Ir arriba suavemente
-function scrollToTop(event) {
-    event.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+// Esta función hace que la página suba hasta arriba del todo
+function scrollToTop() {
+    // Para navegadores modernos
+    document.documentElement.scrollTop = 0;
+    // Para navegadores antiguos
+    document.body.scrollTop = 0;
 }
 
-/*
-=== EXPLICACIÓN SÚPER SIMPLE ===
+// Configuro todos los eventos una vez que la página haya terminado de cargar
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Página cargada');
 
-1. document.querySelector() = busca UN elemento
-2. document.querySelectorAll() = busca TODOS los elementos
-3. addEventListener() = "cuando pase algo, haz esto"
-4. .style.left = cambia la posición horizontal
-5. .style.top = cambia la posición vertical
-6. .textContent = cambia el texto
-7. .classList.add() = añade una clase CSS
-8. .classList.remove() = quita una clase CSS
-9. .style.display = 'block' = muestra el elemento
-10. .style.display = 'none' = oculta el elemento
-*/
+    // Configuro el botón que sube arriba
+    const scrollButton = document.querySelector('.btn-up');
+    if (scrollButton) {
+        // Evento para escritorio: clic con ratón
+        scrollButton.onclick = function() {
+            scrollToTop();
+        };
+        // Evento para móviles: toque con dedo
+        scrollButton.addEventListener('touchstart', function() {
+            scrollToTop();
+        });
+    }
+
+    // Configuro el botón para revelar estadísticas
+    const statsButton = document.querySelector('.reveal-stats');
+    if (statsButton) {
+        statsButton.onclick = function() {
+            animateStats();
+        };
+    }
+
+    // Configuro los botones que muestran acciones personales o globales
+    const actionButtons = document.querySelectorAll('.action-btn');
+    actionButtons.forEach((button) => {
+        // Leo el texto del botón para saber qué acción mostrar
+        const buttonText = button.textContent.trim();
+
+        button.onclick = function() {
+            if (buttonText.includes('Personales')) {
+                showPersonalActions();
+            } else if (buttonText.includes('Globales')) {
+                showGlobalEfforts();
+            }
+        };
+    });
+});

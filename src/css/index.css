@@ -20,8 +20,17 @@ body {
     min-height: 100vh;
 }
 
+#emoji-cursor {
+    position: fixed;
+    font-size: 24px;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s linear;
+}
+
 /*HEADER*/
-#top{
+#top {
     background-color: #88a7d0;
     display: flex;
     justify-content: space-between;
@@ -35,7 +44,7 @@ body {
     font-size: 2rem;
 }
 
-#top i{
+#top i {
     width: 20px;
     font-size: 25px;
 }
@@ -62,9 +71,10 @@ label #cancel {
     display: none;
 }
 
-#check{
+#check {
     display: none;
 }
+
 /*fin añadido*/
 
 .menu {
@@ -74,7 +84,7 @@ label #cancel {
     margin-right: 45px;
 }
 
-.menu-item{
+.menu-item {
     padding: 10px;
     list-style: none;
 }
@@ -94,12 +104,12 @@ label #cancel {
     font-size: 13px;
 }
 
-.menu-item a:hover{
+.menu-item a:hover {
     color: white;
 }
 
 /*SECTIONS*/
-.container-section{
+.container-section {
     flex: 1;
     text-align: center;
     position: relative;
@@ -107,7 +117,7 @@ label #cancel {
     background: #f4f9f4;
 }
 
-section img{
+section img {
     width: 400px;
     height: 300px;
     border-radius: 10px;
@@ -139,9 +149,10 @@ section img{
         opacity: 1;
     }
 }
+
 /*fin añadido*/
 
-.que-es-section h2{
+.que-es-section h2 {
     font-size: 30px;
     padding: 0 0 50px 0;
 }
@@ -156,22 +167,23 @@ section img{
 }
 
 /*--- donde-section ---*/
-.donde-section{
+.donde-section {
     padding: 20px 8%;
 }
 
-h3{
+h3 {
     padding: 40px 0;
     font-size: 25px;
 }
-.donde-box{
+
+.donde-box {
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 50px;
 }
 
-.donde-list{
+.donde-list {
     text-align: left;
     background-color: #dae7f9ed;
     padding: 0 20px;
@@ -179,7 +191,7 @@ h3{
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.donde-list li{
+.donde-list li {
     list-style: none;
     line-height: 25px;
     margin: 17px 0;
@@ -190,7 +202,7 @@ h3{
     padding: 20px 8% 0 8%;
 }
 
-.box-cont-para-que{
+.box-cont-para-que {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -201,30 +213,31 @@ h3{
     text-align: left;
 
     background-color: #dae7f9ed;
-    padding: 0 20px; 
+    padding: 0 20px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.box-cont-para-que li{
+.box-cont-para-que li {
     list-style: none;
     line-height: 25px;
     margin: 17px 0;
 }
 
 /*Botones*/
-.buttons{
+.buttons {
     width: 100%;
     padding: 50px 0 30px 0;
 }
 
-.btn i{
+.btn i {
     font-size: 30px;
-    color: rgb(73, 72, 72);/*prueba cambiar color*/
+    color: rgb(73, 72, 72);
+    /*prueba cambiar color*/
 }
 
 .btn i:hover {
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
 
 .btn-right {
@@ -233,12 +246,13 @@ h3{
     text-align: center;
 }
 
-.btn-up{
+.btn-up {
     position: absolute;
     bottom: 30px;
     right: 24px;
 
 }
+
 /*FOOTER*/
 footer {
     /* background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493); */
@@ -262,21 +276,23 @@ footer p:first-child {
 }
 
 /*--- RESPONSIVE ---*/
-@media only screen and (max-width: 945px){/*768px, 607px para el .container-section*/
+@media only screen and (max-width: 945px) {
+
+    /*768px, 607px para el .container-section*/
     #top {
         font-size: 55%;
         position: relative;
         z-index: 1;
     }
-    
+
     label #btn-menu {
         display: block;
     }
-    
+
     .menu-item .menu-links {
         display: none;
     }
-    
+
     .menu {
         display: block;
         position: absolute;
@@ -289,30 +305,30 @@ footer p:first-child {
         transition: all .5s;
         z-index: 100;
     }
-    
+
     .top .menu li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
-    
+
     .menu li a {
         font-size: 20px;
     }
-    
+
     .menu-item {
         background: #c4d4e9;
     }
-    
+
     .menu-item:hover {
         /* background-color: #dfcdce; */
         background-color: #c8cdd1;
     }
-    
+
     #check:checked~.menu {
         display: block;
     }
-    
+
     label #cancel {
         display: none;
     }
@@ -320,26 +336,27 @@ footer p:first-child {
     #check:checked~ul {
         width: 100%;
     }
-    
+
     #check:checked~label #btn-menu {
         display: none;
     }
-    
+
     #check:checked~label #cancel {
         display: block;
     }
-    
+
     .que-es-section {
         padding-top: 120px;
     }
 
-    @media only screen and (max-width: 870px){
+    @media only screen and (max-width: 870px) {
         .donde-box {
             flex-wrap: wrap;
             flex-direction: column-reverse;
         }
 
-        .donde-list, .para-que-list {
+        .donde-list,
+        .para-que-list {
             width: 600px;
         }
 
@@ -348,46 +365,66 @@ footer p:first-child {
             flex-direction: column;
         }
 
-       @media only screen and (max-width: 678px) {
-            .donde-list, .para-que-list{
+        @media only screen and (max-width: 678px) {
+
+            .donde-list,
+            .para-que-list {
                 width: 500px;
             }
-            @media only screen and (max-width: 565px){
-                .donde-list, .para-que-list{
+
+            @media only screen and (max-width: 565px) {
+
+                .donde-list,
+                .para-que-list {
                     width: 400px;
                 }
-                @media only screen and (max-width: 455px){
-                    .donde-list, .donde-img, .para-que-list, .para-img{
+
+                @media only screen and (max-width: 455px) {
+
+                    .donde-list,
+                    .donde-img,
+                    .para-que-list,
+                    .para-img {
                         width: 350px;
                     }
+
                     @media only screen and (max-width: 405px) {
-                        .title{
+                        .title {
                             font-size: 29px;
                         }
 
-                        .donde-img, .para-img{
+                        .donde-img,
+                        .para-img {
                             height: 250px;
                         }
 
-                        .donde-list, .donde-img, .para-que-list, .para-img{
+                        .donde-list,
+                        .donde-img,
+                        .para-que-list,
+                        .para-img {
                             width: 320px;
                         }
-                        @media only screen and (max-width: 365px){
-                            .title{
+
+                        @media only screen and (max-width: 365px) {
+                            .title {
                                 font-size: 27px;
                             }
-                            .donde-img, .para-img{
+
+                            .donde-img,
+                            .para-img {
                                 height: 230px;
                             }
 
-                            .donde-list, .donde-img, .para-que-list, .para-img{
+                            .donde-list,
+                            .donde-img,
+                            .para-que-list,
+                            .para-img {
                                 width: 300px;
                             }
                         }
                     }
                 }
             }
-       }
+        }
     }
 }
-

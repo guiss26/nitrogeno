@@ -18,6 +18,24 @@ function write(){
 }
 document.addEventListener("DOMContentLoaded", write)
 
+//cursor
+ document.addEventListener("mousemove", (e) => {
+  // Mueve el emoji
+  const emojiCursor = document.getElementById("emoji-cursor");
+  if (emojiCursor) {
+    emojiCursor.style.left = `${e.clientX}px`;
+    emojiCursor.style.top = `${e.clientY}px`;
+  }
+
+  // Agrega el rastro
+  const trail = document.createElement("div");
+  trail.className = "cursor-trail";
+  trail.style.left = `${e.clientX}px`;
+  trail.style.top = `${e.clientY}px`;
+  document.body.appendChild(trail);
+
+  setTimeout(() => trail.remove(), 600);
+});
 
 //para que el ↑ te lleve arriba con desplazamiento lento
 function scrollToTop(event){
@@ -26,4 +44,9 @@ function scrollToTop(event){
         top: 0,
         behavior: 'smooth' //desplazamiento suave
     })
+}
+
+function scrollToTop(event) {
+  event.preventDefault();
+  document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
 }

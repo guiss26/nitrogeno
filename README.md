@@ -91,12 +91,12 @@ raíz del proyecto/
 
 Este proyecto ha sido desarrollado de forma colaborativa por un equipo de coders dentro del programa **Factoría F5**, combinando creatividad, tecnología y trabajo en equipo:
 
-- **Guissela Pérez** – Responsable de la pestaña **"Qué es"** y **Scrum Master** del equipo.  
-- **Aday** – Encargada del desarrollo de la sección **"Historia"**.  
-- **Rocío** – Desarrolladora de la pestaña de **"Curiosidades"**.  
-- **Ana Mur** – Responsable de la sección **"Impacto"**, enfocada en medioambiente y sociedad.  
-- **Larysa Ambartsumian** – Creadora de la pestaña **"Juego"**, incluyendo la lógica interactiva con JavaScript.  
-- **Paloma Gómez** – Diseñadora y desarrolladora de la sección **"Creadoras"**, que destaca el trabajo del equipo.
+- **Guissela Pérez** – Responsable de la pestaña **Qué es** y **Scrum Master** del equipo.  
+- **Aday Álvarez** – Encargada del desarrollo de la sección **Historia**.  
+- **Rocío Coronel** – Desarrolladora de la pestaña de **Curiosidades**.  
+- **Ana Muruzabal** – Responsable de la sección **Impacto**, enfocada en medioambiente y sociedad.  
+- **Larysa Ambartsumian** – Creadora de la pestaña **Juego**, incluyendo la lógica interactiva con JavaScript.  
+- **Paloma Gómez** – Diseñadora y desarrolladora de la sección **Creadoras**, que destaca el trabajo del equipo.
 
 Este proyecto refleja el esfuerzo conjunto de cada integrante, fomentando el aprendizaje activo y la colaboración en un entorno digital.
 

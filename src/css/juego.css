@@ -14,8 +14,7 @@ body {
 .headline {
     font-size: 44px;
     text-align: center;
-    color: #88a7d0;
-}
+    color: #486f99;}
 
 @media (max-width: 768px) {
     .headline {

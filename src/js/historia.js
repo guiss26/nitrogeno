@@ -39,6 +39,9 @@ function scrollToTop(event){
         behavior: 'smooth' //desplazamiento suave
     })
 }
+
+// === SONIDOS DE TEXTOS ===
+
 const text = document.querySelector('.hover-sound');
 const audio = document.getElementById('hoverAudio');
 

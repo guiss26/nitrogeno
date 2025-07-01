@@ -78,6 +78,7 @@ section.history h2:hover{
   display: block;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  cursor: pointer;
 }
 
 section.history p {
@@ -206,7 +207,7 @@ section.history code {
   text-align: center;
 }
 
-/* === TARJETAS*/
+/* === TARJETAS === */
  .horizontal-cards {
   list-style: none;
   padding: 0;
@@ -306,7 +307,7 @@ section.history code {
   text-align: center;
 }
 
-/* === CITA + FOTOS LATERALES === */
+/* === CITA + 2 FOTOS LATERALES === */
 
 section.history .quote-container {
   display: grid;
@@ -331,6 +332,7 @@ section.history blockquote {
 
 section.history blockquote:hover {
   background: #b2ebf2;
+  transition: background-color 0.3s ease;
 }
 
 .quote-img {
@@ -343,15 +345,17 @@ section.history blockquote:hover {
   background-color: #fff;
   display: block;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .scientist {
   margin-top: 0.5rem;
   font-size: 1rem;
   font-family: monospace;
+  cursor: pointer;
 }
 
-/* Mostrar/Ocultar según dispositivo */
+/* === Mostrar/Ocultar según dispositivo == */
 .desktop-only {
   display: block;
 }
@@ -500,12 +504,12 @@ footer {
   color: #661040;
 }
 
-/* cursor*/
+/* === CURSOR FLOR === */
 .cursor-trail {
   position: fixed;
   width: 16px;
   height: 16px;
-  background: rgba(168, 207, 239, 0.25); /* rosa suave (hot pink transparente) */
+  background: rgba(168, 207, 239, 0.25); /* grisito claro */
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
@@ -555,7 +559,6 @@ footer {
         /**/
     .menu {
         display: block;
-            /* z-index: 9999; */
         position: absolute;
         width: 100%;
         box-sizing: border-box;
@@ -564,7 +567,6 @@ footer {
         display: none;
         text-align: center;
         transition: all .5s;
-        /* z-index: 10; */
         z-index: 100;
     }
     
@@ -605,7 +607,7 @@ footer {
     #check:checked~label #cancel {
         display: block;
     }
-
+    
   }
  @media only screen and (max-width: 870px){
 
@@ -621,6 +623,7 @@ footer {
 
   .horizontal-cards {
     flex-direction: column;
+    grid-template-columns: 1fr; /*cambia de 2 a una carta por fila*/
   }
 
   .flip-card {
@@ -647,43 +650,11 @@ footer {
   .reaction-container ul.reaction-list {
     padding-left: 1rem;
   }
-
- /* .quote-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .quote-img {
-    width: 80px;
-    height: auto;
-  }*/
-
-  /*.menu {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .menu-item a {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  nav ul.menu {
-    padding: 1rem 0;
-  }*/
   
   section.history {
-  /*max-width: 900px;*/
   width: 100%;
   margin: auto;
   padding: 2rem;
-  }
-
-  body {
-    cursor: none;
   }
 
   html, body {
@@ -692,17 +663,9 @@ footer {
   overflow-x: hidden;
 }
 
- .horizontal-cards {
-    grid-template-columns: 1fr; /*cambia de 2 a una carta por fila*/
-  }
-
   .flip-card {
     width: 90%;
     height: 300px;
-  }
-
-  .horizontal-cards {
-    grid-template-columns: 1fr; /*cambia de 2 a una carta por fila*/
   }
 
      section.history .quote-container {
@@ -731,18 +694,5 @@ footer {
     font-size: 0.9rem;
   }
 }
-  /*.flip-card {
-    width: 90%;
-    height: 450px;
-  }*/
-  
 
 
-
-
-/*section.history {
-  max-width: 900px;
-  width: 100%;
-  margin: none;
-  padding: 2rem;
-}*/

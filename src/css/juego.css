@@ -102,6 +102,12 @@ body {
     margin: 20px;
 }
 
+@media (max-width: 768px) {
+    .two-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 #game-board {
     --cell-size: 20vmin;
@@ -154,15 +160,12 @@ body {
     height: 100vh;
 }
 
-
-
 @media (max-width: 768px) {
     .two-columns {
         flex-direction: column;
         align-items: center;
     }
 }
-
 
 .buttons {
     display: flex;
@@ -190,13 +193,6 @@ body {
     bottom: 24px;
     right: 24px;
 }
-
-footer {
-    background-image: url(../../public/comun/background-footer.png);
-    background-size: cover;
-    text-align: center;
-}
-
 
 @media (max-width: 768px) {
     .menu {

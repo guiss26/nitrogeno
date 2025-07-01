@@ -19,6 +19,7 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="icon" href="../public/comun/logo.webp" type="image/webp">
 </head>
 
 <body>
@@ -30,43 +31,43 @@
       </h1>
       <input type="checkbox" id="check">
                 <label for="check">
-                    <i class="fa-solid fa-bars" id="btn"></i>
+                    <i class="fa-solid fa-bars" id="btn-menu"></i>
                     <i class="fa-solid fa-xmark" id="cancel"></i>
                 </label>
                 <ul class="menu">
           <li class="menu-item">
             <a href="../index.html">
-              <img src="../public/comun/que-es.png" alt="icono-que-es">
+              <img class="menu-links" src="../public/comun/que-es.png" alt="icono-que-es">
               ¿Qué es?
             </a>
           </li>
           <li class="menu-item">
             <a href="../pages/historia.html">
-              <img src="../public/comun/historia.png" alt="icono-historia">
+              <img class="menu-links" src="../public/comun/historia.png" alt="icono-historia">
               Historia
             </a>
           </li>
           <li class="menu-item">
             <a href="../pages/curiosidades.html">
-              <img src="../public/comun/curiosidades.png" alt="icono-curiosidades">
+              <img class="menu-links" src="../public/comun/curiosidades.png" alt="icono-curiosidades">
               Curiosidades
             </a>
           </li>
           <li class="menu-item">
             <a href="../pages/impacto.html">
-              <img src="../public/comun/impacto.png" alt="icono-impacto">
+              <img class="menu-links" src="../public/comun/impacto.png" alt="icono-impacto">
               Impacto
             </a>
           </li>
           <li class="menu-item">
             <a href="../pages/juego.html">
-              <img src="../public/comun/juego.png" alt="icono-juego">
+              <img class="menu-links" src="../public/comun/juego.png" alt="icono-juego">
               Juego
             </a>
           </li>
           <li class="menu-item">
             <a href="../pages/creadoras.html">
-              <img src="../public/comun/creadoras.png" alt="icono-creadoras">
+              <img class="menu-links" src="../public/comun/creadoras.png" alt="icono-creadoras">
               Creadoras
             </a>
           </li>
@@ -91,10 +92,13 @@
             que revolucionarían la agricultura… y un gas invisible que terminaría alimentando al mundo (¡y también
             causando más de un problema ambiental!).</p>
         </div>
-        <div class="image-block">
-          <img src="../public/historia-files/daniel-rutherford.jpg" alt="Daniel Rutherford">
-          <p class="scientist"><strong>Daniel Rutherford</strong></p>
-        </div>
+       <div class="image-block">
+  <img class="daniel-pic" src="../public/historia-files/daniel-rutherford.jpg" alt="Daniel Rutherford">
+   <audio id="danielAudio" src="../public/historia-files/daniel.mp3"></audio>
+  <a href="https://es.wikipedia.org/wiki/Daniel_Rutherford" target="_blank" class="scientist-link">
+       <p class="scientist"><strong>Daniel Rutherford</strong></p>
+  </a>
+  </div>
       </div>
       <h2>¿Qué tienen en común los explosivos, el estiércol y la agricultura moderna?</h2>
       <h2>Todos están relacionados con el nitrógeno.</h2>
@@ -199,33 +203,45 @@
       </div>
 
       <div class="quote-container">
-        <div>
-          <img src="../public/historia-files/fritz-haber.jpg" alt="Foto izquierda" class="quote-img">
-          <p class="scientist"><strong>Daniel Rutherford</strong></p>
-        </div>
-        <div>
-          <blockquote>
-            N₂ + 3 H₂ → 2 NH₃<br>
-            <small>(Reacción del proceso Haber-Bosch)</small>
-          </blockquote>
-        </div>
-        <div>
-          <img src="../public/historia-files/carl-bosch.JPG" alt="Foto derecha" class="quote-img">
-          <p class="scientist"><strong>Carl Bosch</strong></p>
-        </div>
+  <div class="fritz">
+    <div class="fritz-pic">
+    <img src="../public/historia-files/fritz-haber.jpg" alt="Foto izquierda" class="quote-img">
+    <a href="https://es.wikipedia.org/wiki/Fritz_Haber" target="_blank" class="scientist-link">
       </div>
+      <p class="scientist"><strong>Fritz Haber</strong></p>
+    </a>
+    <audio id="fritzAudio" src="../public/historia-files/fritz.mp3"></audio>
+  </div>
 
-      <div class="reaction-container">
-        <h3>Reacción de síntesis</br>del amoníaco </br>(NH₃)</h3>
-        <button onclick="triggerReaction()">Iniciar Reacción</button>
-        <ul class="reaction-list">
-          <li>Se obtiene NH₃ a partir de N₂ y H₂</li>
-          <li>Usa altas temperaturas (400–500 °C)</li>
-          <li>Presión superior a 200 atm</li>
-          <li>Requiere un catalizador de hierro</li>
-        </ul>
+  <div class="quote-text">
+    <blockquote>
+      N₂ + 3 H₂ → 2 NH₃<br>
+      <small>(Reacción del proceso Haber-Bosch)</small>
+    </blockquote>
+  </div>
+
+  <div class="carl">
+    <div class="carl-pic">
+    <img src="../public/historia-files/carl-bosch.JPG" alt="Foto derecha" class="quote-img">
+    <a href="https://es.wikipedia.org/wiki/Carl_Bosch" target="_blank" class="scientist-link">
       </div>
+      <p class="scientist"><strong>Carl Bosch</strong></p>
+    </a>
+    <audio id="carlAudio" src="../public/historia-files/carl.mp3"></audio>
+  </div>
+</div>
 
+<!-- Esto va debajo -->
+<div class="reaction-container">
+  <h3>Reacción de síntesis</br>del amoníaco </br>(NH₃)</h3>
+  <button onclick="triggerReaction()">Iniciar Reacción</button>
+  <ul class="reaction-list">
+    <li>Se obtiene NH₃ a partir de N₂ y H₂</li>
+    <li>Usa altas temperaturas (400–500 °C)</li>
+    <li>Presión superior a 200 atm</li>
+    <li>Requiere un catalizador de hierro</li>
+  </ul>
+</div>
       <h2>Repercusión mundial</h2>
       <p>Gracias a este proceso, se pudo producir fertilizante a gran escala, aumentando la producción de alimentos.</p>
 

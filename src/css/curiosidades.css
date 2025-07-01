@@ -26,6 +26,7 @@ body {
 }
 
 .curiosidades h1 {
+   font-family: 'DM Sans', sans-serif;
   text-align: center;
   font-size: 2.5rem;
   color: var(--oscuro);
@@ -38,7 +39,7 @@ body {
   gap: 2.5rem;
   margin-left: auto;
   margin-right: auto;
-  max-width: 900px; /* ancho máximo para que no quede muy ancho */
+  max-width: 900px; 
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -54,15 +55,15 @@ body {
 .timeline-item {
   background-color: var(--beige);
   padding: 2.2rem 2.5rem;
-  margin: 0 auto; /* centra horizontalmente */
+  margin: 0 auto; 
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(44, 62, 80, 0.15);
   transition: transform 0.3s ease;
-  max-width: 900px;      /* ancho máximo fijo */
-  width: 95%;           /* ocupa todo el ancho disponible hasta max-width */
-  box-sizing: border-box; /* incluye padding en el ancho total */
+  max-width: 900px;   
+  width: 95%;         
+  box-sizing: border-box; 
   position: relative;
-  border-left: none;     /* quitamos borde */
+  border-left: none;     
 }
 
 
@@ -83,10 +84,20 @@ body {
 }
 
 .timeline-item::before {
-  display: none; /* oculta el emoji 💡 si estaba */
+  display: none; 
+}
+.curio-img {
+  width: 30%;          
+  max-width: 400px;     
+  height: auto;         
+  border-radius: 10px;
+  margin: 0 auto 1rem;  
+  display: block;       
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Responsive */
+
+/* RESPONSIVE*/
 @media screen and (max-width: 769px) {
   .curiosidades {
     padding: 1rem;
@@ -112,39 +123,25 @@ body {
   }
 }
 
-.bottom-buttons {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem 0;
-}
-
 .buttons {
-  display: flex;
-  align-items: center; 
-  justify-content: flex-start; 
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  gap: 1rem;
+  width: 100%;
+  padding: 24px 0;
   position: relative;
 }
 
-.btn {
-  text-decoration: none;
+.btn-horizontal {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .btn i {
-  font-size: 32px;
-  color: #494848;
-  transition: transform 0.2s ease;
-}
-
-.btn i:hover {
-  transform: scale(1.2);
+  font-size: 30px;
+  color: rgb(73, 72, 72);
 }
 
 .btn-up {
-  margin-left:auto;
-  display: flex;
-  align-items: center;
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
 }

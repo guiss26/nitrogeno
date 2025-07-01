@@ -5,7 +5,6 @@ AOS.init({
   easing: 'ease-out-back',
 });
 
-// Configura los eventos y atributos AOS en las tarjetas
 document.querySelectorAll('.timeline-item').forEach(item => {
     item.addEventListener('mouseenter', () => {
         item.style.boxShadow = '0 8px 16px rgba(44, 62, 80, 0.2)';
@@ -17,6 +16,25 @@ document.querySelectorAll('.timeline-item').forEach(item => {
         item.style.transform = 'scale(1)';
     });
 
-    // Usamos animación zoom-in-up para todas las tarjetas
+
     item.setAttribute('data-aos', 'zoom-in-up');
 });
+document.querySelectorAll('.curio-img').forEach(img => {
+  img.addEventListener('mouseenter', () => {
+    img.style.transform = 'scale(1.05)';
+    img.style.opacity = '0.95';
+  });
+
+  img.addEventListener('mouseleave', () => {
+    img.style.transform = 'scale(1)';
+    img.style.opacity = '1';
+  });
+});
+//para que el ↑ te lleve arriba con desplazamiento lento
+function scrollToTop(event){
+    event.preventDefault(); //Previene el salto instantáneo
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' //desplazamiento suave
+    })
+}

@@ -40,6 +40,11 @@ function scrollToTop(event){
     })
 }
 
+function scrollToTop(event) {
+  event.preventDefault();
+  document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
+}
+
 // === SONIDOS DE TEXTOS ===
 
 const text = document.querySelector('.hover-sound');

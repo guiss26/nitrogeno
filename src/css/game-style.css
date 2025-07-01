@@ -58,7 +58,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 7.5vmin;
     font-weight: bold;
-    background-color: #FF80C4;
+    background-color: #88a7d0;
     color: black;
     transition: 100ms;
     animation: show 200ms;
@@ -114,7 +114,7 @@ body {
     padding: 12px 25px;
     border: none;
     border-radius: 7px;
-    background-color: #FF80C4;
+    background-color: #88a7d0;
     color: white;
     font-size: 1rem;
     cursor: pointer;
@@ -126,7 +126,7 @@ body {
 }
 
 .popup-button:hover {
-    background-color: #ff55cc;
+    background-color: #88a7d0;
     transform: scale(1.05);
 }
 

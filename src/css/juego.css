@@ -2,6 +2,10 @@ body {
     background-color: #f4f9f4;
 }
 
+#top {
+    background-color: #88a7d0;
+
+}
 
 .flex-1 {
     flex: 1;
@@ -10,8 +14,7 @@ body {
 .headline {
     font-size: 44px;
     text-align: center;
-    color: #FF2AAA;
-}
+    color: #486f99;}
 
 @media (max-width: 768px) {
     .headline {
@@ -29,7 +32,7 @@ body {
     display: block;
     margin: 40px auto;
     padding: 2.0em 3.2em;
-    background-color: #FF80C4;
+    background-color: #88a7d0;
     border: 1px solid #000;
     border-radius: 8px;
     font-family: 'Space Mono', monospace;
@@ -42,9 +45,9 @@ body {
 }
 
 .button-game:hover {
-    background-color: #FF80C4;
+    background-color: #88a7d0;
     transform: scale(1.03);
-    box-shadow: 0 0 12px rgba(255, 42, 170, 0.6);
+    box-shadow: #486f99;
 }
 
 .collapsible1, .collapsible2 {
@@ -54,7 +57,7 @@ body {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    background-color: #FF80C4;
+    background-color: #88a7d0;
     cursor: pointer;
     padding: 18px;
     border: none;

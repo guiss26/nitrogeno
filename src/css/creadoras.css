@@ -314,3 +314,95 @@ footer {
     background-size: cover;
     text-align: center;
 }
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.rain-container {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+}
+
+.rain-background-container {
+    position: fixed; /* Esto lo saca del flujo normal del documento */
+    top: 0;          /* Lo posiciona en la parte superior del viewport */
+    left: 0;         /* Lo posiciona en la parte izquierda del viewport */
+    width: 100%;     /* Ocupa el 100% del ancho del viewport */
+    height: 100%;    /* Ocupa el 100% de la altura del viewport */
+    overflow: hidden; /* Asegura que las gotas no se vean fuera de este div */
+    pointer-events: none; /* Crucial: permite que los clics pasen a los elementos que están debajo de la lluvia */
+    z-index: -1;     /* Envía la lluvia al fondo, detrás de todo el contenido */
+    /* Si tenías un background-image en el body para el fondo general, puedes moverlo aquí si quieres
+       que la lluvia esté sobre él, o déjalo en el body si la lluvia debe estar sobre el color de fondo del body. */
+}
+
+@keyframes animation {
+    0% {
+        transform: translate(var(--x-start), var(--y-start)) rotate(0);
+        opacity: var(--a);
+    }
+    100% {
+        transform: translate(var(--x-end), var(--y-end)) rotate(50deg);
+        opacity: 0; /* <--- Esto hace que desaparezca */
+    }
+}
+
+
+.rainDrop {
+    font-size: var(--sz);
+    filter: blur(var(--blur));
+    animation: animation 11s linear forwards;
+    animation-fill-mode: forwards;
+    transform: translate(var(--x-start), -15 vh) rotate(0);
+    opacity: var(--a);
+}
+
+.rainDrop--s {
+    --sz: 1rem;
+    --blur: 2px;
+    --a: 0.8;
+    --x-satar:50vw;
+    --x-end:0;
+    --y-start:0;
+    --y-end:100vh;
+    position: absolute;
+}
+
+.rainDrop--m {
+    --sz: 2rem;
+    --blur: 1px;
+    --a: o.8;
+    --x-start:50vw;
+    --x-end:0;
+    --y-start:0;
+    --y-end:100vh;
+    position: absolute;
+    z-index: 50;
+}
+
+.rainDrop--l {
+    --sz: 3rem;
+    --blur: 0px;
+    --a: o.8;
+    --x-satar:50vw;
+    --x-end:0;
+    --y-start:0;
+    --y-end:100vh;
+    position: absolute;
+    z-index: 80;
+}
+
+.rainDrop--xl {
+    --sz: 6rem;
+    --blur: 4px;
+    --a: o.5;
+    --x-satar:50vw;
+    --x-end:0;
+    --y-start:0;
+    --y-end:100vh;
+    position: absolute;
+    z-index: 1000;
+}

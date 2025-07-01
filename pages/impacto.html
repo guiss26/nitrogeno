@@ -1,84 +1,96 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Declaración de HTML5 -->
+<html lang="es"> <!-- Documento en español -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nitrógeno</title>
-    <link rel="stylesheet" href="../src/css/index.css">
-    <link rel="stylesheet" href="../src/css/impacto.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"> <!-- Codificación para caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adaptar a dispositivos móviles -->
+  <title>Impacto del Nitrógeno</title> <!-- Título en la pestaña del navegador -->
+  
+  <!-- Hojas de estilo propias -->
+  <link rel="stylesheet" href="../src/css/index.css">
+  <link rel="stylesheet" href="../src/css/impacto.css">
+  
+  <!-- Carga anticipada de Google Fonts para rendimiento -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Fuentes importadas desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="icon" href="../public/comun/logo.webp" type="image/webp">
+  <!-- Iconos de Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
-    <main class="container">
-        <!-- <header id="top"> -->
-          <nav id="top">
-              <h1>
-                  <a class="title" href="#"><i class="fa-solid fa-arrow-left"></i> 7.NITROGENO</a>
-              </h1>
-                <input type="checkbox" id="check">
-              <label for="check">
-                  <i class="fa-solid fa-bars" id="btn-menu"></i>
-                  <i class="fa-solid fa-xmark" id="cancel"></i>
-              </label>
-                <ul class="menu">
-                    <li class="menu-item">
-                        <a href="../index.html">
-                            <img class="menu-links" src="../public/comun/que-es.png" alt="icono-que-es">
-                            ¿Qué es?
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="../pages/historia.html">
-                            <img class="menu-links" src="../public/comun/historia.png" alt="icono-historia">
-                            Historia
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="../pages/curiosidades.html">
-                            <img class="menu-links" src="../public/comun/curiosidades.png" alt="icono-curiosidades">
-                            Curiosidades
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="../pages/impacto.html">
-                            <img class="menu-links" src="../public/comun/impacto.png" alt="icono-impacto">
-                            Impacto
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="../pages/juego.html">
-                            <img class="menu-links" src="../public/comun/juego.png" alt="icono-juego">
-                            Juego
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="../pages/creadoras.html">
-                            <img class="menu-links" src="../public/comun/creadoras.png" alt="icono-creadoras">
-                            Creadoras
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        <!-- </header> -->
+  <main class="container"> <!-- Contenedor principal de la página -->
 
-    <!-- Contenido principal -->
+    <!-- Cursor personalizado con un emoji -->
+    <div id="emoji-cursor">🍃</div>
+    
+    <!-- Barra de navegación -->
+    <nav id="top">
+      <h1>
+        <!-- Título con icono de flecha que redirige -->
+        <a class="title" href="#"><i class="fa-solid fa-arrow-left"></i> 7.NITROGENO</a>
+      </h1>
+
+      <!-- Checkbox para controlar menú hamburguesa -->
+      <input type="checkbox" id="check">
+      <label for="check">
+        <!-- Icono menú hamburguesa y cerrar -->
+        <i class="fa-solid fa-bars" id="btn"></i>
+        <i class="fa-solid fa-xmark" id="cancel"></i>
+      </label>
+
+      <!-- Menú desplegable con enlaces a otras páginas -->
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="../index.html">
+            <img src="../public/comun/que-es.png" alt="icono-que-es">
+            ¿Qué es?
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="../pages/historia.html">
+            <img src="../public/comun/historia.png" alt="icono-historia">
+            Historia
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="../pages/curiosidades.html">
+            <img src="../public/comun/curiosidades.png" alt="icono-curiosidades">
+            Curiosidades
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="../pages/impacto.html">
+            <img src="../public/comun/impacto.png" alt="icono-impacto">
+            Impacto
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="../pages/juego.html">
+            <img src="../public/comun/juego.png" alt="icono-juego">
+            Juego
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="../pages/creadoras.html">
+            <img src="../public/comun/creadoras.png" alt="icono-creadoras">
+            Creadoras
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sección de contenido principal -->
     <section class="impact">
       
       <!-- Título principal -->
-      <header>
-        <h1>Impacto del Nitrógeno</h1>
-        <h2>El elemento que alimenta al mundo...<br>pero también lo contamina</h2>
-      </header>
+      <h1>Impacto del Nitrógeno</h1>
+      
+      <!-- Subtítulo con salto de línea -->
+      <h2>El elemento que alimenta al mundo...<br>pero también lo contamina</h2>
 
       <!-- Texto introductorio -->
       <div class="intro-text">
@@ -86,96 +98,75 @@
         <p>Desde la revolución verde del siglo XX, la humanidad ha duplicado la cantidad de nitrógeno reactivo en el ambiente.</p>
       </div>
 
-      <!-- Efectos del nitrógeno -->
-      <section class="effects-section">
-        <h2>Principales efectos ambientales</h2>
-        
-        <div class="effects-grid">
-          <article class="effect-card">
-            <img src="../public/impacto-files/impactorioeutrofizacion.jpg" alt="Lagos con proliferación de algas debido a eutrofización">
-            <h3>Eutrofización</h3>
-            <p>El exceso de nitrógeno en aguas causa proliferación de algas y zonas muertas.</p>
-          </article>
-          
-          <article class="effect-card">
-            <img src="../public/impacto-files/impactosmog.jpg" alt="Ciudad con smog y contaminación atmosférica">
-            <h3>Contaminación Atmosférica</h3>
-            <p>Los óxidos de nitrógeno contribuyen al smog y la lluvia ácida.</p>
-          </article>
-          
-          <article class="effect-card">
-            <img src="../public/impacto-files/impactocambioclimatico.jpg" alt="Efectos del cambio climático en el planeta">
-            <h3>Cambio Climático</h3>
-            <p>El óxido nitroso es 300 veces más potente que el CO₂ como gas de efecto invernadero.</p>
-          </article>
+      <!-- Efectos ambientales en tarjetas -->
+      <h2>Principales efectos ambientales</h2>
+      <div class="effects-grid">
+        <!-- Tarjeta 1: Eutrofización -->
+        <div class="effect-card">
+          <img src="../public/impacto-files/impactofertilizacion.jpg" alt="Eutrofización">
+          <h3>Eutrofización</h3>
+          <p>El exceso de nitrógeno en aguas causa proliferación de algas y zonas muertas.</p>
         </div>
-      </section>
+        
+        <!-- Tarjeta 2: Contaminación -->
+        <div class="effect-card">
+          <img src="../public/impacto-files/impactosmog.jpg" alt="Contaminación del aire">
+          <h3>Contaminación Atmosférica</h3>
+          <p>Los óxidos de nitrógeno contribuyen al smog y la lluvia ácida.</p>
+        </div>
+        
+        <!-- Tarjeta 3: Cambio climático -->
+        <div class="effect-card">
+          <img src="../public/impacto-files/impactocambioclimatico.jpg" alt="Cambio climático">
+          <h3>Cambio Climático</h3>
+          <p>El óxido nitroso es 300 veces más potente que el CO₂.</p>
+        </div>
+      </div>
 
-      <!-- Estadísticas -->
-      <section class="stats-container">
+      <!-- Sección de estadísticas con animación JS -->
+      <div class="stats-container">
         <h2>Datos que impactan</h2>
         <div class="stat-grid">
           <div class="stat-card" data-stat="120">
-            <div class="stat-number" aria-live="polite">0</div>
+            <div class="stat-number">0</div>
             <div class="stat-label">Millones de toneladas de N₂ añadidas anualmente</div>
           </div>
           <div class="stat-card" data-stat="50">
-            <div class="stat-number" aria-live="polite">0</div>
+            <div class="stat-number">0</div>
             <div class="stat-label">% de la población depende de fertilizantes sintéticos</div>
           </div>
           <div class="stat-card" data-stat="400">
-            <div class="stat-number" aria-live="polite">0</div>
+            <div class="stat-number">0</div>
             <div class="stat-label">Zonas muertas oceánicas identificadas</div>
           </div>
         </div>
-        <button class="reveal-stats" onclick="animateStats()" type="button">
-          Revelar Estadísticas
-        </button>
-      </section>
+        <button class="reveal-stats">Revelar Estadísticas</button> <!-- Botón para activar animación -->
+      </div>
 
-      <!-- Soluciones -->
-      <section class="solutions-section">
+      <!-- Sección de soluciones -->
+      <div class="solutions-section">
         <h2>Soluciones para un futuro sostenible</h2>
         <ul class="solutions-list">
-          <li>
-            <span aria-hidden="true">🌱</span> 
-            <strong>Agricultura de precisión:</strong> Aplicar fertilizantes solo donde se necesitan
-          </li>
-          <li>
-            <span aria-hidden="true">🦠</span> 
-            <strong>Biofertilizantes:</strong> Usar bacterias que fijan nitrógeno naturalmente
-          </li>
-          <li>
-            <span aria-hidden="true">🔄</span> 
-            <strong>Rotación de cultivos:</strong> Alternar con leguminosas
-          </li>
-          <li>
-            <span aria-hidden="true">💧</span> 
-            <strong>Tratamiento de agua:</strong> Eliminar nitratos antes de la descarga
-          </li>
-          <li>
-            <span aria-hidden="true">🥗</span> 
-            <strong>Dietas sostenibles:</strong> Reducir productos intensivos en nitrógeno
-          </li>
+          <li>🌱 <strong>Agricultura de precisión:</strong> Aplicar fertilizantes solo donde se necesitan</li>
+          <li>🦠 <strong>Biofertilizantes:</strong> Usar bacterias que fijan nitrógeno naturalmente</li>
+          <li>🔄 <strong>Rotación de cultivos:</strong> Alternar con leguminosas</li>
+          <li>💧 <strong>Tratamiento de agua:</strong> Eliminar nitratos antes de la descarga</li>
+          <li>🥗 <strong>Dietas sostenibles:</strong> Reducir productos intensivos en nitrógeno</li>
         </ul>
-      </section>
+      </div>
 
-      <!-- Llamada a la acción -->
-      <section class="call-to-action">
+      <!-- Sección de llamada a la acción con botones -->
+      <div class="call-to-action">
         <h2>¿Qué puedes hacer tú?</h2>
         <p>Cada acción cuenta para restablecer el equilibrio del nitrógeno en nuestro planeta.</p>
         <div class="action-buttons">
-          <button class="action-btn" onclick="showPersonalActions()" type="button" aria-expanded="false" aria-controls="personal-actions">
-            Acciones Personales
-          </button>
-          <button class="action-btn" onclick="showGlobalEfforts()" type="button" aria-expanded="false" aria-controls="global-efforts">
-            Esfuerzos Globales
-          </button>
+          <button class="action-btn">Acciones Personales</button> <!-- Muestra contenido oculto personal -->
+          <button class="action-btn">Esfuerzos Globales</button> <!-- Muestra contenido oculto global -->
         </div>
-      </section>
+      </div>
 
-      <!-- Contenido oculto -->
-      <div id="personal-actions" class="hidden-content" aria-hidden="true">
+      <!-- Contenido oculto: Acciones personales -->
+      <div id="personal-actions" class="hidden-content">
         <h3>Acciones Personales</h3>
         <ul>
           <li>Consume productos orgánicos cuando sea posible</li>
@@ -186,7 +177,8 @@
         </ul>
       </div>
 
-      <div id="global-efforts" class="hidden-content" aria-hidden="true">
+      <!-- Contenido oculto: Esfuerzos globales -->
+      <div id="global-efforts" class="hidden-content">
         <h3>Iniciativas Globales</h3>
         <ul>
           <li>Protocolo de Montreal para reducir N₂O</li>
@@ -197,62 +189,31 @@
         </ul>
       </div>
     </section>
-
-    <!-- Modal de sorpresa -->
-    <div id="surprise-modal" class="modal-overlay" style="display: none;" aria-hidden="true" role="dialog" aria-labelledby="modal-title" aria-describedby="modal-description">
-      <div class="modal-content">
-        <button class="modal-close" onclick="closeSurpriseModal()" type="button" aria-label="Cerrar ventana">&times;</button>
-        <div class="modal-header">
-          <h2 id="modal-title">🌟 ¡Recurso sorpresa contra el cambio climático!</h2>
-        </div>
-        <div class="modal-body" id="modal-description">
-          <p>Si te ha gustado aprender sobre el nitrógeno, te va a <strong>encantar</strong> esto:</p>
-          
-          <div class="surprise-content">
-            <h3>📚 "La vida que vendrá"</h3>
-            <p>Un newsletter increíble que explica el futuro del planeta de forma súper clara y optimista. ¡Perfecto para seguir aprendiendo sobre medio ambiente!</p>
-            
-            <div class="surprise-buttons">
-              <a href="https://substack.com/@lavidaquevendra" target="_blank" rel="noopener noreferrer" class="surprise-btn primary">
-                🌱 ¡Quiero leerlo!
-              </a>
-              <button class="surprise-btn secondary" onclick="closeSurpriseModal()" type="button">
-                Quizás después
-              </button>
-            </div>
-          </div>
-          
-          <p class="surprise-note">💡 <em>Recomendado por nuestro equipo - ¡Es gratis y súper interesante!</em></p>
-        </div>
+    
+    <!-- Botones de navegación entre páginas y para volver arriba -->
+    <div class="buttons">
+      <div class="btn-horizontal">
+        <a class="btn btn-left" href="curiosidades.html" title="Ir a Curiosidades">
+          <i class="fa-regular fa-circle-left"></i>
+        </a>
+        <a class="btn" href="juego.html">
+          <i class="fa-regular fa-circle-right"></i>
+        </a>
       </div>
+      <button class="btn btn-up" type="button">
+        <i class="fa-regular fa-circle-up"></i>
+      </button>
     </div>
 
-    <!-- Botones de navegación -->
-    <nav class="buttons" aria-label="Navegación entre páginas">
-      <div class="btn-horizontal">
-        <a class="btn btn-left" href="curiosidades.html" title="Ir a Curiosidades" aria-label="Página anterior: Curiosidades">
-          <i class="fa-regular fa-circle-left" aria-hidden="true"></i>
-        </a>
-        <a class="btn" href="juego.html" title="Ir a Juego" aria-label="Página siguiente: Juego">
-          <i class="fa-regular fa-circle-right" aria-hidden="true"></i>
-        </a>
-      </div>
-      <a class="btn btn-up" onclick="scrollToTop(event)" type="button" aria-label="Ir al inicio de la página">
-        <i class="fa-regular fa-circle-up" aria-hidden="true"></i>
-      </a>
-    </nav>
-
-    <!-- Footer -->
+    <!-- Pie de página con créditos -->
     <footer>
       <p>Proyecto creado por grupo P4 Femcoders Factoria F5</p>
       <p>© 2025 Tabla Periódica Interactiva</p>
-      <img class="logo-fem-coders" src="../public/comun/fem-coders-logo.png" alt="Logo Fem Coders F5">
+      <img class="logo-fem-coders" src="../public/comun/fem-coders-logo.png" alt="logo fem-coders-f5">
     </footer>
   </main>
   
-  <!-- Scripts -->
+  <!-- Script JS con defer para ejecutar al final -->
   <script src="../src/js/impacto.js" defer></script>
-  <script src="../src/js/script.js" defer></script>
-
 </body>
 </html>

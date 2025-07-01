@@ -1,5 +1,3 @@
-// === JAVASCRIPT ULTRA SIMPLIFICADO PARA IMPACTO === //
-
 // 🍃 El emoji te sigue cuando mueves el ratón
 document.addEventListener('mousemove', function(e) {
     // Mueve la hojita
@@ -45,7 +43,7 @@ document.addEventListener('mousemove', function(e) {
 
 
 
-// 👁️ Mostrar/ocultar contenido
+// Mostrar/ocultar contenido
 function showPersonalActions() {
     var content = document.getElementById('personal-actions');
     
@@ -85,6 +83,4 @@ function scrollToTop(event) {
 8. .classList.remove() = quita una clase CSS
 9. .style.display = 'block' = muestra el elemento
 10. .style.display = 'none' = oculta el elemento
-
-¡Eso es TODO lo que necesitas saber para empezar! 🎉
 */

@@ -1,6 +1,4 @@
-/* === CSS SIMPLIFICADO PARA IMPACTO (Compatible con Historia) === */
-
-/* Estilos globales (iguales que Historia) */
+/* Estilos globales  */
 body {
   background: linear-gradient(to bottom, #f1f1f1, #e0f7fa);
   color: #333;
@@ -254,7 +252,7 @@ section.impact code {
   margin: 0;
 }
 
-/* Botón del ciclo (mismo estilo que Historia) */
+/* Botón del ciclo */
 .cycle-container button {
   background-color: #f394e6;
   color: white;
@@ -270,7 +268,7 @@ section.impact code {
   transform: scale(1.08);
 }
 
-/* Soluciones (mismo estilo que consequences-list) */
+/* Soluciones */
 .solutions-section {
   background: #f0f8ff;
   padding: 2rem;
@@ -398,7 +396,7 @@ section.impact code {
   text-decoration: underline;
 }
 
-/* === VENTANA SORPRESA === */
+/* === VENTANA SORPRESA QUE NO ME FUNCIONA!! === */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -578,7 +576,7 @@ section.impact code {
   }
 }
 
-/* Efectos hover (igual que Historia) */
+/* Efectos hover */
 .hover-sound {
   cursor: pointer;
   color: #c01677;
@@ -589,7 +587,7 @@ section.impact code {
   color: #661040;
 }
 
-/* Botones de navegación (usar los de index.css) */
+/* Botones de navegación */
 .buttons {
   width: 100%;
   padding: 24px 0;
@@ -613,14 +611,14 @@ section.impact code {
   right: 24px;
 }
 
-/* Footer (igual que Historia) */
+/* Footer  */
 footer {
   background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493);
   background-size: cover;
   text-align: center;
 }
 
-/* RESPONSIVE (igual que Historia) */
+/* RESPONSIVE */
 @media only screen and (max-width: 768px) {
   .effects-grid {
     flex-direction: column;

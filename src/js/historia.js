@@ -70,3 +70,48 @@ textCarl.addEventListener('click', () => {
   audioCarl.currentTime = 0; // Reinicia desde el inicio
   audioCarl.play();
 });
+
+/* === RESPONSIVE PARA BLOQUE GIFS === */
+
+if (window.innerWidth <= 768) { // solo en móviles
+  const animatedWrappers = document.querySelectorAll('.animated-wrapper');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const wrapper = entry.target;
+      const img = wrapper.querySelector('img');
+      const gif = wrapper.querySelector('iframe');
+
+      if (entry.isIntersecting) {
+        // Mostrar GIF y ocultar imagen
+        gif.style.display = 'block';
+        img.style.opacity = '0';
+
+        // Reinicia el GIF
+        const src = gif.getAttribute('src');
+        gif.setAttribute('src', src);
+
+        // Volver a la imagen después de 3 segundos
+        setTimeout(() => {
+          gif.style.display = 'none';
+          img.style.opacity = '1';
+        }, 3000);
+      }
+    });
+  }, {
+    threshold: 0.6
+  });
+
+  animatedWrappers.forEach(wrapper => observer.observe(wrapper));
+}
+
+/* ==== RESPONSIVE PARA LAS FLIP-CARDS === */
+
+// Solo activar en pantallas pequeñas para que no choque con hover de desktop
+if (window.innerWidth <= 768) {
+  document.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('flipped');
+    });
+  });
+}

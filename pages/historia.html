@@ -157,6 +157,7 @@
               </div>
             </div>
           </div>
+          <span class="tap-to-flip">Toca para girar</span>  <!-- Aquí está fuera del flip-card -->
         </li>
         <li>
           <div class="flip-card">
@@ -171,6 +172,7 @@
               </div>
             </div>
           </div>
+          <span class="tap-to-flip">Toca para girar</span>
         </li>
         <li>
           <div class="flip-card">
@@ -185,6 +187,7 @@
               </div>
             </div>
           </div>
+          <span class="tap-to-flip">Toca para girar</span>
         </li>
       </ul></br>
 
@@ -202,36 +205,49 @@
         amoníaco a partir del aire, sentando las bases de los fertilizantes sintéticos modernos.</p>
       </div>
 
-      <div class="quote-container">
+      <!-- Contenedor completo -->
+<div class="quote-container">
+
+  <!-- Cita solo visible en responsive -->
+<div class="quote-text mobile-only">
+  <blockquote>
+    N₂ + 3 H₂ → 2 NH₃<br>
+    <small>(Reacción del proceso Haber-Bosch)</small>
+  </blockquote>
+</div>
+
+  <!-- Fritz -->
   <div class="fritz">
     <div class="fritz-pic">
-    <img src="../public/historia-files/fritz-haber.jpg" alt="Foto izquierda" class="quote-img">
-    <a href="https://es.wikipedia.org/wiki/Fritz_Haber" target="_blank" class="scientist-link">
-      </div>
-      <p class="scientist"><strong>Fritz Haber</strong></p>
-    </a>
+      <img src="../public/historia-files/fritz-haber.jpg" alt="Foto izquierda" class="quote-img">
+      <a href="https://es.wikipedia.org/wiki/Fritz_Haber" target="_blank" class="scientist-link"></a>
+    </div>
+    <p class="scientist"><strong>Fritz Haber</strong></p>
     <audio id="fritzAudio" src="../public/historia-files/fritz.mp3"></audio>
   </div>
 
-  <div class="quote-text">
+  <!-- Cita solo visible en desktop -->
+  <div class="quote-text desktop-only">
     <blockquote>
       N₂ + 3 H₂ → 2 NH₃<br>
       <small>(Reacción del proceso Haber-Bosch)</small>
     </blockquote>
   </div>
 
+  <!-- Carl -->
   <div class="carl">
     <div class="carl-pic">
-    <img src="../public/historia-files/carl-bosch.JPG" alt="Foto derecha" class="quote-img">
-    <a href="https://es.wikipedia.org/wiki/Carl_Bosch" target="_blank" class="scientist-link">
-      </div>
-      <p class="scientist"><strong>Carl Bosch</strong></p>
-    </a>
+      <img src="../public/historia-files/carl-bosch.JPG" alt="Foto derecha" class="quote-img">
+      <a href="https://es.wikipedia.org/wiki/Carl_Bosch" target="_blank" class="scientist-link"></a>
+    </div>
+    <p class="scientist"><strong>Carl Bosch</strong></p>
     <audio id="carlAudio" src="../public/historia-files/carl.mp3"></audio>
   </div>
 </div>
 
-<!-- Esto va debajo -->
+
+
+<!-- Esto va debajo de las 2 fotos de la quote-->
 <div class="reaction-container">
   <h3>Reacción de síntesis</br>del amoníaco </br>(NH₃)</h3>
   <button onclick="triggerReaction()">Iniciar Reacción</button>

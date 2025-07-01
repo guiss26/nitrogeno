@@ -36,50 +36,50 @@
       
       <!-- Menú hamburguesa -->
       <input type="checkbox" id="check" aria-label="Abrir menú de navegación">
-      <label for="check" class="menu-toggle">
-        <i class="fa-solid fa-bars" id="btn" aria-hidden="true"></i>
+      <label for="check">
+        <i class="fa-solid fa-bars" id="btn-menu" aria-hidden="true"></i>
         <i class="fa-solid fa-xmark" id="cancel" aria-hidden="true"></i>
         <span class="sr-only">Menú</span>
       </label>
       
       <ul class="menu">
-        <li class="menu-item">
-          <a href="../index.html">
-            <img src="../public/comun/que-es.png" alt="Icono qué es">
-            ¿Qué es?
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="../pages/historia.html">
-            <img src="../public/comun/historia.png" alt="Icono historia">
-            Historia
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="../pages/curiosidades.html">
-            <img src="../public/comun/curiosidades.png" alt="Icono curiosidades">
-            Curiosidades
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="../pages/impacto.html" aria-current="page">
-            <img src="../public/comun/impacto.png" alt="Icono impacto">
-            Impacto
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="../pages/juego.html">
-            <img src="../public/comun/juego.png" alt="Icono juego">
-            Juego
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="../pages/creadoras.html">
-            <img src="../public/comun/creadoras.png" alt="Icono creadoras">
-            Creadoras
-          </a>
-        </li>
-      </ul>
+          <li class="menu-item">
+            <a href="../index.html">
+              <img class="menu-links" src="../public/comun/que-es.png" alt="icono-que-es">
+              ¿Qué es?
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="../pages/historia.html">
+              <img class="menu-links" src="../public/comun/historia.png" alt="icono-historia">
+              Historia
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="../pages/curiosidades.html">
+              <img class="menu-links" src="../public/comun/curiosidades.png" alt="icono-curiosidades">
+              Curiosidades
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="../pages/impacto.html">
+              <img class="menu-links" src="../public/comun/impacto.png" alt="icono-impacto">
+              Impacto
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="../pages/juego.html">
+              <img class="menu-links" src="../public/comun/juego.png" alt="icono-juego">
+              Juego
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="../pages/creadoras.html">
+              <img class="menu-links" src="../public/comun/creadoras.png" alt="icono-creadoras">
+              Creadoras
+            </a>
+          </li>
+        </ul>
     </nav>
 
     <!-- Contenido principal -->
@@ -248,9 +248,9 @@
           <i class="fa-regular fa-circle-right" aria-hidden="true"></i>
         </a>
       </div>
-      <button class="btn btn-up" onclick="scrollToTop(event)" type="button" aria-label="Ir al inicio de la página">
+      <a class="btn btn-up" onclick="scrollToTop(event)" type="button" aria-label="Ir al inicio de la página">
         <i class="fa-regular fa-circle-up" aria-hidden="true"></i>
-      </button>
+      </a>
     </nav>
 
     <!-- Footer -->

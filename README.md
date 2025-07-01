@@ -77,15 +77,15 @@ raíz del proyecto/
 │ │ └── style.css # Estilos generales
 │ │
 │ └── js/
-│ ├── cel.js
+│ ├── cell.js
 │ ├── creadoras.js
 │ ├── curiosidades.js
-│ ├── gamejs.js
+│ ├── game.js
 │ ├── grid.js
 │ ├── historia.js
 │ ├── juego.js
 │ ├── script.js
-│ └── tiles.js
+│ └── tile.js
 
 ## Autoras
 

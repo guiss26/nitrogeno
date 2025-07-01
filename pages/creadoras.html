@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
+    <div class="rain-background-container"></div>
+    
     <main class="container">
               <!-- <header id="top"> -->
             <nav id="top">
@@ -67,14 +69,20 @@
                 </ul>
             </nav>
         <!-- </header> -->
+
     <section id="creadoras-section">
-        <div class="nitrogen-background"></div> <h2>Nuestras Creadoras: La Huella de Nuestras Mentes</h2>
+        <div class="nitrogen-background"></div> <h2>
+    <i class="fa-solid fa-music" style="color:#ca34d8;"></i> 
+    Nuestras Creadoras: La Huella de Nuestras Mentes
+    <button id="toggle-audio" class="audio-btn" aria-label="Reproducir/Pausar Audio">
+        <i class="fa-solid fa-volume-high"></i>
+    </button>
+</h2>
         <p class="intro-text">Al igual que el nitrógeno es fundamental para la vida, la colaboración de nuestro equipo ha sido la base de este proyecto. Conoce a las mentes detrás de cada molécula de idea.</p>
 
         <section class="creadoras-container">
         </section>
     </section>
-
     <div id="creatorModal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
@@ -101,6 +109,11 @@
         </footer>
 
     <script src="../src/js/creadoras.js"></script>
+    <audio id="bg-audio" loop>
+    <source src="../public/creadoras-files/reggae-brothers-of-old-full-362266.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+</audio>
+
 </body>
 </html>
 

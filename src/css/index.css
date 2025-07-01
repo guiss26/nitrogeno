@@ -6,7 +6,6 @@
     font-family: "Space Mono", monospace;
     font-optical-sizing: auto;
     font-style: normal;
-    /* font-size: 12px; */
     font-size: 15px;
 }
 
@@ -23,7 +22,7 @@ body {
 
 /*HEADER*/
 #top{
-    background-color: #FFB6C1;
+    background-color: #88a7d0;
     display: flex;
     justify-content: space-between;
     padding: 10px 0 20px 50px;
@@ -104,7 +103,8 @@ label #cancel {
     flex: 1;
     text-align: center;
     position: relative;
-    background: linear-gradient(to bottom, #fff0f5, #ffe4e1, #f0fff0);
+    /* background: linear-gradient(to bottom, #fff0f5, #ffe4e1, #f0fff0); */
+    background: #f4f9f4;
 }
 
 section img{
@@ -173,7 +173,7 @@ h3{
 
 .donde-list{
     text-align: left;
-    background-color: #f9c9e4;
+    background-color: #dae7f9ed;
     padding: 0 20px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -200,7 +200,7 @@ h3{
 .para-que-list {
     text-align: left;
 
-    background-color: #ffcee9;
+    background-color: #dae7f9ed;
     padding: 0 20px; 
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -235,20 +235,21 @@ h3{
 
 .btn-up{
     position: absolute;
-    /* position: fixed; */
     bottom: 30px;
     right: 24px;
 
 }
 /*FOOTER*/
 footer {
-    background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493);
+    /* background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493); */
+    background: linear-gradient(to right, #d6e0ef, #b5c8e0, #88a7d0, #5f7ea8, #3c5c82);
     background-size: cover;
     text-align: center;
 }
 
 footer p {
     margin-top: 10px;
+    color: black;
 }
 
 footer p:first-child {
@@ -276,7 +277,6 @@ footer p:first-child {
         display: none;
     }
     
-        /**/
     .menu {
         display: block;
         position: absolute;
@@ -301,11 +301,12 @@ footer p:first-child {
     }
     
     .menu-item {
-        background: #fddbde;
+        background: #c4d4e9;
     }
     
     .menu-item:hover {
-        background-color: #dfcdce;
+        /* background-color: #dfcdce; */
+        background-color: #c8cdd1;
     }
     
     #check:checked~.menu {
@@ -328,18 +329,13 @@ footer p:first-child {
         display: block;
     }
     
-        /* #typewriter {
-            z-index: 1;
-            position: relative;
-        } */
-    
     .que-es-section {
         padding-top: 120px;
     }
 
     @media only screen and (max-width: 870px){
         .donde-box {
-            flex-wrap: wrap;/*cambiar*/
+            flex-wrap: wrap;
             flex-direction: column-reverse;
         }
 
@@ -348,7 +344,7 @@ footer p:first-child {
         }
 
         .box-cont-para-que {
-            flex-wrap: wrap;/*realmente sirve?*/
+            flex-wrap: wrap;
             flex-direction: column;
         }
 
@@ -395,16 +391,3 @@ footer p:first-child {
     }
 }
 
-
-
-/*FALTA .container-section RESPONSIVE
-   - sections responsive 
-      -> img responsive ✅
-      -> uls responsive flex-wrap ✅
-      -> posible carrusel responsive (?)*/
-/*FALTA QUE EL h2 #typewriter aparezca como antes*/✅
-/*FALTA CARRUSEL IMG EN section donde y para*/
-
-/*Añadir cursor flor(?)*/
-/*Cambia color Nitrogeno titulo?*/
-/*Todos los navs del mismo color?*/

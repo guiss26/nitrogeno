@@ -6,9 +6,6 @@ body {
 }
 
 /* === ENCABEZADO === */
-#top {
-  background-color: #FF80C4;
-}
 
 /* === SECCIÓN HISTORIA === */
 section.history {
@@ -27,13 +24,13 @@ section.history {
 /* === TÍTULO Y SUBTITULOS === */
 section.history h1 {
   font-size: 2.5rem;
-  color: rgb(73, 72, 72);
+  color: #247c8c;
   margin-bottom: 1rem;
 }
 
 section.history h2 {
   font-size: 1.5rem;
-  color: rgb(73, 72, 72);
+  color: #247c8c;
   margin-bottom: 1rem;
 }
 
@@ -187,9 +184,8 @@ section.history code {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-.horizontal-list .item h3 {
+.horizontal-list .item h2 {
   font-size: 1.1rem;
-  color: rgb(60, 54, 214);
   font-weight: 700;
   letter-spacing: 0.3px;
   text-transform: uppercase;
@@ -225,9 +221,6 @@ section.history code {
   perspective: 1000px;
 }
 
-.flip-title {
-  color: 
-}
 
 .flip-card {
   width: 100%;
@@ -282,16 +275,16 @@ section.history code {
   margin-bottom: 0.75rem;
 }
 
-.flip-card-front h2{
+.flip-card-front item h2{
   margin: 0;
   color: rgb(60, 54, 214);
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
 
 .flip-card-back {
   background-color: #b2ebf2;
-  color: #611651;
+  color: #0e4da4;
   transform: rotateY(180deg);
   padding: 1rem;
   display: flex;
@@ -494,11 +487,7 @@ button:hover {
 }
 
 /* === FOOTER === */
-footer {
-  background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493);
-  background-size: cover;
-  text-align: center;
-}
+
 .hover-sound {
   cursor: pointer;
   color: #c01677;

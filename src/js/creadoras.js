@@ -13,8 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'creadora1',
             name: 'Guissella',
+            photo: '../public/creadoras-files/guissella.png', // Reemplazar con URL de la foto real
             role: 'Scrum master',
-            nitrogenLink: '"Así como el nitrógeno es el 78% del aire que respiramos, el Scrum Master es el 100% del oxígeno que impulsa a tu equipo."',
+            nitrogenLink: '"Así como el nitrógeno es el 78% del aire que respiramos, el Scrum Master es el 100% del oxígeno que haimpulsa este equipo."',
             wisdom: '"La colaboración es el catalizador que convierte las ideas individuales en una reacción en cadena de éxito."',
             atomPositions: [ // Posiciones relativas para los "átomos de ideas"
                 { top: '10%', left: '15%' },
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'creadora2',
             name: 'Aday',
-            photo: '',// Reemplazar con URL de la foto real
+            photo: '../public/creadoras-files/aday.png', 
             role: 'Historiadora',
             nitrogenLink: '"Así como el nitrógeno es fundamental para la vida en la Tierra, Aday ha sido el elemento esencial que ha dado vida a la fascinante historia del nitrógeno en esta página."',
             wisdom: '"Un buen diseño es la interfaz invisible que conecta al usuario con el corazón del contenido."',
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'creadora3',
             name: 'Rocío',
-            photo: '', // Reemplazar con URL de la foto real
+            photo: '../public/creadoras-files/rocio.png', 
             role: 'Investigadora',
             nitrogenLink: '"Descubrir los secretos del nitrógeno fue tan fascinante como ver cómo nuestras palabras daban vida a la información."',
             wisdom: '"La claridad es el oxígeno de la comunicación; asegúrate de que tus mensajes respiren libertad."',
@@ -51,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'creadora4',
             name: 'Ana',
-            photo: 'https://via.placeholder.com/150/f39c12/FFFFFF?text=Sofia', // Reemplazar con URL de la foto real
+            photo: '../public/creadoras-files/ana.png', 
             role: 'Creadora',
             nitrogenLink: '"Hacer que el nitrógeno cobre vida con el código fue un reto tan emocionante como ver una reacción química controlada."',
             wisdom: '"No hay bug que una buena taza de café y un par de ojos frescos no puedan resolver."',
@@ -64,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'creadora5',
             name: 'Larysa',
-            photo: 'https://via.placeholder.com/150/9b59b6/FFFFFF?text=Elena', // Reemplazar con URL de la foto real
+            photo: '../public/creadoras-files/larysa.png', 
             role: 'Creadora de Interactividad',
             nitrogenLink: '"Organizar este proyecto fue como equilibrar el ciclo del nitrógeno: vital para que todo fluyera sin problemas."',
             wisdom: '"Un equipo unido no solo supera obstáculos, sino que los transforma en escalones hacia el éxito."',
@@ -77,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'creadora6',
             name: 'Paloma',
-            photo: 'https://via.placeholder.com/150/e74c3c/FFFFFF?text=Paula', // Reemplazar con URL de la foto real
+            photo: '../public/creadoras-files/paloma.png', 
             role: 'Pestaña creadora',
             nitrogenLink: '"Asegurar que la información del nitrógeno fuera clara y accesible para todos fue mi misión principal."',
             wisdom: '"La inclusión no es una opción, es la base de un diseño web realmente potente y universal."',
@@ -154,3 +155,99 @@ document.addEventListener('DOMContentLoaded', () => {
     // animateNitrogenBg(); // Descomentar para activar la animación JS, o dejar solo la CSS
 
 });
+
+const COUNT = 200;
+
+const SIZES = [
+    'rainDrop--s',
+    'rainDrop--s',
+    'rainDrop--s',
+    'rainDrop--s',
+    'rainDrop--m',
+    'rainDrop--m',
+    'rainDrop--m',
+    'rainDrop--m',
+    'rainDrop--l',
+    'rainDrop--l',
+    'rainDrop--l',
+    'rainDrop--xl',
+    'rainDrop--xl',
+    'rainDrop--xl',
+];
+
+const EMOJIS = [
+    '🎀',
+    '🎆',
+    '💻',
+    '💕',
+    '♥',
+    '💕',
+    '💟',
+    '💖',
+    '🧠',
+    '🖤',
+    '💜',
+    '🌺',
+    '🌸',
+    '😻',
+    '🐈'
+];
+
+const rainContainer = document.querySelector('.rain-background-container');
+
+const genRainDrop = (size, xStart, xEnd, yStart, emoji)=>{
+    const myEmoji = document.createElement('div');
+    myEmoji.innerText = emoji;
+    myEmoji.classList.add('rainDrop', size);
+    myEmoji.style.setProperty('--x-satrt', xStart + 'vw');
+    myEmoji.style.setProperty('--x-end', xEnd + 'vw');
+    myEmoji.style.setProperty('--y-satrt', yStart + 'vh');
+    myEmoji.style.setProperty('--y-end', yStart + 200 + 'vh');
+
+    return myEmoji;
+}
+
+for(let i=0; i<COUNT; i++){
+    const size = randFromList(SIZES);
+    const xStart = getRamdom(350,-50);
+    const xEnd = getRamdom(xStart -20, xStart + 20);
+    const yStart = getRamdom(-100, 0);
+    const emoji = randFromList(EMOJIS);
+    rainContainer.appendChild(genRainDrop(size, xStart,xEnd, yStart, emoji));
+}
+
+function randFromList(items){
+    return items[Math.floor(Math.random()*items.length)];
+}
+
+function getRamdom(min, max){
+    return Math.random()*(max - min) + min;
+}
+    document.addEventListener('DOMContentLoaded', () => {
+        const audio = document.getElementById('bg-audio');
+        const toggleBtn = document.getElementById('toggle-audio');
+        const icon = toggleBtn.querySelector('i');
+
+        let isPlaying = false;
+
+        toggleBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                audio.pause();
+                icon.classList.remove('fa-volume-xmark');
+                icon.classList.add('fa-volume-high');
+            } else {
+                audio.play();
+                icon.classList.remove('fa-volume-high');
+                icon.classList.add('fa-volume-xmark');
+            }
+            isPlaying = !isPlaying;
+        });
+    });
+
+function scrollToTop(event){
+    event.preventDefault(); //Previene el salto instantáneo
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' //desplazamiento suave
+    })
+}

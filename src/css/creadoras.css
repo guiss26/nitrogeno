@@ -45,6 +45,8 @@ body {
   z-index: 10000;
   transform: translate(-50%, -50%);
   transition: transform 0.05s linear;
+  position: fixed;
+  pointer-events: none; /* Para que no interfiera con clicks */
 }
 
 @keyframes fadeOut {

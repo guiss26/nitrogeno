@@ -6,7 +6,6 @@
     font-family: "Space Mono", monospace;
     font-optical-sizing: auto;
     font-style: normal;
-    /* font-size: 12px; */
     font-size: 15px;
 }
 
@@ -235,7 +234,6 @@ h3{
 
 .btn-up{
     position: absolute;
-    /* position: fixed; */
     bottom: 30px;
     right: 24px;
 
@@ -276,7 +274,6 @@ footer p:first-child {
         display: none;
     }
     
-        /**/
     .menu {
         display: block;
         position: absolute;
@@ -328,18 +325,13 @@ footer p:first-child {
         display: block;
     }
     
-        /* #typewriter {
-            z-index: 1;
-            position: relative;
-        } */
-    
     .que-es-section {
         padding-top: 120px;
     }
 
     @media only screen and (max-width: 870px){
         .donde-box {
-            flex-wrap: wrap;/*cambiar*/
+            flex-wrap: wrap;
             flex-direction: column-reverse;
         }
 
@@ -348,7 +340,7 @@ footer p:first-child {
         }
 
         .box-cont-para-que {
-            flex-wrap: wrap;/*realmente sirve?*/
+            flex-wrap: wrap;
             flex-direction: column;
         }
 
@@ -395,16 +387,3 @@ footer p:first-child {
     }
 }
 
-
-
-/*FALTA .container-section RESPONSIVE
-   - sections responsive 
-      -> img responsive ✅
-      -> uls responsive flex-wrap ✅
-      -> posible carrusel responsive (?)*/
-/*FALTA QUE EL h2 #typewriter aparezca como antes*/✅
-/*FALTA CARRUSEL IMG EN section donde y para*/
-
-/*Añadir cursor flor(?)*/
-/*Cambia color Nitrogeno titulo?*/
-/*Todos los navs del mismo color?*/

@@ -173,7 +173,7 @@ h3{
 
 .donde-list{
     text-align: left;
-    background-color: #f9c9e4;
+    background-color: #dae7f9ed;
     padding: 0 20px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -200,7 +200,7 @@ h3{
 .para-que-list {
     text-align: left;
 
-    background-color: #ffcee9;
+    background-color: #dae7f9ed;
     padding: 0 20px; 
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -241,13 +241,15 @@ h3{
 }
 /*FOOTER*/
 footer {
-    background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493);
+    /* background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493); */
+    background: linear-gradient(to right, #d6e0ef, #b5c8e0, #88a7d0, #5f7ea8, #3c5c82);
     background-size: cover;
     text-align: center;
 }
 
 footer p {
     margin-top: 10px;
+    color: black;
 }
 
 footer p:first-child {

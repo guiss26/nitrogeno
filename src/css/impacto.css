@@ -611,11 +611,7 @@ section.impact code {
 }
 
 /* Footer (igual que Historia) */
-footer {
-  background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493);
-  background-size: cover;
-  text-align: center;
-}
+
 
 /* RESPONSIVE (igual que Historia) */
 @media only screen and (max-width: 768px) {

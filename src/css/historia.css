@@ -482,11 +482,7 @@ button:hover {
 }
 
 /* === FOOTER === */
-footer {
-  background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493);
-  background-size: cover;
-  text-align: center;
-}
+
 .hover-sound {
   cursor: pointer;
   color: #c01677;

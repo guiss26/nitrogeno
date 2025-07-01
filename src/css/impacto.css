@@ -599,7 +599,7 @@ section.impact {
 /* Títulos principales */
 section.impact h1 {
   font-size: 2.5rem;
-  color: #b80075; /* Color rosado fuerte */
+  color: #20252b; /* Color rosado fuerte */
   margin-bottom: 1rem;
   font-family: "Space Mono", monospace;
   font-weight: 700;
@@ -607,18 +607,12 @@ section.impact h1 {
 
 section.impact h2 {
   font-size: 1.5rem;
-  color: #b80075;
+  color: #20252b;
   margin-bottom: 1rem;
   font-family: "Space Mono", monospace;
   font-weight: 700;
 }
 
-/* Efecto hover para cambiar el color de títulos */
-section.impact h1:hover,
-section.impact h2:hover {
-  color: rgb(60, 54, 214); /* Cambia a azul al pasar el ratón */
-  transition: color 0.3s ease;
-}
 
 /* Espaciado en párrafos */
 section.impact p {
@@ -627,7 +621,7 @@ section.impact p {
 
 /* Estilo de texto en negrita */
 section.impact strong {
-  color: #6e0c59; /* Un morado oscuro */
+  color: #20252b; /* Un morado oscuro */
 }
 
 /* Código en línea */
@@ -688,7 +682,7 @@ section.impact code {
 
 /* Título dentro de tarjetas */
 .effect-card h3 {
-  color: #8a1454; /* Morado */
+  color: #20252b; /* Morado */
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
   font-weight: 700;
@@ -698,14 +692,14 @@ section.impact code {
 
 /* Texto dentro de tarjetas */
 .effect-card p {
-  color: #444;
+  color: #20252b;
   font-size: 0.95rem;
   line-height: 1.4;
 }
 
 /* Contenedor de estadísticas */
 .stats-container {
-  background: #fface3; /* Rosa claro */
+  background: #fdfdfd; /* Rosa claro */
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -716,7 +710,7 @@ section.impact code {
 
 /* Cambio de color al pasar el ratón en estadísticas */
 .stats-container:hover {
-  background: #b2ebf2; /* Azul claro */
+  background:#88a7d0; /* Azul claro */
   transition: background 0.3s ease;
 }
 
@@ -750,7 +744,7 @@ section.impact code {
 .stat-number {
   font-size: 3rem;
   font-weight: bold;
-  color: #b80075;
+  color: #6298d6;
   margin-bottom: 0.5rem;
 }
 
@@ -763,7 +757,7 @@ section.impact code {
 
 /* Botón para revelar estadísticas */
 .reveal-stats {
-  background-color: #f394e6; /* Rosa intenso */
+  background-color: #1d1e1f; /* Rosa intenso */
   color: white;
   border: none;
   padding: 0.8rem 1.5rem;
@@ -775,13 +769,13 @@ section.impact code {
 
 /* Efecto hover en botón de estadísticas */
 .reveal-stats:hover {
-  background-color: #3d5eed; /* Azul fuerte */
+  background-color: #9ea3bc; /* Azul fuerte */
   transform: scale(1.05);
 }
 
 /* Sección de soluciones */
 .solutions-section {
-  background: #f0f8ff; /* Azul muy claro */
+  background: #e7ebf1; /* Azul muy claro */
   padding: 2rem;
   border-radius: 1rem;
   margin: 2rem auto;
@@ -795,13 +789,14 @@ section.impact code {
   max-width: 700px;
   margin: 20px auto;
   font-size: 1.1rem;
-  color: #333;
+  color: #1b1a1a;
 }
 
 /* Cada elemento de la lista de soluciones */
 .solutions-list li {
   position: relative;
-  background: #fae0f2; /* Rosa pastel */
+  background: #eceef0d4; /* Degradado rosa a azul */
+; /* Rosa pastel */
   margin-bottom: 15px;
   padding: 15px 20px 15px 50px;
   border-radius: 8px;
@@ -811,13 +806,13 @@ section.impact code {
 
 /* Efecto hover para soluciones */
 .solutions-list li:hover {
-  background: #b2ebf2; /* Azul suave */
+  background: #f7f8f9; /* Azul suave */
   transform: translateX(5px); /* Desplaza un poco a la derecha */
 }
 
 /* Sección llamada a la acción */
 .call-to-action {
-  background: linear-gradient(135deg, #fface3, #b2ebf2); /* Degradado rosa a azul */
+  background: linear-gradient(135deg, hsl(204, 22%, 95%), #eceef0d4); /* Degradado rosa a azul */
   padding: 2rem;
   border-radius: 1rem;
   margin: 2rem auto;
@@ -836,7 +831,7 @@ section.impact code {
 
 /* Estilos de botones de acción */
 .action-btn {
-  background-color: #f394e6;
+  background-color: #0d0d0e;
   color: white;
   border: none;
   padding: 0.8rem 1.5rem;
@@ -865,7 +860,7 @@ section.impact code {
 
 /* Títulos de contenido oculto */
 .hidden-content h3 {
-  color: #b80075;
+  color: #007bb8;
   margin-bottom: 1rem;
 }
 

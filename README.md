@@ -12,7 +12,7 @@ Cada pestaña aborda un tema diferente para ofrecer una visión amplia y dinámi
 - **Historia:** Recorrido histórico sobre el descubrimiento y estudio del nitrógeno.  
 - **Curiosidades:** Datos interesantes y poco conocidos sobre el nitrógeno.  
 - **Impacto:** Influencia del nitrógeno en el medioambiente y la salud.  
-- **Juego:** Una sección interactiva que redirige a un juego de casillas donde puedes formar la molécula de N₂O, creado con JavaScript.  
+- **Juego:** Una sección interactiva que redirige a un juego de casillas donde puedes formar la molécula de N4O2, creado con JavaScript.  
 - **Curiosidades:** Información adicional y anécdotas relacionadas con el nitrógeno.  
 - **Creadoras:** Presentación del equipo que desarrolló el proyecto, con sus roles y aportes.
 
@@ -27,7 +27,7 @@ Cada pestaña aborda un tema diferente para ofrecer una visión amplia y dinámi
 2. Asegúrate de tener la carpeta files con las imágenes y sonidos necesarios.
 3. Abre el archivo index.html en tu navegador preferido, preferentemente Chrome o Firefox.
 4. Explora cada pestaña para conocer los diferentes enfoques sobre el nitrógeno.  
-5. En la pestaña “Juego”, prueba a formar la molécula de N₂O en un tablero interactivo.  
+5. En la pestaña “Juego”, prueba a formar la molécula de N4O2 en un tablero interactivo.  
 6. Disfruta de una navegación fluida y animaciones que hacen la ciencia más accesible y divertida.
 
 ## Recursos y licencias

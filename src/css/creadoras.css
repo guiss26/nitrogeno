@@ -326,6 +326,19 @@ body {
     overflow: hidden;
 }
 
+.rain-background-container {
+    position: fixed; /* Esto lo saca del flujo normal del documento */
+    top: 0;          /* Lo posiciona en la parte superior del viewport */
+    left: 0;         /* Lo posiciona en la parte izquierda del viewport */
+    width: 100%;     /* Ocupa el 100% del ancho del viewport */
+    height: 100%;    /* Ocupa el 100% de la altura del viewport */
+    overflow: hidden; /* Asegura que las gotas no se vean fuera de este div */
+    pointer-events: none; /* Crucial: permite que los clics pasen a los elementos que están debajo de la lluvia */
+    z-index: -1;     /* Envía la lluvia al fondo, detrás de todo el contenido */
+    /* Si tenías un background-image en el body para el fondo general, puedes moverlo aquí si quieres
+       que la lluvia esté sobre él, o déjalo en el body si la lluvia debe estar sobre el color de fondo del body. */
+}
+
 @keyframes animation {
     0% {
         transform: translate(var(--x-start), var(--y-start)) rotate(0);

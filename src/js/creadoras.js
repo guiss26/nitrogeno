@@ -193,7 +193,7 @@ const EMOJIS = [
     '🐈'
 ];
 
-const rainContainer = document.querySelector('#creadoras-section > h2');
+const rainContainer = document.querySelector('.rain-background-container');
 
 const genRainDrop = (size, xStart, xEnd, yStart, emoji)=>{
     const myEmoji = document.createElement('div');

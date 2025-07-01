@@ -18,6 +18,40 @@ body {
     background-size: cover; 
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que se repita */
+    cursor: none;
+}
+
+.cursor-trail {
+  position: fixed;
+  width: 16px;
+  height: 16px;
+  background: rgba(168, 207, 239, 0.25); / rosa suave (hot pink transparente) */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 0 0 15px rgba(146, 183, 246, 0.4);
+  transform: translate(-50%, -50%);
+  animation: fadeOut 0.7s ease-out forwards;
+}
+
+#emoji-cursor {
+  position: fixed;
+  font-size: 24px;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s linear;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.2) translate(-50%, -50%);
+  }
 }
 
 header {
@@ -44,8 +78,6 @@ header h1 {
   line-height: 1.7;
   color: #333;
 }
-
-
 
 .nitrogen-background {
     position: absolute;
@@ -364,7 +396,7 @@ body {
 .rainDrop--m {
     --sz: 2rem;
     --blur: 1px;
-    --a: o.8;
+    --a: 0.8;
     --x-start:50vw;
     --x-end:0;
     --y-start:0;
@@ -376,7 +408,7 @@ body {
 .rainDrop--l {
     --sz: 3rem;
     --blur: 0px;
-    --a: o.8;
+    --a: 0.8;
     --x-satar:50vw;
     --x-end:0;
     --y-start:0;
@@ -388,7 +420,7 @@ body {
 .rainDrop--xl {
     --sz: 6rem;
     --blur: 4px;
-    --a: o.5;
+    --a: 0.5;
     --x-satar:50vw;
     --x-end:0;
     --y-start:0;

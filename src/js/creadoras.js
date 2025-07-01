@@ -199,9 +199,9 @@ const genRainDrop = (size, xStart, xEnd, yStart, emoji)=>{
     const myEmoji = document.createElement('div');
     myEmoji.innerText = emoji;
     myEmoji.classList.add('rainDrop', size);
-    myEmoji.style.setProperty('--x-satrt', xStart + 'vw');
+    myEmoji.style.setProperty('--x-start', xStart + 'vw');
     myEmoji.style.setProperty('--x-end', xEnd + 'vw');
-    myEmoji.style.setProperty('--y-satrt', yStart + 'vh');
+    myEmoji.style.setProperty('--y-s', yStart + 'vh');
     myEmoji.style.setProperty('--y-end', yStart + 200 + 'vh');
 
     return myEmoji;
@@ -244,6 +244,7 @@ function getRamdom(min, max){
         });
     });
 
+<<<<<<< HEAD
 function scrollToTop(event){
     event.preventDefault(); //Previene el salto instantáneo
     window.scrollTo({
@@ -251,3 +252,22 @@ function scrollToTop(event){
         behavior: 'smooth' //desplazamiento suave
     })
 }
+=======
+document.addEventListener("mousemove", (e) => {
+  // Mueve el emoji
+  const emojiCursor = document.getElementById("emoji-cursor");
+  if (emojiCursor) {
+    emojiCursor.style.left = `${e.clientX}px`;
+    emojiCursor.style.top = `${e.clientY}px`;
+  }
+
+  // Agrega el rastro
+  const trail = document.createElement("div");
+  trail.className = "cursor-trail";
+  trail.style.left = `${e.clientX}px`;
+  trail.style.top = `${e.clientY}px`;
+  document.body.appendChild(trail);
+
+  setTimeout(() => trail.remove(), 600);
+});
+>>>>>>> 0086e60ce9ce00d0c5a6e1f82328adcaf231a536

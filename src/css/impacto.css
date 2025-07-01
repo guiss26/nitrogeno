@@ -7,9 +7,6 @@ body {
   cursor: none !important;
 }
 
-#top {
-  background-color: #FF80C4;
-}
 
 /* Contenedor principal (usando los mismos estilos que .history) */
 section.impact {

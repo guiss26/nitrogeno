@@ -22,7 +22,7 @@ body {
 
 /*HEADER*/
 #top{
-    background-color: #FFB6C1;
+    background-color: #88a7d0;
     display: flex;
     justify-content: space-between;
     padding: 10px 0 20px 50px;
@@ -103,7 +103,8 @@ label #cancel {
     flex: 1;
     text-align: center;
     position: relative;
-    background: linear-gradient(to bottom, #fff0f5, #ffe4e1, #f0fff0);
+    /* background: linear-gradient(to bottom, #fff0f5, #ffe4e1, #f0fff0); */
+    background: #f4f9f4;
 }
 
 section img{
@@ -298,11 +299,12 @@ footer p:first-child {
     }
     
     .menu-item {
-        background: #fddbde;
+        background: #c4d4e9;
     }
     
     .menu-item:hover {
-        background-color: #dfcdce;
+        /* background-color: #dfcdce; */
+        background-color: #c8cdd1;
     }
     
     #check:checked~.menu {

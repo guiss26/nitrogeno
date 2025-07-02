@@ -57,4 +57,3 @@ document.addEventListener("mousemove", (e) => {
 
   setTimeout(() => trail.remove(), 600);
 });
-

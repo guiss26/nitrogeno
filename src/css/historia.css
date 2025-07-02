@@ -1,6 +1,6 @@
 /* === ESTILOS GENERALES === */
 body {
-  background: linear-gradient(to bottom, #f1f1f1, #e0f7fa);
+  /* background: linear-gradient(to bottom, #f1f1f1, #e0f7fa); */
   color: #333;
   cursor: none;
 }
@@ -596,11 +596,11 @@ button:hover {
     }
     
     .menu-item {
-        background: #fddbde;
+        background: #c4d4e9;
     }
     
     .menu-item:hover {
-        background-color: #dfcdce;
+        background-color: #c8cdd1;
     }
     
     #check:checked~.menu {

@@ -223,6 +223,62 @@ h3 {
     margin: 17px 0;
 }
 
+/*Carousel */
+.carousel-container {
+    position: relative;/*prueba*/
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.carousel-track-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-track li {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.carousel-track img {
+    object-fit: cover;
+    border-radius: 10px;
+
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.carousel-btn.prev{
+    left: 10px;
+}
+
+.carousel-btn.next{
+    right: 10px;
+}
+
+
 /*--- para-que-section ---*/
 .para-que-section {
     padding: 20px 8% 0 8%;

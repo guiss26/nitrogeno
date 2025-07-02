@@ -50,3 +50,61 @@ function scrollToTop(event) {
   event.preventDefault();
   document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
 }
+
+
+//CAROUSEL
+document.querySelectorAll('.carousel-container').forEach((carousel) => {
+  const track = carousel.querySelector('.carousel-track');
+  const originalSlides = Array.from(track.children); // Guardamos los originales
+  const nextBtn = carousel.querySelector('.carousel-btn.next');
+  const prevBtn = carousel.querySelector('.carousel-btn.prev');
+
+  // ⚠️ Evitar duplicar clones si ya existen
+  if (track.children.length === originalSlides.length) {
+    const firstClone = originalSlides[0].cloneNode(true);
+    const lastClone = originalSlides[originalSlides.length - 1].cloneNode(true);
+
+    track.insertBefore(lastClone, originalSlides[0]);
+    track.appendChild(firstClone);
+  }
+
+  const slides = track.querySelectorAll('li');
+  let index = 1;
+  const slideWidth = 100;
+
+  // Inicializar posición al primer slide real
+  track.style.transform = `translateX(-${index * slideWidth}%)`;
+
+  function moveToSlide(i) {
+    track.style.transition = 'transform 0.5s ease';
+    track.style.transform = `translateX(-${i * slideWidth}%)`;
+  }
+
+  function handleTransitionEnd() {
+    if (slides[index].isEqualNode(slides[0])) {
+      // Estamos en el clon del último slide → saltamos al real último
+      track.style.transition = 'none';
+      index = slides.length - 2;
+      track.style.transform = `translateX(-${index * slideWidth}%)`;
+    } else if (slides[index].isEqualNode(slides[slides.length - 1])) {
+      // Estamos en el clon del primer slide → saltamos al real primero
+      track.style.transition = 'none';
+      index = 1;
+      track.style.transform = `translateX(-${index * slideWidth}%)`;
+    }
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (index >= slides.length - 1) return;
+    index++;
+    moveToSlide(index);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (index <= 0) return;
+    index--;
+    moveToSlide(index);
+  });
+
+  track.addEventListener('transitionend', handleTransitionEnd);
+});

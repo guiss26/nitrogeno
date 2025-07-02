@@ -252,6 +252,7 @@ function scrollToTop(event){
     })
 }
 
+//para el cursor
 document.addEventListener("mousemove", (e) => {
   // Mueve el emoji
   const emojiCursor = document.getElementById("emoji-cursor");

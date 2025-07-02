@@ -1,4 +1,4 @@
-// Inicializa AOS
+
 AOS.init({
   offset: 250,
   duration: 800,
@@ -30,13 +30,12 @@ document.querySelectorAll('.curio-img').forEach(img => {
     img.style.opacity = '1';
   });
 });
-//para que el ↑ te lleve arriba con desplazamiento lento
+
 function scrollToTop(event){
-    event.preventDefault(); //Previene el salto instantáneo
+    event.preventDefault(); 
     window.scrollTo({
         top: 0,
-        behavior: 'smooth' //desplazamiento suave
+        behavior: 'smooth' 
     })
 }
-
 

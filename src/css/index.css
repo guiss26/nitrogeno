@@ -262,10 +262,12 @@ h3 {
     font-size: 30px;
     color: rgb(73, 72, 72);
     /*prueba cambiar color*/
+    transition: color 0.3s;
 }
 
 .btn i:hover {
     transform: scale(1.2);
+    color: #7398c4;
 }
 
 .btn-right {

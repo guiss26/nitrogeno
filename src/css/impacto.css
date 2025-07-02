@@ -8,11 +8,11 @@ body {
   position: fixed;
   width: 16px;
   height: 16px;
-  background: rgba(34, 139, 34, 0.4); /* Verde translúcido */
+  background: rgba(179, 230, 117, 0.3); /* más opaco */
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
-  box-shadow: 0 0 15px rgba(34, 139, 34, 0.6);
+  box-shadow: 0 0 20px rgba(179, 230, 117, 0.9); /* sombra más intensa */
   transform: translate(-50%, -50%);
   animation: fadeOut 0.7s ease-out forwards;
 }

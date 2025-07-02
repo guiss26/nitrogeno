@@ -89,12 +89,38 @@ function showGlobalEfforts() {
 }
 
 // Esta función hace que la página suba hasta arriba del todo
-function scrollToTop() {
-    // Para navegadores modernos
-    document.documentElement.scrollTop = 0;
-    // Para navegadores antiguos
-    document.body.scrollTop = 0;
+// function scrollToTop() {
+//     // Para navegadores modernos
+//     document.documentElement.scrollTop = 0;
+//     // Para navegadores antiguos
+//     document.body.scrollTop = 0;
+// }
+
+
+function scrollToTop(event){
+    event.preventDefault(); //Previene el salto instantáneo
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' //desplazamiento suave
+    })
+
+    document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
 }
+
+// function scrollToTop(event) {
+//   if (event) event.preventDefault();
+//   window.scrollTo({
+//     top: 0,
+//     behavior: 'smooth'
+//   });
+// }
+
+
+// function scrollToTop(event) {
+//   event.preventDefault();
+//   document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
+// }
+
 
 // Configuro todos los eventos una vez que la página haya terminado de cargar
 document.addEventListener('DOMContentLoaded', function() {

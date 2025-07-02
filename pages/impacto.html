@@ -38,7 +38,7 @@
       <input type="checkbox" id="check">
       <label for="check">
         <!-- Icono menú hamburguesa y cerrar -->
-        <i class="fa-solid fa-bars" id="btn"></i>
+        <i class="fa-solid fa-bars" id="btn-menu"></i>
         <i class="fa-solid fa-xmark" id="cancel"></i>
       </label>
 
@@ -46,37 +46,37 @@
       <ul class="menu">
         <li class="menu-item">
           <a href="../index.html">
-            <img src="../public/comun/que-es.png" alt="icono-que-es">
+            <img class="menu-links" src="../public/comun/que-es.png" alt="icono-que-es">
             ¿Qué es?
           </a>
         </li>
         <li class="menu-item">
           <a href="../pages/historia.html">
-            <img src="../public/comun/historia.png" alt="icono-historia">
+            <img class="menu-links" src="../public/comun/historia.png" alt="icono-historia">
             Historia
           </a>
         </li>
         <li class="menu-item">
           <a href="../pages/curiosidades.html">
-            <img src="../public/comun/curiosidades.png" alt="icono-curiosidades">
+            <img class="menu-links" src="../public/comun/curiosidades.png" alt="icono-curiosidades">
             Curiosidades
           </a>
         </li>
         <li class="menu-item">
           <a href="../pages/impacto.html">
-            <img src="../public/comun/impacto.png" alt="icono-impacto">
+            <img class="menu-links" src="../public/comun/impacto.png" alt="icono-impacto">
             Impacto
           </a>
         </li>
         <li class="menu-item">
           <a href="../pages/juego.html">
-            <img src="../public/comun/juego.png" alt="icono-juego">
+            <img class="menu-links" src="../public/comun/juego.png" alt="icono-juego">
             Juego
           </a>
         </li>
         <li class="menu-item">
           <a href="../pages/creadoras.html">
-            <img src="../public/comun/creadoras.png" alt="icono-creadoras">
+            <img class="menu-links" src="../public/comun/creadoras.png" alt="icono-creadoras">
             Creadoras
           </a>
         </li>
@@ -200,9 +200,9 @@
           <i class="fa-regular fa-circle-right"></i>
         </a>
       </div>
-      <button class="btn btn-up" type="button">
+      <a class="btn btn-up" onclick="scrollToTop(event)" href="#top">
         <i class="fa-regular fa-circle-up"></i>
-      </button>
+      </a>
     </div>
 
     <!-- Pie de página con créditos -->

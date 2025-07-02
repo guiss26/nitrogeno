@@ -1,10 +1,33 @@
 body {
     background-color: #f4f9f4;
+    cursor: none;
 }
 
 #top {
     background-color: #88a7d0;
 
+}
+
+
+/* === CURSOR FLOR === */
+#emoji-cursor {
+  position: fixed;
+  font-size: 24px;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s linear;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.2) translate(-50%, -50%);
+  }
 }
 
 .flex-1 {
@@ -48,6 +71,7 @@ body {
     background-color: #88a7d0;
     transform: scale(1.03);
     box-shadow: #486f99;
+    cursor: none;
 }
 
 .collapsible1, .collapsible2 {
@@ -67,6 +91,7 @@ body {
     border: 1px solid #000;
     border-radius: 8px;
     margin: 0 auto;
+    cursor: none;
 }
 
 .content1, .content2 {
@@ -186,6 +211,7 @@ body {
 
 .btn i:hover {
     transform: scale(1.2);
+    cursor: none;
 }
 
 .btn-up {

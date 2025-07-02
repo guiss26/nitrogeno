@@ -6,3 +6,13 @@ collapsibles.forEach(button => {
         content.classList.toggle("active");
     });
 });
+
+//para el cursor
+document.addEventListener("mousemove", (e) => {
+  // Mueve el emoji
+  const emojiCursor = document.getElementById("emoji-cursor");
+  if (emojiCursor) {
+    emojiCursor.style.left = `${e.clientX}px`;
+    emojiCursor.style.top = `${e.clientY}px`;
+  }
+});

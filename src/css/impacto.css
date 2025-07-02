@@ -366,17 +366,12 @@ section.impact code {
   right: 24px;
 }
 
-<<<<<<< HEAD
-/* Footer (igual que Historia) */
-
-=======
 /* Pie de página */
 footer {
   background: linear-gradient(to right, #fff0f5, #fbcce7, #f9a7d4, #f679c3, #ff1493);
   background-size: cover;
   text-align: center;
 }
->>>>>>> 19c63a7297c17dc60d91cf689d9b45a35ec8a4fe
 
 /* RESPONSIVE: ajustes para pantallas pequeñas */
 @media only screen and (max-width: 768px) {

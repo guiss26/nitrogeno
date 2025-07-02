@@ -24,13 +24,13 @@ section.history {
 /* === TÍTULO Y SUBTITULOS === */
 section.history h1 {
   font-size: 2.5rem;
-  color: rgb(73, 72, 72);
+  color: #247c8c;
   margin-bottom: 1rem;
 }
 
 section.history h2 {
   font-size: 1.5rem;
-  color: rgb(73, 72, 72);
+  color: #247c8c;
   margin-bottom: 1rem;
 }
 
@@ -184,9 +184,8 @@ section.history code {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-.horizontal-list .item h3 {
+.horizontal-list .item h2 {
   font-size: 1.1rem;
-  color: rgb(60, 54, 214);
   font-weight: 700;
   letter-spacing: 0.3px;
   text-transform: uppercase;
@@ -222,9 +221,6 @@ section.history code {
   perspective: 1000px;
 }
 
-.flip-title {
-  color: 
-}
 
 .flip-card {
   width: 100%;
@@ -279,16 +275,16 @@ section.history code {
   margin-bottom: 0.75rem;
 }
 
-.flip-card-front h2{
+.flip-card-front item h2{
   margin: 0;
   color: rgb(60, 54, 214);
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
 
 .flip-card-back {
   background-color: #b2ebf2;
-  color: #611651;
+  color: #0e4da4;
   transform: rotateY(180deg);
   padding: 1rem;
   display: flex;
@@ -370,7 +366,7 @@ section.history blockquote:hover {
 
 /* === CONTENEDOR DE REACCIÓN HABER-BOSCH === */
 .reaction-container {
-  background: rgb(164, 202, 232);
+  background: rgb(176, 213, 241);
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -406,10 +402,11 @@ button:hover {
   list-style-type: none;
   padding: 0;
   margin-top: 1rem;
+  font-weight: bold;
 }
 
 .reaction-list li {
-  background-color: #64c1e3;
+  background-color: #89c6dc;
   margin: 0.5rem 0;
   padding: 0.8rem;
   border-radius: 0.5rem;
@@ -446,12 +443,13 @@ button:hover {
 
 .consequences-list li {
   position: relative;
-  background: rgb(164, 202, 232);
+  background: rgb(176, 213, 241);
   margin-bottom: 15px;
   padding: 15px 20px 15px 50px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
   transition: background-color 0.3s ease;
+  font-weight: bold;
 }
 
 .consequences-list li:hover {

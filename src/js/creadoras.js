@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'Guissella',
             photo: '../public/creadoras-files/guissella.png', // Reemplazar con URL de la foto real
             role: 'Scrum master',
-            nitrogenLink: '"Así como el nitrógeno es el 78% del aire que respiramos, el Scrum Master es el 100% del oxígeno que haimpulsa este equipo."',
+            nitrogenLink: '"Así como el nitrógeno es el 78% del aire que respiramos, el Scrum Master es el 100% del oxígeno que ha impulsado este equipo."',
             wisdom: '"La colaboración es el catalizador que convierte las ideas individuales en una reacción en cadena de éxito."',
             atomPositions: [ // Posiciones relativas para los "átomos de ideas"
                 { top: '10%', left: '15%' },

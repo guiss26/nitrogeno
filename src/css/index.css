@@ -12,12 +12,29 @@
 body {
     height: 100vh;
     width: 100%;
+    cursor: none;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+/*CURSOR*/
+.cursor-trail {
+  position: fixed;
+  width: 16px;
+  height: 16px;
+  /* background: rgba(126, 252, 255, 0.5);  */
+  background: rgba(126, 252, 255, 0.2);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  /* box-shadow: 0 0 15px rgba(126, 252, 255, 0.8); */
+  box-shadow: 0 0 10px rgba(126, 252, 255, 0.35); 
+  transform: translate(-50%, -50%);
+  animation: fadeOut 0.7s ease-out forwards;
 }
 
 #emoji-cursor {
@@ -29,6 +46,16 @@ body {
     transition: transform 0.05s linear;
 }
 
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.2) translate(-50%, -50%);
+  }
+}
 /*HEADER*/
 #top {
     background-color: #88a7d0;
@@ -106,6 +133,7 @@ label #cancel {
 
 .menu-item a:hover {
     color: white;
+    cursor: none;
 }
 
 /*SECTIONS*/
@@ -401,6 +429,10 @@ footer p:first-child {
                         .para-que-list,
                         .para-img {
                             width: 320px;
+                        }
+
+                        footer{
+                            padding: 0 20px;/*prueba*/
                         }
 
                         @media only screen and (max-width: 365px) {

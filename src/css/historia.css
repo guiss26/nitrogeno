@@ -524,11 +524,13 @@ button:hover {
   position: fixed;
   width: 16px;
   height: 16px;
-  background: rgba(168, 207, 239, 0.25); /* grisito claro */
+  /* background: rgba(168, 207, 239, 0.25);  */
+  background: rgba(255, 209, 85, 0.15);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
-  box-shadow: 0 0 15px rgba(146, 183, 246, 0.4);
+  /* box-shadow: 0 0 15px rgba(146, 183, 246, 0.4); */
+  box-shadow: 0 0 10px rgba(255, 209, 85, 0.25);
   transform: translate(-50%, -50%);
   animation: fadeOut 0.7s ease-out forwards;
 }

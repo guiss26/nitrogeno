@@ -1,4 +1,4 @@
-  function triggerReaction() {
+ function triggerReaction() {
     const items = document.querySelectorAll(".reaction-list li");
     items.forEach((item, index) => {
       setTimeout(() => {
@@ -13,7 +13,7 @@
   btn.addEventListener("click", triggerReaction);
 });
 
- document.addEventListener("mousemove", (e) => {
+document.addEventListener("mousemove", (e) => {
   // Mueve el emoji
   const emojiCursor = document.getElementById("emoji-cursor");
   if (emojiCursor) {
@@ -32,12 +32,12 @@
 });
 
 //para que el ↑ te lleve arriba con desplazamiento lento
-function scrollToTop(event){
-    event.preventDefault(); //Previene el salto instantáneo
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth' //desplazamiento suave
-    })
+function scrollToTop(event) {
+  event.preventDefault(); //Previene el salto instantáneo
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' //desplazamiento suave
+  })
 }
 
 function scrollToTop(event) {
@@ -47,36 +47,27 @@ function scrollToTop(event) {
 
 // === SONIDOS DE TEXTOS ===
 
-const text = document.querySelector('.hover-sound');
-const audio = document.getElementById('hoverAudio');
+document.addEventListener("DOMContentLoaded", () => {
+  function setupAudio(selector, audioId) {
+    const element = document.querySelector(selector);
+    const audio = document.getElementById(audioId);
 
-text.addEventListener('click', () => {
-  audio.currentTime = 0; // Reinicia desde el inicio
-  audio.play();
-});
+    if (element && audio) {
+      element.addEventListener("click", () => {
+        audio.currentTime = 0;
+        audio.play();
+      });
+    } else {
+      console.warn(`No se encontró ${selector} o ${audioId}`);
+    }
+  }
 
-const textDaniel = document.querySelector('.daniel-pic');
-const audioDaniel = document.getElementById('danielAudio');
-
-textDaniel.addEventListener('click', () => {
-  audioDaniel.currentTime = 0; // Reinicia desde el inicio
-  audioDaniel.play();
-});
-
-const textFritz = document.querySelector('.fritz-pic');
-const audioFritz = document.getElementById('fritzAudio');
-
-textFritz.addEventListener('click', () => {
-  audioFritz.currentTime = 0; // Reinicia desde el inicio
-  audioFritz.play();
-});
-
-const textCarl = document.querySelector('.carl-pic');
-const audioCarl = document.getElementById('carlAudio');
-
-textCarl.addEventListener('click', () => {
-  audioCarl.currentTime = 0; // Reinicia desde el inicio
-  audioCarl.play();
+  // Asignar audios a elementos
+  setupAudio('.hover-sound', 'hoverAudio');
+  setupAudio('.daniel-pic-desktop', 'danielAudio');
+  setupAudio('.daniel-pic-mobile', 'danielAudio');
+  setupAudio('.fritz-pic', 'fritzAudio');
+  setupAudio('.carl-pic', 'carlAudio');
 });
 
 /* === RESPONSIVE PARA BLOQUE GIFS === */

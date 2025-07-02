@@ -199,9 +199,9 @@ const genRainDrop = (size, xStart, xEnd, yStart, emoji)=>{
     const myEmoji = document.createElement('div');
     myEmoji.innerText = emoji;
     myEmoji.classList.add('rainDrop', size);
-    myEmoji.style.setProperty('--x-satrt', xStart + 'vw');
+    myEmoji.style.setProperty('--x-start', xStart + 'vw');
     myEmoji.style.setProperty('--x-end', xEnd + 'vw');
-    myEmoji.style.setProperty('--y-satrt', yStart + 'vh');
+    myEmoji.style.setProperty('--y-s', yStart + 'vh');
     myEmoji.style.setProperty('--y-end', yStart + 200 + 'vh');
 
     return myEmoji;
@@ -244,6 +244,7 @@ function getRamdom(min, max){
         });
     });
 
+
 function scrollToTop(event){
     event.preventDefault(); //Previene el salto instantáneo
     window.scrollTo({
@@ -251,6 +252,7 @@ function scrollToTop(event){
         behavior: 'smooth' //desplazamiento suave
     })
 }
+
 
 //para el cursor
 document.addEventListener("mousemove", (e) => {
@@ -270,3 +272,4 @@ document.addEventListener("mousemove", (e) => {
 
   setTimeout(() => trail.remove(), 600);
 });
+

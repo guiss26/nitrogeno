@@ -44,6 +44,7 @@ Cada pestaña aborda un tema diferente para ofrecer una visión amplia y dinámi
 
 El repositorio está organizado de la siguiente forma:
 
+```
 raíz del proyecto/
 │
 ├── index.html # Página de inicio
@@ -87,6 +88,7 @@ raíz del proyecto/
 │ ├── script.js
 │ └── tile.js
 
+```
 ## Autoras
 
 Este proyecto ha sido desarrollado de forma colaborativa por un equipo de coders dentro del programa **Factoría F5**, combinando creatividad, tecnología y trabajo en equipo:

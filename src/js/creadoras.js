@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalNitrogenLink = document.getElementById('modalNitrogenLink');
     const modalWisdom = document.getElementById('modalWisdom');
 
-    // Datos de las creadoras (¡Asegúrate de reemplazar con sus nombres, fotos y textos reales!)
-    const creadorasData = [
+        const creadorasData = [
         {
             id: 'creadora1',
             name: 'Guissella',

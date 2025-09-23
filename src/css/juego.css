@@ -37,7 +37,9 @@ body {
 .headline {
     font-size: 44px;
     text-align: center;
-    color: #486f99;}
+    color: #486f99;
+    padding-top: 30px;
+}
 
 @media (max-width: 768px) {
     .headline {

@@ -1,6 +1,6 @@
 
 // Detecto el movimiento del ratón en la página
-document.addEventListener('mousemove', function(e) {
+document.addEventListener('mousemove', function (e) {
     // Obtengo el elemento de la hojita personalizada
     const cursor = document.getElementById('emoji-cursor');
     if (cursor) {
@@ -89,26 +89,43 @@ function showGlobalEfforts() {
 }
 
 // Esta función hace que la página suba hasta arriba del todo
-function scrollToTop() {
-    // Para navegadores modernos
-    document.documentElement.scrollTop = 0;
-    // Para navegadores antiguos
-    document.body.scrollTop = 0;
+document.addEventListener("DOMContentLoaded", () => {
+    const scrollButton = document.getElementById("scrollUpBtn");
+
+    if (scrollButton) {
+        scrollButton.addEventListener("click", function (event) {
+            event.preventDefault(); // evita salto brusco
+
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // desplazamiento suave
+            });
+        });
+    }
+});
+
+function scrollToTop(event) {
+    event.preventDefault(); //Previene el salto instantáneo
+    document.querySelector('main').scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }
 
+
 // Configuro todos los eventos una vez que la página haya terminado de cargar
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     console.log('Página cargada');
 
     // Configuro el botón que sube arriba
     const scrollButton = document.querySelector('.btn-up');
     if (scrollButton) {
         // Evento para escritorio: clic con ratón
-        scrollButton.onclick = function() {
+        scrollButton.onclick = function () {
             scrollToTop();
         };
         // Evento para móviles: toque con dedo
-        scrollButton.addEventListener('touchstart', function() {
+        scrollButton.addEventListener('touchstart', function () {
             scrollToTop();
         });
     }
@@ -116,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Configuro el botón para revelar estadísticas
     const statsButton = document.querySelector('.reveal-stats');
     if (statsButton) {
-        statsButton.onclick = function() {
+        statsButton.onclick = function () {
             animateStats();
         };
     }
@@ -127,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Leo el texto del botón para saber qué acción mostrar
         const buttonText = button.textContent.trim();
 
-        button.onclick = function() {
+        button.onclick = function () {
             if (buttonText.includes('Personales')) {
                 showPersonalActions();
             } else if (buttonText.includes('Globales')) {

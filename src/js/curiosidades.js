@@ -1,4 +1,4 @@
-// Inicializa AOS
+
 AOS.init({
   offset: 250,
   duration: 800,
@@ -30,11 +30,30 @@ document.querySelectorAll('.curio-img').forEach(img => {
     img.style.opacity = '1';
   });
 });
-//para que el ↑ te lleve arriba con desplazamiento lento
+
 function scrollToTop(event){
-    event.preventDefault(); //Previene el salto instantáneo
+    event.preventDefault(); 
     window.scrollTo({
         top: 0,
-        behavior: 'smooth' //desplazamiento suave
+        behavior: 'smooth' 
     })
 }
+
+//para el cursor
+document.addEventListener("mousemove", (e) => {
+  // Mueve el emoji
+  const emojiCursor = document.getElementById("emoji-cursor");
+  if (emojiCursor) {
+    emojiCursor.style.left = `${e.clientX}px`;
+    emojiCursor.style.top = `${e.clientY}px`;
+  }
+
+  // Agrega el rastro
+  const trail = document.createElement("div");
+  trail.className = "cursor-trail";
+  trail.style.left = `${e.clientX}px`;
+  trail.style.top = `${e.clientY}px`;
+  document.body.appendChild(trail);
+
+  setTimeout(() => trail.remove(), 600);
+});

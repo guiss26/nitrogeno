@@ -91,7 +91,7 @@ raíz del proyecto/
 
 Este proyecto ha sido desarrollado de forma colaborativa por un equipo de coders dentro del programa **Factoría F5**, combinando creatividad, tecnología y trabajo en equipo:
 
-- **Guissela Pérez** – Responsable de la pestaña **Qué es** y **Scrum Master** del equipo.  
+- **Guissella Pérez** – Responsable de la pestaña **Qué es** y **Scrum Master** del equipo.  
 - **Aday Álvarez** – Encargada del desarrollo de la sección **Historia**.  
 - **Rocío Coronel** – Desarrolladora de la pestaña de **Curiosidades**.  
 - **Ana Muruzabal** – Responsable de la sección **Impacto**, enfocada en medioambiente y sociedad.  
@@ -102,5 +102,5 @@ Este proyecto refleja el esfuerzo conjunto de cada integrante, fomentando el apr
 
 ## Licencia
 
-Este proyecto está abierto para uso personal y educativo. l código está disponible en este repositorio para que puedas revisarlo, aprender y contribuir.
+Este proyecto está abierto para uso personal y educativo. El código está disponible en este repositorio para que puedas revisarlo, aprender y contribuir.
 

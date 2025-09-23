@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'Guissella',
             photo: '../public/creadoras-files/guissella.png', // Reemplazar con URL de la foto real
             role: 'Scrum master',
-            nitrogenLink: '"Así como el nitrógeno es el 78% del aire que respiramos, el Scrum Master es el 100% del oxígeno que haimpulsa este equipo."',
+            nitrogenLink: '"Así como el nitrógeno es el 78% del aire que respiramos, el Scrum Master es el 100% del oxígeno que ha impulsado este equipo."',
             wisdom: '"La colaboración es el catalizador que convierte las ideas individuales en una reacción en cadena de éxito."',
             atomPositions: [ // Posiciones relativas para los "átomos de ideas"
                 { top: '10%', left: '15%' },
@@ -199,9 +199,9 @@ const genRainDrop = (size, xStart, xEnd, yStart, emoji)=>{
     const myEmoji = document.createElement('div');
     myEmoji.innerText = emoji;
     myEmoji.classList.add('rainDrop', size);
-    myEmoji.style.setProperty('--x-satrt', xStart + 'vw');
+    myEmoji.style.setProperty('--x-start', xStart + 'vw');
     myEmoji.style.setProperty('--x-end', xEnd + 'vw');
-    myEmoji.style.setProperty('--y-satrt', yStart + 'vh');
+    myEmoji.style.setProperty('--y-s', yStart + 'vh');
     myEmoji.style.setProperty('--y-end', yStart + 200 + 'vh');
 
     return myEmoji;
@@ -244,6 +244,7 @@ function getRamdom(min, max){
         });
     });
 
+
 function scrollToTop(event){
     event.preventDefault(); //Previene el salto instantáneo
     window.scrollTo({
@@ -251,3 +252,24 @@ function scrollToTop(event){
         behavior: 'smooth' //desplazamiento suave
     })
 }
+
+
+//para el cursor
+document.addEventListener("mousemove", (e) => {
+  // Mueve el emoji
+  const emojiCursor = document.getElementById("emoji-cursor");
+  if (emojiCursor) {
+    emojiCursor.style.left = `${e.clientX}px`;
+    emojiCursor.style.top = `${e.clientY}px`;
+  }
+
+  // Agrega el rastro
+  const trail = document.createElement("div");
+  trail.className = "cursor-trail";
+  trail.style.left = `${e.clientX}px`;
+  trail.style.top = `${e.clientY}px`;
+  document.body.appendChild(trail);
+
+  setTimeout(() => trail.remove(), 600);
+});
+

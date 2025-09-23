@@ -110,11 +110,9 @@ showWinPopup() {
     window.open("../pages/creadoras.html", "_blank");
   });
 
-  // ВСТАВЛЯЕМ КНОПКИ В КОНТЕЙНЕР
   buttonsContainer.appendChild(btnBack);
   buttonsContainer.appendChild(btnCreators);
 
-  // ДОБАВЛЯЕМ ВСЁ В POPUP
   popup.appendChild(message);
   popup.appendChild(buttonsContainer);
   overlay.appendChild(popup);

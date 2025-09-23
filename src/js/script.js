@@ -18,32 +18,23 @@ function write(){
 }
 document.addEventListener("DOMContentLoaded", write)
 
-//cursor
-// Detecto el movimiento del ratón en la página
-document.addEventListener('mousemove', function(e) {
-    // Obtengo el elemento de la hojita personalizada
-    const cursor = document.getElementById('emoji-cursor');
-    if (cursor) {
-        // Coloco la hojita en la posición actual del ratón
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
+//para el cursor
+document.addEventListener("mousemove", (e) => {
+  // Mueve el emoji
+  const emojiCursor = document.getElementById("emoji-cursor");
+  if (emojiCursor) {
+    emojiCursor.style.left = `${e.clientX}px`;
+    emojiCursor.style.top = `${e.clientY}px`;
+  }
 
-        // A veces creo un efecto de rastro verde detrás del cursor
-        if (Math.random() > 0.7) {
-            const trail = document.createElement("div");
-            trail.className = "cursor-trail";
-            trail.style.left = e.clientX + 'px';
-            trail.style.top = e.clientY + 'px';
-            document.body.appendChild(trail);
+  // Agrega el rastro
+  const trail = document.createElement("div");
+  trail.className = "cursor-trail";
+  trail.style.left = `${e.clientX}px`;
+  trail.style.top = `${e.clientY}px`;
+  document.body.appendChild(trail);
 
-            // Elimino el rastro después de 0.6 segundos para que no se acumulen
-            setTimeout(() => {
-                if (trail && trail.parentNode) {
-                    trail.remove();
-                }
-            }, 600);
-        }
-    }
+  setTimeout(() => trail.remove(), 600);
 });
 
 //para que el ↑ te lleve arriba con desplazamiento lento
@@ -59,3 +50,61 @@ function scrollToTop(event) {
   event.preventDefault();
   document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
 }
+
+
+//CAROUSEL
+document.querySelectorAll('.carousel-container').forEach((carousel) => {
+  const track = carousel.querySelector('.carousel-track');
+  const originalSlides = Array.from(track.children); // Guardamos los originales
+  const nextBtn = carousel.querySelector('.carousel-btn.next');
+  const prevBtn = carousel.querySelector('.carousel-btn.prev');
+
+  // ⚠️ Evitar duplicar clones si ya existen
+  if (track.children.length === originalSlides.length) {
+    const firstClone = originalSlides[0].cloneNode(true);
+    const lastClone = originalSlides[originalSlides.length - 1].cloneNode(true);
+
+    track.insertBefore(lastClone, originalSlides[0]);
+    track.appendChild(firstClone);
+  }
+
+  const slides = track.querySelectorAll('li');
+  let index = 1;
+  const slideWidth = 100;
+
+  // Inicializar posición al primer slide real
+  track.style.transform = `translateX(-${index * slideWidth}%)`;
+
+  function moveToSlide(i) {
+    track.style.transition = 'transform 0.5s ease';
+    track.style.transform = `translateX(-${i * slideWidth}%)`;
+  }
+
+  function handleTransitionEnd() {
+    if (slides[index].isEqualNode(slides[0])) {
+      // Estamos en el clon del último slide → saltamos al real último
+      track.style.transition = 'none';
+      index = slides.length - 2;
+      track.style.transform = `translateX(-${index * slideWidth}%)`;
+    } else if (slides[index].isEqualNode(slides[slides.length - 1])) {
+      // Estamos en el clon del primer slide → saltamos al real primero
+      track.style.transition = 'none';
+      index = 1;
+      track.style.transform = `translateX(-${index * slideWidth}%)`;
+    }
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (index >= slides.length - 1) return;
+    index++;
+    moveToSlide(index);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (index <= 0) return;
+    index--;
+    moveToSlide(index);
+  });
+
+  track.addEventListener('transitionend', handleTransitionEnd);
+});

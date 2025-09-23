@@ -9,13 +9,15 @@
   <!-- Hojas de estilo propias -->
   <link rel="stylesheet" href="../src/css/index.css">
   <link rel="stylesheet" href="../src/css/impacto.css">
-  
+
   <!-- Carga anticipada de Google Fonts para rendimiento -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
+
   <!-- Fuentes importadas desde Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
 
   <!-- Iconos de Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -26,23 +28,29 @@
 
     <!-- Cursor personalizado con un emoji -->
     <div id="emoji-cursor">🌍​</div>
-    
-    <!-- Barra de navegación -->
+
     <nav id="top">
       <h1>
-        <!-- Título con icono de flecha que redirige -->
-        <a class="title" href="../index.html"><i class="fa-solid fa-arrow-left"></i> 7.NITROGENO</a>
+        <!-- Botón casita -->
+        <a href="https://celiami.github.io/periodic-table-project/#table-section" class="home-button"
+          title="Volver a la tabla periódica">
+          <i class="fa-solid fa-home"></i>
+        </a>
+
+        <!-- Flecha atrás + título -->
+        <a class="title" href="../index.html">
+          <i class="fa-solid fa-arrow-left"></i> 7.NITROGENO
+        </a>
       </h1>
 
       <!-- Checkbox para controlar menú hamburguesa -->
       <input type="checkbox" id="check">
       <label for="check">
-        <!-- Icono menú hamburguesa y cerrar -->
         <i class="fa-solid fa-bars" id="btn-menu"></i>
         <i class="fa-solid fa-xmark" id="cancel"></i>
       </label>
 
-      <!-- Menú desplegable con enlaces a otras páginas -->
+      <!-- Menú desplegable -->
       <ul class="menu">
         <li class="menu-item">
           <a href="../index.html">
@@ -63,7 +71,7 @@
           </a>
         </li>
         <li class="menu-item">
-          <a href="../pages/impacto.html">
+          <a href="../pages/impacto.html" aria-current="page">
             <img class="menu-links" src="../public/comun/impacto.png" alt="icono-impacto">
             Impacto
           </a>
@@ -83,19 +91,22 @@
       </ul>
     </nav>
 
+
     <!-- Sección de contenido principal -->
     <section class="impact">
-      
+
       <!-- Título principal -->
       <h1>Impacto del Nitrógeno</h1>
-      
+
       <!-- Subtítulo con salto de línea -->
       <h2>El elemento que alimenta al mundo...<br>pero también lo contamina</h2>
 
       <!-- Texto introductorio -->
       <div class="intro-text">
-        <p>El nitrógeno es fundamental para la vida en la Tierra, pero su uso excesivo está causando una de las crisis ambientales más silenciosas de nuestro tiempo.</p>
-        <p>Desde la revolución verde del siglo XX, la humanidad ha duplicado la cantidad de nitrógeno reactivo en el ambiente.</p>
+        <p>El nitrógeno es fundamental para la vida en la Tierra, pero su uso excesivo está causando una de las crisis
+          ambientales más silenciosas de nuestro tiempo.</p>
+        <p>Desde la revolución verde del siglo XX, la humanidad ha duplicado la cantidad de nitrógeno reactivo en el
+          ambiente.</p>
       </div>
 
       <!-- Efectos ambientales en tarjetas -->
@@ -107,14 +118,14 @@
           <h3>Eutrofización</h3>
           <p>El exceso de nitrógeno en aguas causa proliferación de algas y zonas muertas.</p>
         </div>
-        
+
         <!-- Tarjeta 2: Contaminación -->
         <div class="effect-card">
           <img src="../public/impacto-files/impactosmog.jpg" alt="Contaminación del aire">
           <h3>Contaminación Atmosférica</h3>
           <p>Los óxidos de nitrógeno contribuyen al smog y la lluvia ácida.</p>
         </div>
-        
+
         <!-- Tarjeta 3: Cambio climático -->
         <div class="effect-card">
           <img src="../public/impacto-files/impactocambioclimatico.jpg" alt="Cambio climático">
@@ -189,7 +200,7 @@
         </ul>
       </div>
     </section>
-    
+
     <!-- Botones de navegación entre páginas y para volver arriba -->
     <div class="buttons">
       <div class="btn-horizontal">
@@ -212,8 +223,9 @@
       <img class="logo-fem-coders" src="../public/comun/fem-coders-logo.png" alt="logo fem-coders-f5">
     </footer>
   </main>
-  
+
   <!-- Script JS con defer para ejecutar al final -->
   <script src="../src/js/impacto.js" defer></script>
 </body>
+
 </html>
